@@ -1,0 +1,1457 @@
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 1
+
+
+   1              		.file	"systimer.c"
+   2              		.section	".text","axv"
+   3              	.Ltext0:
+   4              		.cfi_sections	.debug_frame
+   5              		.section	.text.sysTimeSetup,"axv",@progbits
+   6              		.align 1
+   7              		.p2align 4,,15
+   8              		.globl sysTimeSetup
+   9              		.type	sysTimeSetup, @function
+  10              	sysTimeSetup:
+  11              	.LFB2:
+  12              		.file 1 "./components/spc582bxx_osal_component_rla/lib/src/systimer.c"
+  13              		.loc 1 52 0
+  14              		.cfi_startproc
+  15              	.LVL0:
+  16 0000 182106F0 		e_stwu %r1,-16(%r1)
+  17              	.LCFI0:
+  18              		.cfi_def_cfa_offset 16
+  19 0004 0080     		se_mflr %r0
+  20 0006 D3F1     		se_stw %r31,12(%r1)
+  21 0008 D501     		se_stw %r0,20(%r1)
+  22              		.cfi_offset 65, 4
+  23              		.cfi_offset 31, -4
+  24              		.loc 1 52 0
+  25 000a 013F     		se_mr %r31,%r3
+  26              		.loc 1 58 0
+  27 000c 70D07804 		e_li %r6,-32764
+  28              		.loc 1 59 0
+  29 0010 49E3     		se_li %r3,30
+  30              	.LVL1:
+  31              		.loc 1 58 0
+  32 0012 70FEE404 		e_lis %r7,0xf404
+  33              		.loc 1 59 0
+  34 0016 4924     		se_li %r4,18
+  35              		.loc 1 58 0
+  36 0018 70E8C224 		e_or2i %r7,16932
+  37 001c B067     		se_sth %r6,0(%r7)
+  38              		.loc 1 59 0
+  39 001e 78000001 		e_bl SPCSetPeripheralClockMode
+  40              	.LVL2:
+  41              		.loc 1 61 0
+  42 0022 4815     		se_li %r5,1
+  43 0024 70DEE7F8 		e_lis %r6,0xf7f8
+  44              		.loc 1 60 0
+  45 0028 70E0E4C4 		e_lis %r7,0x4c4
+  46              		.loc 1 61 0
+  47 002c 6516     		se_bseti %r6,17
+  48              		.loc 1 60 0
+  49 002e 18E7D1B4 		e_ori %r7,%r7,46080
+  50              		.loc 1 61 0
+  51 0032 D056     		se_stw %r5,0(%r6)
+  52              		.loc 1 60 0
+  53 0034 7C67FB96 		divwu %r3,%r7,%r31
+  54              		.loc 1 65 0
+  55 0038 4837     		se_li %r7,3
+  56              		.loc 1 60 0
+  57 003a 186384FF 		e_addi %r3,%r3,-1
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 2
+
+
+  58              	.LVL3:
+  59              		.loc 1 62 0
+  60 003e 54660100 		e_stw %r3,256(%r6)
+  61              		.loc 1 63 0
+  62 0042 54660104 		e_stw %r3,260(%r6)
+  63              		.loc 1 64 0
+  64 0046 54A6010C 		e_stw %r5,268(%r6)
+  65              		.loc 1 65 0
+  66 004a 54E60108 		e_stw %r7,264(%r6)
+  67              		.loc 1 66 0
+  68 004e C501     		se_lwz %r0,20(%r1)
+  69 0050 0090     		se_mtlr %r0
+  70              		.cfi_restore 65
+  71 0052 C3F1     		se_lwz %r31,12(%r1)
+  72              	.LVL4:
+  73 0054 20F1     		se_addi %r1,16
+  74              	.LCFI1:
+  75              		.cfi_restore 31
+  76              		.cfi_def_cfa_offset 0
+  77 0056 0004     		se_blr
+  78              		.cfi_endproc
+  79              	.LFE2:
+  80              		.size	sysTimeSetup, .-sysTimeSetup
+  81              		.section	.text.sysTimeReset,"axv",@progbits
+  82              		.align 1
+  83              		.p2align 4,,15
+  84              		.globl sysTimeReset
+  85              		.type	sysTimeReset, @function
+  86              	sysTimeReset:
+  87              	.LFB3:
+  88              		.loc 1 74 0
+  89              		.cfi_startproc
+  90              		.loc 1 76 0
+  91 0000 70FEE7F8 		e_lis %r7,0xf7f8
+  92 0004 6517     		se_bseti %r7,17
+  93 0006 50C7010C 		e_lwz %r6,268(%r7)
+  94 000a 2206     		se_cmpli %r6,1
+  95 000c 7A120006 		e_beq %cr0,.L5
+  96 0010 0004     		se_blr
+  97              	.L5:
+  98              		.loc 1 77 0
+  99 0012 54C7010C 		e_stw %r6,268(%r7)
+ 100 0016 0004     		se_blr
+ 101              		.cfi_endproc
+ 102              	.LFE3:
+ 103              		.size	sysTimeReset, .-sysTimeReset
+ 104              		.section	".text","axv"
+ 105              	.Letext0:
+ 106              		.file 2 "c:\\spc5studio-6.0\\eclipse\\plugins\\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.
+ 107              		.file 3 "c:\\spc5studio-6.0\\eclipse\\plugins\\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.
+ 108              		.file 4 "./components/spc582bxx_platform_component_rla/lib/include/typedefs.h"
+ 109              		.file 5 "./components/spc582bxx_platform_component_rla/lib/include/spc582b.h"
+ 110              		.file 6 "./components/spc582bxx_clock_component_rla/lib/include/clock.h"
+ 111              		.section	.debug_info,"",@progbits
+ 112              	.Ldebug_info0:
+ 113 0000 000004F0 		.4byte	0x4f0
+ 114 0004 0002     		.2byte	0x2
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 3
+
+
+ 115 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 116 000a 04       		.byte	0x4
+ 117 000b 01       		.uleb128 0x1
+ 118 000c 00000000 		.4byte	.LASF30
+ 119 0010 01       		.byte	0x1
+ 120 0011 00000000 		.4byte	.LASF31
+ 121 0015 00000000 		.4byte	.LASF32
+ 122 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 123 001d 00000000 		.4byte	0
+ 124 0021 00000000 		.4byte	0
+ 125 0025 00000000 		.4byte	.Ldebug_line0
+ 126 0029 02       		.uleb128 0x2
+ 127 002a 01       		.byte	0x1
+ 128 002b 06       		.byte	0x6
+ 129 002c 00000000 		.4byte	.LASF0
+ 130 0030 03       		.uleb128 0x3
+ 131 0031 00000000 		.4byte	.LASF3
+ 132 0035 02       		.byte	0x2
+ 133 0036 1D       		.byte	0x1d
+ 134 0037 0000003B 		.4byte	0x3b
+ 135 003b 02       		.uleb128 0x2
+ 136 003c 01       		.byte	0x1
+ 137 003d 08       		.byte	0x8
+ 138 003e 00000000 		.4byte	.LASF1
+ 139 0042 02       		.uleb128 0x2
+ 140 0043 02       		.byte	0x2
+ 141 0044 05       		.byte	0x5
+ 142 0045 00000000 		.4byte	.LASF2
+ 143 0049 03       		.uleb128 0x3
+ 144 004a 00000000 		.4byte	.LASF4
+ 145 004e 02       		.byte	0x2
+ 146 004f 2B       		.byte	0x2b
+ 147 0050 00000054 		.4byte	0x54
+ 148 0054 02       		.uleb128 0x2
+ 149 0055 02       		.byte	0x2
+ 150 0056 07       		.byte	0x7
+ 151 0057 00000000 		.4byte	.LASF5
+ 152 005b 02       		.uleb128 0x2
+ 153 005c 04       		.byte	0x4
+ 154 005d 05       		.byte	0x5
+ 155 005e 00000000 		.4byte	.LASF6
+ 156 0062 03       		.uleb128 0x3
+ 157 0063 00000000 		.4byte	.LASF7
+ 158 0067 02       		.byte	0x2
+ 159 0068 41       		.byte	0x41
+ 160 0069 0000006D 		.4byte	0x6d
+ 161 006d 02       		.uleb128 0x2
+ 162 006e 04       		.byte	0x4
+ 163 006f 07       		.byte	0x7
+ 164 0070 00000000 		.4byte	.LASF8
+ 165 0074 02       		.uleb128 0x2
+ 166 0075 08       		.byte	0x8
+ 167 0076 05       		.byte	0x5
+ 168 0077 00000000 		.4byte	.LASF9
+ 169 007b 02       		.uleb128 0x2
+ 170 007c 08       		.byte	0x8
+ 171 007d 07       		.byte	0x7
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 4
+
+
+ 172 007e 00000000 		.4byte	.LASF10
+ 173 0082 04       		.uleb128 0x4
+ 174 0083 04       		.byte	0x4
+ 175 0084 05       		.byte	0x5
+ 176 0085 696E7400 		.string	"int"
+ 177 0089 02       		.uleb128 0x2
+ 178 008a 04       		.byte	0x4
+ 179 008b 07       		.byte	0x7
+ 180 008c 00000000 		.4byte	.LASF11
+ 181 0090 03       		.uleb128 0x3
+ 182 0091 00000000 		.4byte	.LASF12
+ 183 0095 03       		.byte	0x3
+ 184 0096 15       		.byte	0x15
+ 185 0097 00000030 		.4byte	0x30
+ 186 009b 03       		.uleb128 0x3
+ 187 009c 00000000 		.4byte	.LASF13
+ 188 00a0 03       		.byte	0x3
+ 189 00a1 21       		.byte	0x21
+ 190 00a2 00000049 		.4byte	0x49
+ 191 00a6 03       		.uleb128 0x3
+ 192 00a7 00000000 		.4byte	.LASF14
+ 193 00ab 03       		.byte	0x3
+ 194 00ac 2D       		.byte	0x2d
+ 195 00ad 00000062 		.4byte	0x62
+ 196 00b1 03       		.uleb128 0x3
+ 197 00b2 00000000 		.4byte	.LASF15
+ 198 00b6 04       		.byte	0x4
+ 199 00b7 1C       		.byte	0x1c
+ 200 00b8 000000BC 		.4byte	0xbc
+ 201 00bc 05       		.uleb128 0x5
+ 202 00bd 00000090 		.4byte	0x90
+ 203 00c1 03       		.uleb128 0x3
+ 204 00c2 00000000 		.4byte	.LASF16
+ 205 00c6 04       		.byte	0x4
+ 206 00c7 20       		.byte	0x20
+ 207 00c8 000000CC 		.4byte	0xcc
+ 208 00cc 05       		.uleb128 0x5
+ 209 00cd 000000A6 		.4byte	0xa6
+ 210 00d1 02       		.uleb128 0x2
+ 211 00d2 04       		.byte	0x4
+ 212 00d3 07       		.byte	0x7
+ 213 00d4 00000000 		.4byte	.LASF17
+ 214 00d8 06       		.uleb128 0x6
+ 215 00d9 04       		.byte	0x4
+ 216 00da 05       		.byte	0x5
+ 217 00db 1879     		.2byte	0x1879
+ 218 00dd 0000012A 		.4byte	0x12a
+ 219 00e1 07       		.uleb128 0x7
+ 220 00e2 00000000 		.4byte	.LASF18
+ 221 00e6 05       		.byte	0x5
+ 222 00e7 187A     		.2byte	0x187a
+ 223 00e9 000000C1 		.4byte	0xc1
+ 224 00ed 04       		.byte	0x4
+ 225 00ee 1D       		.byte	0x1d
+ 226 00ef 00       		.byte	0
+ 227 00f0 02       		.byte	0x2
+ 228 00f1 23       		.byte	0x23
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 5
+
+
+ 229 00f2 00       		.uleb128 0
+ 230 00f3 07       		.uleb128 0x7
+ 231 00f4 00000000 		.4byte	.LASF19
+ 232 00f8 05       		.byte	0x5
+ 233 00f9 187B     		.2byte	0x187b
+ 234 00fb 000000C1 		.4byte	0xc1
+ 235 00ff 04       		.byte	0x4
+ 236 0100 01       		.byte	0x1
+ 237 0101 1D       		.byte	0x1d
+ 238 0102 02       		.byte	0x2
+ 239 0103 23       		.byte	0x23
+ 240 0104 00       		.uleb128 0
+ 241 0105 07       		.uleb128 0x7
+ 242 0106 00000000 		.4byte	.LASF20
+ 243 010a 05       		.byte	0x5
+ 244 010b 187C     		.2byte	0x187c
+ 245 010d 000000C1 		.4byte	0xc1
+ 246 0111 04       		.byte	0x4
+ 247 0112 01       		.byte	0x1
+ 248 0113 1E       		.byte	0x1e
+ 249 0114 02       		.byte	0x2
+ 250 0115 23       		.byte	0x23
+ 251 0116 00       		.uleb128 0
+ 252 0117 08       		.uleb128 0x8
+ 253 0118 46525A00 		.string	"FRZ"
+ 254 011c 05       		.byte	0x5
+ 255 011d 187D     		.2byte	0x187d
+ 256 011f 000000C1 		.4byte	0xc1
+ 257 0123 04       		.byte	0x4
+ 258 0124 01       		.byte	0x1
+ 259 0125 1F       		.byte	0x1f
+ 260 0126 02       		.byte	0x2
+ 261 0127 23       		.byte	0x23
+ 262 0128 00       		.uleb128 0
+ 263 0129 00       		.byte	0
+ 264 012a 09       		.uleb128 0x9
+ 265 012b 04       		.byte	0x4
+ 266 012c 05       		.byte	0x5
+ 267 012d 1877     		.2byte	0x1877
+ 268 012f 00000148 		.4byte	0x148
+ 269 0133 0A       		.uleb128 0xa
+ 270 0134 5200     		.string	"R"
+ 271 0136 05       		.byte	0x5
+ 272 0137 1878     		.2byte	0x1878
+ 273 0139 000000C1 		.4byte	0xc1
+ 274 013d 0A       		.uleb128 0xa
+ 275 013e 4200     		.string	"B"
+ 276 0140 05       		.byte	0x5
+ 277 0141 187E     		.2byte	0x187e
+ 278 0143 000000D8 		.4byte	0xd8
+ 279 0147 00       		.byte	0
+ 280 0148 06       		.uleb128 0x6
+ 281 0149 04       		.byte	0x4
+ 282 014a 05       		.byte	0x5
+ 283 014b 1885     		.2byte	0x1885
+ 284 014d 00000164 		.4byte	0x164
+ 285 0151 08       		.uleb128 0x8
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 6
+
+
+ 286 0152 54535600 		.string	"TSV"
+ 287 0156 05       		.byte	0x5
+ 288 0157 1886     		.2byte	0x1886
+ 289 0159 000000C1 		.4byte	0xc1
+ 290 015d 04       		.byte	0x4
+ 291 015e 20       		.byte	0x20
+ 292 015f 00       		.byte	0
+ 293 0160 02       		.byte	0x2
+ 294 0161 23       		.byte	0x23
+ 295 0162 00       		.uleb128 0
+ 296 0163 00       		.byte	0
+ 297 0164 09       		.uleb128 0x9
+ 298 0165 04       		.byte	0x4
+ 299 0166 05       		.byte	0x5
+ 300 0167 1883     		.2byte	0x1883
+ 301 0169 00000182 		.4byte	0x182
+ 302 016d 0A       		.uleb128 0xa
+ 303 016e 5200     		.string	"R"
+ 304 0170 05       		.byte	0x5
+ 305 0171 1884     		.2byte	0x1884
+ 306 0173 000000C1 		.4byte	0xc1
+ 307 0177 0A       		.uleb128 0xa
+ 308 0178 4200     		.string	"B"
+ 309 017a 05       		.byte	0x5
+ 310 017b 1887     		.2byte	0x1887
+ 311 017d 00000148 		.4byte	0x148
+ 312 0181 00       		.byte	0
+ 313 0182 06       		.uleb128 0x6
+ 314 0183 04       		.byte	0x4
+ 315 0184 05       		.byte	0x5
+ 316 0185 188C     		.2byte	0x188c
+ 317 0187 0000019E 		.4byte	0x19e
+ 318 018b 08       		.uleb128 0x8
+ 319 018c 54564C00 		.string	"TVL"
+ 320 0190 05       		.byte	0x5
+ 321 0191 188D     		.2byte	0x188d
+ 322 0193 000000C1 		.4byte	0xc1
+ 323 0197 04       		.byte	0x4
+ 324 0198 20       		.byte	0x20
+ 325 0199 00       		.byte	0
+ 326 019a 02       		.byte	0x2
+ 327 019b 23       		.byte	0x23
+ 328 019c 00       		.uleb128 0
+ 329 019d 00       		.byte	0
+ 330 019e 09       		.uleb128 0x9
+ 331 019f 04       		.byte	0x4
+ 332 01a0 05       		.byte	0x5
+ 333 01a1 188A     		.2byte	0x188a
+ 334 01a3 000001BC 		.4byte	0x1bc
+ 335 01a7 0A       		.uleb128 0xa
+ 336 01a8 5200     		.string	"R"
+ 337 01aa 05       		.byte	0x5
+ 338 01ab 188B     		.2byte	0x188b
+ 339 01ad 000000C1 		.4byte	0xc1
+ 340 01b1 0A       		.uleb128 0xa
+ 341 01b2 4200     		.string	"B"
+ 342 01b4 05       		.byte	0x5
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 7
+
+
+ 343 01b5 188E     		.2byte	0x188e
+ 344 01b7 00000182 		.4byte	0x182
+ 345 01bb 00       		.byte	0
+ 346 01bc 06       		.uleb128 0x6
+ 347 01bd 04       		.byte	0x4
+ 348 01be 05       		.byte	0x5
+ 349 01bf 1893     		.2byte	0x1893
+ 350 01c1 000001FC 		.4byte	0x1fc
+ 351 01c5 07       		.uleb128 0x7
+ 352 01c6 00000000 		.4byte	.LASF18
+ 353 01ca 05       		.byte	0x5
+ 354 01cb 1894     		.2byte	0x1894
+ 355 01cd 000000C1 		.4byte	0xc1
+ 356 01d1 04       		.byte	0x4
+ 357 01d2 1E       		.byte	0x1e
+ 358 01d3 00       		.byte	0
+ 359 01d4 02       		.byte	0x2
+ 360 01d5 23       		.byte	0x23
+ 361 01d6 00       		.uleb128 0
+ 362 01d7 08       		.uleb128 0x8
+ 363 01d8 54494500 		.string	"TIE"
+ 364 01dc 05       		.byte	0x5
+ 365 01dd 1895     		.2byte	0x1895
+ 366 01df 000000C1 		.4byte	0xc1
+ 367 01e3 04       		.byte	0x4
+ 368 01e4 01       		.byte	0x1
+ 369 01e5 1E       		.byte	0x1e
+ 370 01e6 02       		.byte	0x2
+ 371 01e7 23       		.byte	0x23
+ 372 01e8 00       		.uleb128 0
+ 373 01e9 08       		.uleb128 0x8
+ 374 01ea 54454E00 		.string	"TEN"
+ 375 01ee 05       		.byte	0x5
+ 376 01ef 1896     		.2byte	0x1896
+ 377 01f1 000000C1 		.4byte	0xc1
+ 378 01f5 04       		.byte	0x4
+ 379 01f6 01       		.byte	0x1
+ 380 01f7 1F       		.byte	0x1f
+ 381 01f8 02       		.byte	0x2
+ 382 01f9 23       		.byte	0x23
+ 383 01fa 00       		.uleb128 0
+ 384 01fb 00       		.byte	0
+ 385 01fc 09       		.uleb128 0x9
+ 386 01fd 04       		.byte	0x4
+ 387 01fe 05       		.byte	0x5
+ 388 01ff 1891     		.2byte	0x1891
+ 389 0201 0000021A 		.4byte	0x21a
+ 390 0205 0A       		.uleb128 0xa
+ 391 0206 5200     		.string	"R"
+ 392 0208 05       		.byte	0x5
+ 393 0209 1892     		.2byte	0x1892
+ 394 020b 000000C1 		.4byte	0xc1
+ 395 020f 0A       		.uleb128 0xa
+ 396 0210 4200     		.string	"B"
+ 397 0212 05       		.byte	0x5
+ 398 0213 1897     		.2byte	0x1897
+ 399 0215 000001BC 		.4byte	0x1bc
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 8
+
+
+ 400 0219 00       		.byte	0
+ 401 021a 06       		.uleb128 0x6
+ 402 021b 04       		.byte	0x4
+ 403 021c 05       		.byte	0x5
+ 404 021d 189C     		.2byte	0x189c
+ 405 021f 00000248 		.4byte	0x248
+ 406 0223 07       		.uleb128 0x7
+ 407 0224 00000000 		.4byte	.LASF18
+ 408 0228 05       		.byte	0x5
+ 409 0229 189D     		.2byte	0x189d
+ 410 022b 000000C1 		.4byte	0xc1
+ 411 022f 04       		.byte	0x4
+ 412 0230 1F       		.byte	0x1f
+ 413 0231 00       		.byte	0
+ 414 0232 02       		.byte	0x2
+ 415 0233 23       		.byte	0x23
+ 416 0234 00       		.uleb128 0
+ 417 0235 08       		.uleb128 0x8
+ 418 0236 54494600 		.string	"TIF"
+ 419 023a 05       		.byte	0x5
+ 420 023b 189E     		.2byte	0x189e
+ 421 023d 000000C1 		.4byte	0xc1
+ 422 0241 04       		.byte	0x4
+ 423 0242 01       		.byte	0x1
+ 424 0243 1F       		.byte	0x1f
+ 425 0244 02       		.byte	0x2
+ 426 0245 23       		.byte	0x23
+ 427 0246 00       		.uleb128 0
+ 428 0247 00       		.byte	0
+ 429 0248 09       		.uleb128 0x9
+ 430 0249 04       		.byte	0x4
+ 431 024a 05       		.byte	0x5
+ 432 024b 189A     		.2byte	0x189a
+ 433 024d 00000266 		.4byte	0x266
+ 434 0251 0A       		.uleb128 0xa
+ 435 0252 5200     		.string	"R"
+ 436 0254 05       		.byte	0x5
+ 437 0255 189B     		.2byte	0x189b
+ 438 0257 000000C1 		.4byte	0xc1
+ 439 025b 0A       		.uleb128 0xa
+ 440 025c 4200     		.string	"B"
+ 441 025e 05       		.byte	0x5
+ 442 025f 189F     		.2byte	0x189f
+ 443 0261 0000021A 		.4byte	0x21a
+ 444 0265 00       		.byte	0
+ 445 0266 06       		.uleb128 0x6
+ 446 0267 04       		.byte	0x4
+ 447 0268 05       		.byte	0x5
+ 448 0269 18A5     		.2byte	0x18a5
+ 449 026b 00000282 		.4byte	0x282
+ 450 026f 08       		.uleb128 0x8
+ 451 0270 54535600 		.string	"TSV"
+ 452 0274 05       		.byte	0x5
+ 453 0275 18A6     		.2byte	0x18a6
+ 454 0277 000000C1 		.4byte	0xc1
+ 455 027b 04       		.byte	0x4
+ 456 027c 20       		.byte	0x20
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 9
+
+
+ 457 027d 00       		.byte	0
+ 458 027e 02       		.byte	0x2
+ 459 027f 23       		.byte	0x23
+ 460 0280 00       		.uleb128 0
+ 461 0281 00       		.byte	0
+ 462 0282 09       		.uleb128 0x9
+ 463 0283 04       		.byte	0x4
+ 464 0284 05       		.byte	0x5
+ 465 0285 18A3     		.2byte	0x18a3
+ 466 0287 000002A0 		.4byte	0x2a0
+ 467 028b 0A       		.uleb128 0xa
+ 468 028c 5200     		.string	"R"
+ 469 028e 05       		.byte	0x5
+ 470 028f 18A4     		.2byte	0x18a4
+ 471 0291 000000C1 		.4byte	0xc1
+ 472 0295 0A       		.uleb128 0xa
+ 473 0296 4200     		.string	"B"
+ 474 0298 05       		.byte	0x5
+ 475 0299 18A7     		.2byte	0x18a7
+ 476 029b 00000266 		.4byte	0x266
+ 477 029f 00       		.byte	0
+ 478 02a0 06       		.uleb128 0x6
+ 479 02a1 04       		.byte	0x4
+ 480 02a2 05       		.byte	0x5
+ 481 02a3 18AC     		.2byte	0x18ac
+ 482 02a5 000002BC 		.4byte	0x2bc
+ 483 02a9 08       		.uleb128 0x8
+ 484 02aa 54564C00 		.string	"TVL"
+ 485 02ae 05       		.byte	0x5
+ 486 02af 18AD     		.2byte	0x18ad
+ 487 02b1 000000C1 		.4byte	0xc1
+ 488 02b5 04       		.byte	0x4
+ 489 02b6 20       		.byte	0x20
+ 490 02b7 00       		.byte	0
+ 491 02b8 02       		.byte	0x2
+ 492 02b9 23       		.byte	0x23
+ 493 02ba 00       		.uleb128 0
+ 494 02bb 00       		.byte	0
+ 495 02bc 09       		.uleb128 0x9
+ 496 02bd 04       		.byte	0x4
+ 497 02be 05       		.byte	0x5
+ 498 02bf 18AA     		.2byte	0x18aa
+ 499 02c1 000002DA 		.4byte	0x2da
+ 500 02c5 0A       		.uleb128 0xa
+ 501 02c6 5200     		.string	"R"
+ 502 02c8 05       		.byte	0x5
+ 503 02c9 18AB     		.2byte	0x18ab
+ 504 02cb 000000C1 		.4byte	0xc1
+ 505 02cf 0A       		.uleb128 0xa
+ 506 02d0 4200     		.string	"B"
+ 507 02d2 05       		.byte	0x5
+ 508 02d3 18AE     		.2byte	0x18ae
+ 509 02d5 000002A0 		.4byte	0x2a0
+ 510 02d9 00       		.byte	0
+ 511 02da 06       		.uleb128 0x6
+ 512 02db 04       		.byte	0x4
+ 513 02dc 05       		.byte	0x5
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 10
+
+
+ 514 02dd 18B3     		.2byte	0x18b3
+ 515 02df 0000032C 		.4byte	0x32c
+ 516 02e3 07       		.uleb128 0x7
+ 517 02e4 00000000 		.4byte	.LASF18
+ 518 02e8 05       		.byte	0x5
+ 519 02e9 18B4     		.2byte	0x18b4
+ 520 02eb 000000C1 		.4byte	0xc1
+ 521 02ef 04       		.byte	0x4
+ 522 02f0 1D       		.byte	0x1d
+ 523 02f1 00       		.byte	0
+ 524 02f2 02       		.byte	0x2
+ 525 02f3 23       		.byte	0x23
+ 526 02f4 00       		.uleb128 0
+ 527 02f5 08       		.uleb128 0x8
+ 528 02f6 43484E00 		.string	"CHN"
+ 529 02fa 05       		.byte	0x5
+ 530 02fb 18B5     		.2byte	0x18b5
+ 531 02fd 000000C1 		.4byte	0xc1
+ 532 0301 04       		.byte	0x4
+ 533 0302 01       		.byte	0x1
+ 534 0303 1D       		.byte	0x1d
+ 535 0304 02       		.byte	0x2
+ 536 0305 23       		.byte	0x23
+ 537 0306 00       		.uleb128 0
+ 538 0307 08       		.uleb128 0x8
+ 539 0308 54494500 		.string	"TIE"
+ 540 030c 05       		.byte	0x5
+ 541 030d 18B6     		.2byte	0x18b6
+ 542 030f 000000C1 		.4byte	0xc1
+ 543 0313 04       		.byte	0x4
+ 544 0314 01       		.byte	0x1
+ 545 0315 1E       		.byte	0x1e
+ 546 0316 02       		.byte	0x2
+ 547 0317 23       		.byte	0x23
+ 548 0318 00       		.uleb128 0
+ 549 0319 08       		.uleb128 0x8
+ 550 031a 54454E00 		.string	"TEN"
+ 551 031e 05       		.byte	0x5
+ 552 031f 18B7     		.2byte	0x18b7
+ 553 0321 000000C1 		.4byte	0xc1
+ 554 0325 04       		.byte	0x4
+ 555 0326 01       		.byte	0x1
+ 556 0327 1F       		.byte	0x1f
+ 557 0328 02       		.byte	0x2
+ 558 0329 23       		.byte	0x23
+ 559 032a 00       		.uleb128 0
+ 560 032b 00       		.byte	0
+ 561 032c 09       		.uleb128 0x9
+ 562 032d 04       		.byte	0x4
+ 563 032e 05       		.byte	0x5
+ 564 032f 18B1     		.2byte	0x18b1
+ 565 0331 0000034A 		.4byte	0x34a
+ 566 0335 0A       		.uleb128 0xa
+ 567 0336 5200     		.string	"R"
+ 568 0338 05       		.byte	0x5
+ 569 0339 18B2     		.2byte	0x18b2
+ 570 033b 000000C1 		.4byte	0xc1
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 11
+
+
+ 571 033f 0A       		.uleb128 0xa
+ 572 0340 4200     		.string	"B"
+ 573 0342 05       		.byte	0x5
+ 574 0343 18B8     		.2byte	0x18b8
+ 575 0345 000002DA 		.4byte	0x2da
+ 576 0349 00       		.byte	0
+ 577 034a 06       		.uleb128 0x6
+ 578 034b 04       		.byte	0x4
+ 579 034c 05       		.byte	0x5
+ 580 034d 18BD     		.2byte	0x18bd
+ 581 034f 00000378 		.4byte	0x378
+ 582 0353 07       		.uleb128 0x7
+ 583 0354 00000000 		.4byte	.LASF18
+ 584 0358 05       		.byte	0x5
+ 585 0359 18BE     		.2byte	0x18be
+ 586 035b 000000C1 		.4byte	0xc1
+ 587 035f 04       		.byte	0x4
+ 588 0360 1F       		.byte	0x1f
+ 589 0361 00       		.byte	0
+ 590 0362 02       		.byte	0x2
+ 591 0363 23       		.byte	0x23
+ 592 0364 00       		.uleb128 0
+ 593 0365 08       		.uleb128 0x8
+ 594 0366 54494600 		.string	"TIF"
+ 595 036a 05       		.byte	0x5
+ 596 036b 18BF     		.2byte	0x18bf
+ 597 036d 000000C1 		.4byte	0xc1
+ 598 0371 04       		.byte	0x4
+ 599 0372 01       		.byte	0x1
+ 600 0373 1F       		.byte	0x1f
+ 601 0374 02       		.byte	0x2
+ 602 0375 23       		.byte	0x23
+ 603 0376 00       		.uleb128 0
+ 604 0377 00       		.byte	0
+ 605 0378 09       		.uleb128 0x9
+ 606 0379 04       		.byte	0x4
+ 607 037a 05       		.byte	0x5
+ 608 037b 18BB     		.2byte	0x18bb
+ 609 037d 00000396 		.4byte	0x396
+ 610 0381 0A       		.uleb128 0xa
+ 611 0382 5200     		.string	"R"
+ 612 0384 05       		.byte	0x5
+ 613 0385 18BC     		.2byte	0x18bc
+ 614 0387 000000C1 		.4byte	0xc1
+ 615 038b 0A       		.uleb128 0xa
+ 616 038c 4200     		.string	"B"
+ 617 038e 05       		.byte	0x5
+ 618 038f 18C0     		.2byte	0x18c0
+ 619 0391 0000034A 		.4byte	0x34a
+ 620 0395 00       		.byte	0
+ 621 0396 06       		.uleb128 0x6
+ 622 0397 10       		.byte	0x10
+ 623 0398 05       		.byte	0x5
+ 624 0399 18A2     		.2byte	0x18a2
+ 625 039b 000003DC 		.4byte	0x3dc
+ 626 039f 0B       		.uleb128 0xb
+ 627 03a0 00000000 		.4byte	.LASF21
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 12
+
+
+ 628 03a4 05       		.byte	0x5
+ 629 03a5 18A8     		.2byte	0x18a8
+ 630 03a7 00000282 		.4byte	0x282
+ 631 03ab 02       		.byte	0x2
+ 632 03ac 23       		.byte	0x23
+ 633 03ad 00       		.uleb128 0
+ 634 03ae 0B       		.uleb128 0xb
+ 635 03af 00000000 		.4byte	.LASF22
+ 636 03b3 05       		.byte	0x5
+ 637 03b4 18AF     		.2byte	0x18af
+ 638 03b6 000002BC 		.4byte	0x2bc
+ 639 03ba 02       		.byte	0x2
+ 640 03bb 23       		.byte	0x23
+ 641 03bc 04       		.uleb128 0x4
+ 642 03bd 0B       		.uleb128 0xb
+ 643 03be 00000000 		.4byte	.LASF23
+ 644 03c2 05       		.byte	0x5
+ 645 03c3 18B9     		.2byte	0x18b9
+ 646 03c5 0000032C 		.4byte	0x32c
+ 647 03c9 02       		.byte	0x2
+ 648 03ca 23       		.byte	0x23
+ 649 03cb 08       		.uleb128 0x8
+ 650 03cc 0B       		.uleb128 0xb
+ 651 03cd 00000000 		.4byte	.LASF24
+ 652 03d1 05       		.byte	0x5
+ 653 03d2 18C1     		.2byte	0x18c1
+ 654 03d4 00000378 		.4byte	0x378
+ 655 03d8 02       		.byte	0x2
+ 656 03d9 23       		.byte	0x23
+ 657 03da 0C       		.uleb128 0xc
+ 658 03db 00       		.byte	0
+ 659 03dc 0C       		.uleb128 0xc
+ 660 03dd 00000000 		.4byte	.LASF33
+ 661 03e1 0180     		.2byte	0x180
+ 662 03e3 05       		.byte	0x5
+ 663 03e4 1876     		.2byte	0x1876
+ 664 03e6 00000458 		.4byte	0x458
+ 665 03ea 0D       		.uleb128 0xd
+ 666 03eb 4D435200 		.string	"MCR"
+ 667 03ef 05       		.byte	0x5
+ 668 03f0 187F     		.2byte	0x187f
+ 669 03f2 0000012A 		.4byte	0x12a
+ 670 03f6 02       		.byte	0x2
+ 671 03f7 23       		.byte	0x23
+ 672 03f8 00       		.uleb128 0
+ 673 03f9 0B       		.uleb128 0xb
+ 674 03fa 00000000 		.4byte	.LASF25
+ 675 03fe 05       		.byte	0x5
+ 676 03ff 1881     		.2byte	0x1881
+ 677 0401 00000468 		.4byte	0x468
+ 678 0405 02       		.byte	0x2
+ 679 0406 23       		.byte	0x23
+ 680 0407 04       		.uleb128 0x4
+ 681 0408 0B       		.uleb128 0xb
+ 682 0409 00000000 		.4byte	.LASF26
+ 683 040d 05       		.byte	0x5
+ 684 040e 1888     		.2byte	0x1888
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 13
+
+
+ 685 0410 00000164 		.4byte	0x164
+ 686 0414 03       		.byte	0x3
+ 687 0415 23       		.byte	0x23
+ 688 0416 F001     		.uleb128 0xf0
+ 689 0418 0B       		.uleb128 0xb
+ 690 0419 00000000 		.4byte	.LASF27
+ 691 041d 05       		.byte	0x5
+ 692 041e 188F     		.2byte	0x188f
+ 693 0420 0000019E 		.4byte	0x19e
+ 694 0424 03       		.byte	0x3
+ 695 0425 23       		.byte	0x23
+ 696 0426 F401     		.uleb128 0xf4
+ 697 0428 0B       		.uleb128 0xb
+ 698 0429 00000000 		.4byte	.LASF28
+ 699 042d 05       		.byte	0x5
+ 700 042e 1898     		.2byte	0x1898
+ 701 0430 000001FC 		.4byte	0x1fc
+ 702 0434 03       		.byte	0x3
+ 703 0435 23       		.byte	0x23
+ 704 0436 F801     		.uleb128 0xf8
+ 705 0438 0B       		.uleb128 0xb
+ 706 0439 00000000 		.4byte	.LASF29
+ 707 043d 05       		.byte	0x5
+ 708 043e 18A0     		.2byte	0x18a0
+ 709 0440 00000248 		.4byte	0x248
+ 710 0444 03       		.byte	0x3
+ 711 0445 23       		.byte	0x23
+ 712 0446 FC01     		.uleb128 0xfc
+ 713 0448 0D       		.uleb128 0xd
+ 714 0449 434800   		.string	"CH"
+ 715 044c 05       		.byte	0x5
+ 716 044d 18C3     		.2byte	0x18c3
+ 717 044f 0000046D 		.4byte	0x46d
+ 718 0453 03       		.byte	0x3
+ 719 0454 23       		.byte	0x23
+ 720 0455 8002     		.uleb128 0x100
+ 721 0457 00       		.byte	0
+ 722 0458 0E       		.uleb128 0xe
+ 723 0459 000000B1 		.4byte	0xb1
+ 724 045d 00000468 		.4byte	0x468
+ 725 0461 0F       		.uleb128 0xf
+ 726 0462 000000D1 		.4byte	0xd1
+ 727 0466 EB       		.byte	0xeb
+ 728 0467 00       		.byte	0
+ 729 0468 05       		.uleb128 0x5
+ 730 0469 00000458 		.4byte	0x458
+ 731 046d 0E       		.uleb128 0xe
+ 732 046e 00000396 		.4byte	0x396
+ 733 0472 0000047D 		.4byte	0x47d
+ 734 0476 0F       		.uleb128 0xf
+ 735 0477 000000D1 		.4byte	0xd1
+ 736 047b 07       		.byte	0x7
+ 737 047c 00       		.byte	0
+ 738 047d 10       		.uleb128 0x10
+ 739 047e 01       		.byte	0x1
+ 740 047f 00000000 		.4byte	.LASF34
+ 741 0483 01       		.byte	0x1
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 14
+
+
+ 742 0484 33       		.byte	0x33
+ 743 0485 01       		.byte	0x1
+ 744 0486 00000000 		.4byte	.LFB2
+ 745 048a 00000000 		.4byte	.LFE2
+ 746 048e 00000000 		.4byte	.LLST0
+ 747 0492 01       		.byte	0x1
+ 748 0493 000004C8 		.4byte	0x4c8
+ 749 0497 11       		.uleb128 0x11
+ 750 0498 00000000 		.4byte	.LASF35
+ 751 049c 01       		.byte	0x1
+ 752 049d 33       		.byte	0x33
+ 753 049e 000000A6 		.4byte	0xa6
+ 754 04a2 00000000 		.4byte	.LLST1
+ 755 04a6 12       		.uleb128 0x12
+ 756 04a7 72656700 		.string	"reg"
+ 757 04ab 01       		.byte	0x1
+ 758 04ac 35       		.byte	0x35
+ 759 04ad 000000A6 		.4byte	0xa6
+ 760 04b1 01       		.byte	0x1
+ 761 04b2 53       		.byte	0x53
+ 762 04b3 13       		.uleb128 0x13
+ 763 04b4 00000000 		.4byte	.LVL2
+ 764 04b8 000004DD 		.4byte	0x4dd
+ 765 04bc 14       		.uleb128 0x14
+ 766 04bd 01       		.byte	0x1
+ 767 04be 54       		.byte	0x54
+ 768 04bf 01       		.byte	0x1
+ 769 04c0 42       		.byte	0x42
+ 770 04c1 14       		.uleb128 0x14
+ 771 04c2 01       		.byte	0x1
+ 772 04c3 53       		.byte	0x53
+ 773 04c4 01       		.byte	0x1
+ 774 04c5 4E       		.byte	0x4e
+ 775 04c6 00       		.byte	0
+ 776 04c7 00       		.byte	0
+ 777 04c8 15       		.uleb128 0x15
+ 778 04c9 01       		.byte	0x1
+ 779 04ca 00000000 		.4byte	.LASF36
+ 780 04ce 01       		.byte	0x1
+ 781 04cf 49       		.byte	0x49
+ 782 04d0 01       		.byte	0x1
+ 783 04d1 00000000 		.4byte	.LFB3
+ 784 04d5 00000000 		.4byte	.LFE3
+ 785 04d9 02       		.byte	0x2
+ 786 04da 71       		.byte	0x71
+ 787 04db 00       		.sleb128 0
+ 788 04dc 01       		.byte	0x1
+ 789 04dd 16       		.uleb128 0x16
+ 790 04de 01       		.byte	0x1
+ 791 04df 00000000 		.4byte	.LASF37
+ 792 04e3 06       		.byte	0x6
+ 793 04e4 0603     		.2byte	0x603
+ 794 04e6 01       		.byte	0x1
+ 795 04e7 01       		.byte	0x1
+ 796 04e8 17       		.uleb128 0x17
+ 797 04e9 000000A6 		.4byte	0xa6
+ 798 04ed 17       		.uleb128 0x17
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 15
+
+
+ 799 04ee 000000A6 		.4byte	0xa6
+ 800 04f2 00       		.byte	0
+ 801 04f3 00       		.byte	0
+ 802              		.section	.debug_abbrev,"",@progbits
+ 803              	.Ldebug_abbrev0:
+ 804 0000 01       		.uleb128 0x1
+ 805 0001 11       		.uleb128 0x11
+ 806 0002 01       		.byte	0x1
+ 807 0003 25       		.uleb128 0x25
+ 808 0004 0E       		.uleb128 0xe
+ 809 0005 13       		.uleb128 0x13
+ 810 0006 0B       		.uleb128 0xb
+ 811 0007 03       		.uleb128 0x3
+ 812 0008 0E       		.uleb128 0xe
+ 813 0009 1B       		.uleb128 0x1b
+ 814 000a 0E       		.uleb128 0xe
+ 815 000b 55       		.uleb128 0x55
+ 816 000c 06       		.uleb128 0x6
+ 817 000d 11       		.uleb128 0x11
+ 818 000e 01       		.uleb128 0x1
+ 819 000f 52       		.uleb128 0x52
+ 820 0010 01       		.uleb128 0x1
+ 821 0011 10       		.uleb128 0x10
+ 822 0012 06       		.uleb128 0x6
+ 823 0013 00       		.byte	0
+ 824 0014 00       		.byte	0
+ 825 0015 02       		.uleb128 0x2
+ 826 0016 24       		.uleb128 0x24
+ 827 0017 00       		.byte	0
+ 828 0018 0B       		.uleb128 0xb
+ 829 0019 0B       		.uleb128 0xb
+ 830 001a 3E       		.uleb128 0x3e
+ 831 001b 0B       		.uleb128 0xb
+ 832 001c 03       		.uleb128 0x3
+ 833 001d 0E       		.uleb128 0xe
+ 834 001e 00       		.byte	0
+ 835 001f 00       		.byte	0
+ 836 0020 03       		.uleb128 0x3
+ 837 0021 16       		.uleb128 0x16
+ 838 0022 00       		.byte	0
+ 839 0023 03       		.uleb128 0x3
+ 840 0024 0E       		.uleb128 0xe
+ 841 0025 3A       		.uleb128 0x3a
+ 842 0026 0B       		.uleb128 0xb
+ 843 0027 3B       		.uleb128 0x3b
+ 844 0028 0B       		.uleb128 0xb
+ 845 0029 49       		.uleb128 0x49
+ 846 002a 13       		.uleb128 0x13
+ 847 002b 00       		.byte	0
+ 848 002c 00       		.byte	0
+ 849 002d 04       		.uleb128 0x4
+ 850 002e 24       		.uleb128 0x24
+ 851 002f 00       		.byte	0
+ 852 0030 0B       		.uleb128 0xb
+ 853 0031 0B       		.uleb128 0xb
+ 854 0032 3E       		.uleb128 0x3e
+ 855 0033 0B       		.uleb128 0xb
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 16
+
+
+ 856 0034 03       		.uleb128 0x3
+ 857 0035 08       		.uleb128 0x8
+ 858 0036 00       		.byte	0
+ 859 0037 00       		.byte	0
+ 860 0038 05       		.uleb128 0x5
+ 861 0039 35       		.uleb128 0x35
+ 862 003a 00       		.byte	0
+ 863 003b 49       		.uleb128 0x49
+ 864 003c 13       		.uleb128 0x13
+ 865 003d 00       		.byte	0
+ 866 003e 00       		.byte	0
+ 867 003f 06       		.uleb128 0x6
+ 868 0040 13       		.uleb128 0x13
+ 869 0041 01       		.byte	0x1
+ 870 0042 0B       		.uleb128 0xb
+ 871 0043 0B       		.uleb128 0xb
+ 872 0044 3A       		.uleb128 0x3a
+ 873 0045 0B       		.uleb128 0xb
+ 874 0046 3B       		.uleb128 0x3b
+ 875 0047 05       		.uleb128 0x5
+ 876 0048 01       		.uleb128 0x1
+ 877 0049 13       		.uleb128 0x13
+ 878 004a 00       		.byte	0
+ 879 004b 00       		.byte	0
+ 880 004c 07       		.uleb128 0x7
+ 881 004d 0D       		.uleb128 0xd
+ 882 004e 00       		.byte	0
+ 883 004f 03       		.uleb128 0x3
+ 884 0050 0E       		.uleb128 0xe
+ 885 0051 3A       		.uleb128 0x3a
+ 886 0052 0B       		.uleb128 0xb
+ 887 0053 3B       		.uleb128 0x3b
+ 888 0054 05       		.uleb128 0x5
+ 889 0055 49       		.uleb128 0x49
+ 890 0056 13       		.uleb128 0x13
+ 891 0057 0B       		.uleb128 0xb
+ 892 0058 0B       		.uleb128 0xb
+ 893 0059 0D       		.uleb128 0xd
+ 894 005a 0B       		.uleb128 0xb
+ 895 005b 0C       		.uleb128 0xc
+ 896 005c 0B       		.uleb128 0xb
+ 897 005d 38       		.uleb128 0x38
+ 898 005e 0A       		.uleb128 0xa
+ 899 005f 00       		.byte	0
+ 900 0060 00       		.byte	0
+ 901 0061 08       		.uleb128 0x8
+ 902 0062 0D       		.uleb128 0xd
+ 903 0063 00       		.byte	0
+ 904 0064 03       		.uleb128 0x3
+ 905 0065 08       		.uleb128 0x8
+ 906 0066 3A       		.uleb128 0x3a
+ 907 0067 0B       		.uleb128 0xb
+ 908 0068 3B       		.uleb128 0x3b
+ 909 0069 05       		.uleb128 0x5
+ 910 006a 49       		.uleb128 0x49
+ 911 006b 13       		.uleb128 0x13
+ 912 006c 0B       		.uleb128 0xb
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 17
+
+
+ 913 006d 0B       		.uleb128 0xb
+ 914 006e 0D       		.uleb128 0xd
+ 915 006f 0B       		.uleb128 0xb
+ 916 0070 0C       		.uleb128 0xc
+ 917 0071 0B       		.uleb128 0xb
+ 918 0072 38       		.uleb128 0x38
+ 919 0073 0A       		.uleb128 0xa
+ 920 0074 00       		.byte	0
+ 921 0075 00       		.byte	0
+ 922 0076 09       		.uleb128 0x9
+ 923 0077 17       		.uleb128 0x17
+ 924 0078 01       		.byte	0x1
+ 925 0079 0B       		.uleb128 0xb
+ 926 007a 0B       		.uleb128 0xb
+ 927 007b 3A       		.uleb128 0x3a
+ 928 007c 0B       		.uleb128 0xb
+ 929 007d 3B       		.uleb128 0x3b
+ 930 007e 05       		.uleb128 0x5
+ 931 007f 01       		.uleb128 0x1
+ 932 0080 13       		.uleb128 0x13
+ 933 0081 00       		.byte	0
+ 934 0082 00       		.byte	0
+ 935 0083 0A       		.uleb128 0xa
+ 936 0084 0D       		.uleb128 0xd
+ 937 0085 00       		.byte	0
+ 938 0086 03       		.uleb128 0x3
+ 939 0087 08       		.uleb128 0x8
+ 940 0088 3A       		.uleb128 0x3a
+ 941 0089 0B       		.uleb128 0xb
+ 942 008a 3B       		.uleb128 0x3b
+ 943 008b 05       		.uleb128 0x5
+ 944 008c 49       		.uleb128 0x49
+ 945 008d 13       		.uleb128 0x13
+ 946 008e 00       		.byte	0
+ 947 008f 00       		.byte	0
+ 948 0090 0B       		.uleb128 0xb
+ 949 0091 0D       		.uleb128 0xd
+ 950 0092 00       		.byte	0
+ 951 0093 03       		.uleb128 0x3
+ 952 0094 0E       		.uleb128 0xe
+ 953 0095 3A       		.uleb128 0x3a
+ 954 0096 0B       		.uleb128 0xb
+ 955 0097 3B       		.uleb128 0x3b
+ 956 0098 05       		.uleb128 0x5
+ 957 0099 49       		.uleb128 0x49
+ 958 009a 13       		.uleb128 0x13
+ 959 009b 38       		.uleb128 0x38
+ 960 009c 0A       		.uleb128 0xa
+ 961 009d 00       		.byte	0
+ 962 009e 00       		.byte	0
+ 963 009f 0C       		.uleb128 0xc
+ 964 00a0 13       		.uleb128 0x13
+ 965 00a1 01       		.byte	0x1
+ 966 00a2 03       		.uleb128 0x3
+ 967 00a3 0E       		.uleb128 0xe
+ 968 00a4 0B       		.uleb128 0xb
+ 969 00a5 05       		.uleb128 0x5
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 18
+
+
+ 970 00a6 3A       		.uleb128 0x3a
+ 971 00a7 0B       		.uleb128 0xb
+ 972 00a8 3B       		.uleb128 0x3b
+ 973 00a9 05       		.uleb128 0x5
+ 974 00aa 01       		.uleb128 0x1
+ 975 00ab 13       		.uleb128 0x13
+ 976 00ac 00       		.byte	0
+ 977 00ad 00       		.byte	0
+ 978 00ae 0D       		.uleb128 0xd
+ 979 00af 0D       		.uleb128 0xd
+ 980 00b0 00       		.byte	0
+ 981 00b1 03       		.uleb128 0x3
+ 982 00b2 08       		.uleb128 0x8
+ 983 00b3 3A       		.uleb128 0x3a
+ 984 00b4 0B       		.uleb128 0xb
+ 985 00b5 3B       		.uleb128 0x3b
+ 986 00b6 05       		.uleb128 0x5
+ 987 00b7 49       		.uleb128 0x49
+ 988 00b8 13       		.uleb128 0x13
+ 989 00b9 38       		.uleb128 0x38
+ 990 00ba 0A       		.uleb128 0xa
+ 991 00bb 00       		.byte	0
+ 992 00bc 00       		.byte	0
+ 993 00bd 0E       		.uleb128 0xe
+ 994 00be 01       		.uleb128 0x1
+ 995 00bf 01       		.byte	0x1
+ 996 00c0 49       		.uleb128 0x49
+ 997 00c1 13       		.uleb128 0x13
+ 998 00c2 01       		.uleb128 0x1
+ 999 00c3 13       		.uleb128 0x13
+ 1000 00c4 00       		.byte	0
+ 1001 00c5 00       		.byte	0
+ 1002 00c6 0F       		.uleb128 0xf
+ 1003 00c7 21       		.uleb128 0x21
+ 1004 00c8 00       		.byte	0
+ 1005 00c9 49       		.uleb128 0x49
+ 1006 00ca 13       		.uleb128 0x13
+ 1007 00cb 2F       		.uleb128 0x2f
+ 1008 00cc 0B       		.uleb128 0xb
+ 1009 00cd 00       		.byte	0
+ 1010 00ce 00       		.byte	0
+ 1011 00cf 10       		.uleb128 0x10
+ 1012 00d0 2E       		.uleb128 0x2e
+ 1013 00d1 01       		.byte	0x1
+ 1014 00d2 3F       		.uleb128 0x3f
+ 1015 00d3 0C       		.uleb128 0xc
+ 1016 00d4 03       		.uleb128 0x3
+ 1017 00d5 0E       		.uleb128 0xe
+ 1018 00d6 3A       		.uleb128 0x3a
+ 1019 00d7 0B       		.uleb128 0xb
+ 1020 00d8 3B       		.uleb128 0x3b
+ 1021 00d9 0B       		.uleb128 0xb
+ 1022 00da 27       		.uleb128 0x27
+ 1023 00db 0C       		.uleb128 0xc
+ 1024 00dc 11       		.uleb128 0x11
+ 1025 00dd 01       		.uleb128 0x1
+ 1026 00de 12       		.uleb128 0x12
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 19
+
+
+ 1027 00df 01       		.uleb128 0x1
+ 1028 00e0 40       		.uleb128 0x40
+ 1029 00e1 06       		.uleb128 0x6
+ 1030 00e2 9742     		.uleb128 0x2117
+ 1031 00e4 0C       		.uleb128 0xc
+ 1032 00e5 01       		.uleb128 0x1
+ 1033 00e6 13       		.uleb128 0x13
+ 1034 00e7 00       		.byte	0
+ 1035 00e8 00       		.byte	0
+ 1036 00e9 11       		.uleb128 0x11
+ 1037 00ea 05       		.uleb128 0x5
+ 1038 00eb 00       		.byte	0
+ 1039 00ec 03       		.uleb128 0x3
+ 1040 00ed 0E       		.uleb128 0xe
+ 1041 00ee 3A       		.uleb128 0x3a
+ 1042 00ef 0B       		.uleb128 0xb
+ 1043 00f0 3B       		.uleb128 0x3b
+ 1044 00f1 0B       		.uleb128 0xb
+ 1045 00f2 49       		.uleb128 0x49
+ 1046 00f3 13       		.uleb128 0x13
+ 1047 00f4 02       		.uleb128 0x2
+ 1048 00f5 06       		.uleb128 0x6
+ 1049 00f6 00       		.byte	0
+ 1050 00f7 00       		.byte	0
+ 1051 00f8 12       		.uleb128 0x12
+ 1052 00f9 34       		.uleb128 0x34
+ 1053 00fa 00       		.byte	0
+ 1054 00fb 03       		.uleb128 0x3
+ 1055 00fc 08       		.uleb128 0x8
+ 1056 00fd 3A       		.uleb128 0x3a
+ 1057 00fe 0B       		.uleb128 0xb
+ 1058 00ff 3B       		.uleb128 0x3b
+ 1059 0100 0B       		.uleb128 0xb
+ 1060 0101 49       		.uleb128 0x49
+ 1061 0102 13       		.uleb128 0x13
+ 1062 0103 02       		.uleb128 0x2
+ 1063 0104 0A       		.uleb128 0xa
+ 1064 0105 00       		.byte	0
+ 1065 0106 00       		.byte	0
+ 1066 0107 13       		.uleb128 0x13
+ 1067 0108 898201   		.uleb128 0x4109
+ 1068 010b 01       		.byte	0x1
+ 1069 010c 11       		.uleb128 0x11
+ 1070 010d 01       		.uleb128 0x1
+ 1071 010e 31       		.uleb128 0x31
+ 1072 010f 13       		.uleb128 0x13
+ 1073 0110 00       		.byte	0
+ 1074 0111 00       		.byte	0
+ 1075 0112 14       		.uleb128 0x14
+ 1076 0113 8A8201   		.uleb128 0x410a
+ 1077 0116 00       		.byte	0
+ 1078 0117 02       		.uleb128 0x2
+ 1079 0118 0A       		.uleb128 0xa
+ 1080 0119 9142     		.uleb128 0x2111
+ 1081 011b 0A       		.uleb128 0xa
+ 1082 011c 00       		.byte	0
+ 1083 011d 00       		.byte	0
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 20
+
+
+ 1084 011e 15       		.uleb128 0x15
+ 1085 011f 2E       		.uleb128 0x2e
+ 1086 0120 00       		.byte	0
+ 1087 0121 3F       		.uleb128 0x3f
+ 1088 0122 0C       		.uleb128 0xc
+ 1089 0123 03       		.uleb128 0x3
+ 1090 0124 0E       		.uleb128 0xe
+ 1091 0125 3A       		.uleb128 0x3a
+ 1092 0126 0B       		.uleb128 0xb
+ 1093 0127 3B       		.uleb128 0x3b
+ 1094 0128 0B       		.uleb128 0xb
+ 1095 0129 27       		.uleb128 0x27
+ 1096 012a 0C       		.uleb128 0xc
+ 1097 012b 11       		.uleb128 0x11
+ 1098 012c 01       		.uleb128 0x1
+ 1099 012d 12       		.uleb128 0x12
+ 1100 012e 01       		.uleb128 0x1
+ 1101 012f 40       		.uleb128 0x40
+ 1102 0130 0A       		.uleb128 0xa
+ 1103 0131 9742     		.uleb128 0x2117
+ 1104 0133 0C       		.uleb128 0xc
+ 1105 0134 00       		.byte	0
+ 1106 0135 00       		.byte	0
+ 1107 0136 16       		.uleb128 0x16
+ 1108 0137 2E       		.uleb128 0x2e
+ 1109 0138 01       		.byte	0x1
+ 1110 0139 3F       		.uleb128 0x3f
+ 1111 013a 0C       		.uleb128 0xc
+ 1112 013b 03       		.uleb128 0x3
+ 1113 013c 0E       		.uleb128 0xe
+ 1114 013d 3A       		.uleb128 0x3a
+ 1115 013e 0B       		.uleb128 0xb
+ 1116 013f 3B       		.uleb128 0x3b
+ 1117 0140 05       		.uleb128 0x5
+ 1118 0141 27       		.uleb128 0x27
+ 1119 0142 0C       		.uleb128 0xc
+ 1120 0143 3C       		.uleb128 0x3c
+ 1121 0144 0C       		.uleb128 0xc
+ 1122 0145 00       		.byte	0
+ 1123 0146 00       		.byte	0
+ 1124 0147 17       		.uleb128 0x17
+ 1125 0148 05       		.uleb128 0x5
+ 1126 0149 00       		.byte	0
+ 1127 014a 49       		.uleb128 0x49
+ 1128 014b 13       		.uleb128 0x13
+ 1129 014c 00       		.byte	0
+ 1130 014d 00       		.byte	0
+ 1131 014e 00       		.byte	0
+ 1132              		.section	.debug_loc,"",@progbits
+ 1133              	.Ldebug_loc0:
+ 1134              	.LLST0:
+ 1135 0000 00000000 		.4byte	.LFB2
+ 1136 0004 00000000 		.4byte	.LCFI0
+ 1137 0008 0002     		.2byte	0x2
+ 1138 000a 71       		.byte	0x71
+ 1139 000b 00       		.sleb128 0
+ 1140 000c 00000000 		.4byte	.LCFI0
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 21
+
+
+ 1141 0010 00000000 		.4byte	.LCFI1
+ 1142 0014 0002     		.2byte	0x2
+ 1143 0016 71       		.byte	0x71
+ 1144 0017 10       		.sleb128 16
+ 1145 0018 00000000 		.4byte	.LCFI1
+ 1146 001c 00000000 		.4byte	.LFE2
+ 1147 0020 0002     		.2byte	0x2
+ 1148 0022 71       		.byte	0x71
+ 1149 0023 00       		.sleb128 0
+ 1150 0024 00000000 		.4byte	0
+ 1151 0028 00000000 		.4byte	0
+ 1152              	.LLST1:
+ 1153 002c 00000000 		.4byte	.LVL0
+ 1154 0030 00000000 		.4byte	.LVL1
+ 1155 0034 0001     		.2byte	0x1
+ 1156 0036 53       		.byte	0x53
+ 1157 0037 00000000 		.4byte	.LVL1
+ 1158 003b 00000000 		.4byte	.LVL4
+ 1159 003f 0001     		.2byte	0x1
+ 1160 0041 6F       		.byte	0x6f
+ 1161 0042 00000000 		.4byte	.LVL4
+ 1162 0046 00000000 		.4byte	.LFE2
+ 1163 004a 0004     		.2byte	0x4
+ 1164 004c F3       		.byte	0xf3
+ 1165 004d 01       		.uleb128 0x1
+ 1166 004e 53       		.byte	0x53
+ 1167 004f 9F       		.byte	0x9f
+ 1168 0050 00000000 		.4byte	0
+ 1169 0054 00000000 		.4byte	0
+ 1170              		.section	.debug_aranges,"",@progbits
+ 1171 0000 00000024 		.4byte	0x24
+ 1172 0004 0002     		.2byte	0x2
+ 1173 0006 00000000 		.4byte	.Ldebug_info0
+ 1174 000a 04       		.byte	0x4
+ 1175 000b 00       		.byte	0
+ 1176 000c 0000     		.2byte	0
+ 1177 000e 0000     		.2byte	0
+ 1178 0010 00000000 		.4byte	.LFB2
+ 1179 0014 00000058 		.4byte	.LFE2-.LFB2
+ 1180 0018 00000000 		.4byte	.LFB3
+ 1181 001c 00000018 		.4byte	.LFE3-.LFB3
+ 1182 0020 00000000 		.4byte	0
+ 1183 0024 00000000 		.4byte	0
+ 1184              		.section	.debug_ranges,"",@progbits
+ 1185              	.Ldebug_ranges0:
+ 1186 0000 00000000 		.4byte	.LFB2
+ 1187 0004 00000000 		.4byte	.LFE2
+ 1188 0008 00000000 		.4byte	.LFB3
+ 1189 000c 00000000 		.4byte	.LFE3
+ 1190 0010 00000000 		.4byte	0
+ 1191 0014 00000000 		.4byte	0
+ 1192              		.section	.debug_line,"",@progbits
+ 1193              	.Ldebug_line0:
+ 1194 0000 00000259 		.section	.debug_str,"MS",@progbits,1
+ 1194      00020000 
+ 1194      021E0201 
+ 1194      FB0E0D00 
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 22
+
+
+ 1194      01010101 
+ 1195              	.LASF9:
+ 1196 0000 6C6F6E67 		.string	"long long int"
+ 1196      206C6F6E 
+ 1196      6720696E 
+ 1196      7400
+ 1197              	.LASF3:
+ 1198 000e 5F5F7569 		.string	"__uint8_t"
+ 1198      6E74385F 
+ 1198      7400
+ 1199              	.LASF27:
+ 1200 0018 5254495F 		.string	"RTI_CVAL"
+ 1200      4356414C 
+ 1200      00
+ 1201              	.LASF24:
+ 1202 0021 54464C47 		.string	"TFLG"
+ 1202      00
+ 1203              	.LASF32:
+ 1204 0026 433A5C55 		.string	"C:\\Users\\shehans\\Downloads\\BCU Test\\BCU Test"
+ 1204      73657273 
+ 1204      5C736865 
+ 1204      68616E73 
+ 1204      5C446F77 
+ 1205              	.LASF1:
+ 1206 0053 756E7369 		.string	"unsigned char"
+ 1206      676E6564 
+ 1206      20636861 
+ 1206      7200
+ 1207              	.LASF28:
+ 1208 0061 5254495F 		.string	"RTI_TCTRL"
+ 1208      54435452 
+ 1208      4C00
+ 1209              	.LASF8:
+ 1210 006b 6C6F6E67 		.string	"long unsigned int"
+ 1210      20756E73 
+ 1210      69676E65 
+ 1210      6420696E 
+ 1210      7400
+ 1211              	.LASF5:
+ 1212 007d 73686F72 		.string	"short unsigned int"
+ 1212      7420756E 
+ 1212      7369676E 
+ 1212      65642069 
+ 1212      6E7400
+ 1213              	.LASF22:
+ 1214 0090 4356414C 		.string	"CVAL"
+ 1214      00
+ 1215              	.LASF25:
+ 1216 0095 4144525F 		.string	"ADR_reserved0"
+ 1216      72657365 
+ 1216      72766564 
+ 1216      3000
+ 1217              	.LASF36:
+ 1218 00a3 73797354 		.string	"sysTimeReset"
+ 1218      696D6552 
+ 1218      65736574 
+ 1218      00
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 23
+
+
+ 1219              	.LASF31:
+ 1220 00b0 2E2F636F 		.string	"./components/spc582bxx_osal_component_rla/lib/src/systimer.c"
+ 1220      6D706F6E 
+ 1220      656E7473 
+ 1220      2F737063 
+ 1220      35383262 
+ 1221              	.LASF7:
+ 1222 00ed 5F5F7569 		.string	"__uint32_t"
+ 1222      6E743332 
+ 1222      5F7400
+ 1223              	.LASF20:
+ 1224 00f8 4D444953 		.string	"MDIS"
+ 1224      00
+ 1225              	.LASF21:
+ 1226 00fd 4C445641 		.string	"LDVAL"
+ 1226      4C00
+ 1227              	.LASF11:
+ 1228 0103 756E7369 		.string	"unsigned int"
+ 1228      676E6564 
+ 1228      20696E74 
+ 1228      00
+ 1229              	.LASF23:
+ 1230 0110 54435452 		.string	"TCTRL"
+ 1230      4C00
+ 1231              	.LASF10:
+ 1232 0116 6C6F6E67 		.string	"long long unsigned int"
+ 1232      206C6F6E 
+ 1232      6720756E 
+ 1232      7369676E 
+ 1232      65642069 
+ 1233              	.LASF12:
+ 1234 012d 75696E74 		.string	"uint8_t"
+ 1234      385F7400 
+ 1235              	.LASF15:
+ 1236 0135 7675696E 		.string	"vuint8_t"
+ 1236      74385F74 
+ 1236      00
+ 1237              	.LASF37:
+ 1238 013e 53504353 		.string	"SPCSetPeripheralClockMode"
+ 1238      65745065 
+ 1238      72697068 
+ 1238      6572616C 
+ 1238      436C6F63 
+ 1239              	.LASF33:
+ 1240 0158 5049545F 		.string	"PIT_tag"
+ 1240      74616700 
+ 1241              	.LASF35:
+ 1242 0160 7469636B 		.string	"ticks_per_sec"
+ 1242      735F7065 
+ 1242      725F7365 
+ 1242      6300
+ 1243              	.LASF17:
+ 1244 016e 73697A65 		.string	"sizetype"
+ 1244      74797065 
+ 1244      00
+ 1245              	.LASF19:
+ 1246 0177 4D444953 		.string	"MDIS_RTI"
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 24
+
+
+ 1246      5F525449 
+ 1246      00
+ 1247              	.LASF34:
+ 1248 0180 73797354 		.string	"sysTimeSetup"
+ 1248      696D6553 
+ 1248      65747570 
+ 1248      00
+ 1249              	.LASF18:
+ 1250 018d 756E7573 		.string	"unused_0"
+ 1250      65645F30 
+ 1250      00
+ 1251              	.LASF16:
+ 1252 0196 7675696E 		.string	"vuint32_t"
+ 1252      7433325F 
+ 1252      7400
+ 1253              	.LASF2:
+ 1254 01a0 73686F72 		.string	"short int"
+ 1254      7420696E 
+ 1254      7400
+ 1255              	.LASF4:
+ 1256 01aa 5F5F7569 		.string	"__uint16_t"
+ 1256      6E743136 
+ 1256      5F7400
+ 1257              	.LASF13:
+ 1258 01b5 75696E74 		.string	"uint16_t"
+ 1258      31365F74 
+ 1258      00
+ 1259              	.LASF26:
+ 1260 01be 5254495F 		.string	"RTI_LDVAL"
+ 1260      4C445641 
+ 1260      4C00
+ 1261              	.LASF14:
+ 1262 01c8 75696E74 		.string	"uint32_t"
+ 1262      33325F74 
+ 1262      00
+ 1263              	.LASF6:
+ 1264 01d1 6C6F6E67 		.string	"long int"
+ 1264      20696E74 
+ 1264      00
+ 1265              	.LASF30:
+ 1266 01da 474E5520 		.ascii	"GNU C 4.9.4 20160726 (Sat May 27 11:09:55 CDT 2017         b"
+ 1266      4320342E 
+ 1266      392E3420 
+ 1266      32303136 
+ 1266      30373236 
+ 1267 0216 75696C64 		.ascii	"uild.sh"
+ 1267      2E7368
+ 1268 021d 20726576 		.string	" rev=gd8b6c20 s=F494 ELe200 -V release_gd8b6c20_build_Fed_ELe200_ML0) -mcall-sysv -mcpu=e
+ 1268      3D676438 
+ 1268      62366332 
+ 1268      3020733D 
+ 1268      46343934 
+ 1269              	.LASF0:
+ 1270 031e 7369676E 		.string	"signed char"
+ 1270      65642063 
+ 1270      68617200 
+ 1271              	.LASF29:
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 25
+
+
+ 1272 032a 5254495F 		.string	"RTI_TFLG"
+ 1272      54464C47 
+ 1272      00
+ 1273              		.ident	"GCC: (GNU) 4.9.4 20160726 (Sat May 27 11:09:55 CDT 2017         build.sh rev=gd8b6c20 s=F4
+GAS LISTING C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s 			page 26
+
+
+DEFINED SYMBOLS
+                            *ABS*:00000000 systimer.c
+C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s:10     .text.sysTimeSetup:00000000 sysTimeSetup
+C:\Users\shehans\AppData\Local\Temp\cco4b6Bf.s:86     .text.sysTimeReset:00000000 sysTimeReset
+
+UNDEFINED SYMBOLS
+SPCSetPeripheralClockMode
