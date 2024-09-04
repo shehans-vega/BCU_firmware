@@ -57,6 +57,7 @@ extern "C" {
 #endif
  /* List of the callback functions referenced from the SARADCConfig
      structures in saradc_lld_cfg.c.*/
+  void saradcconf_conv_cb(SARADCDriver *saradcp);
 #ifdef __cplusplus
 }
 #endif

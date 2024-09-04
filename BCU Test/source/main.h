@@ -20,5 +20,6 @@
  ===========================================================================*/
 
 #include "gpio_hal.h"
+#include "adc_driver.h"
 
 #endif /* SOURCE_MAIN_H_ */

@@ -37,7 +37,8 @@ build/obj/main.o: main.c source/main.h components/components.h \
  components/spc582bxx_irq_component_rla/lib/include/eirq.h \
  components/spc582bxx_irq_component_rla/lib/include/irq.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
- source/gpio_hal.h
+ source/gpio_hal.h source/adc_driver.h \
+ components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h
 
 source/main.h:
 
@@ -120,3 +121,7 @@ components/spc582bxx_irq_component_rla/lib/include/irq.h:
 components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h:
 
 source/gpio_hal.h:
+
+source/adc_driver.h:
+
+components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h:
