@@ -37,6 +37,7 @@ void CAN_get(CANRxFrame crfp){
 	can_message = crfp.data8[0];
 }
 
+/* Call back function on CAN Reception */
 void mcanconf_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 	if ((crfp.SID == CAN_RECV_ID) && (crfp.IDE == CAN_ID_STD)) {
 		CAN_get(crfp);
