@@ -11,9 +11,10 @@ int main(void) {
 	componentsInit();
 	irqIsrEnable();
 	ADC_init();
+	CAN_init();
 
 	for (;;) {
-		//setOutputs();
+		CAN_send();
 		osalThreadDelayMilliseconds(10);
 	}
 }

@@ -42,4 +42,5 @@ uint16_t IS_6;
 
 
 
+
 #endif /* GPIO_HAL_H_ */

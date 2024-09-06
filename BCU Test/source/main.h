@@ -21,5 +21,6 @@
 
 #include "gpio_hal.h"
 #include "adc_driver.h"
+#include  "can.h"
 
 #endif /* SOURCE_MAIN_H_ */

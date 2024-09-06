@@ -57,6 +57,7 @@ extern "C" {
 #endif
   /* List of the callback functions referenced from the CANConfig
      structures in can_lld_cfg.c.*/
+void mcanconf_rxcb(uint32_t msgbuf, CANRxFrame crfp);
 #ifdef __cplusplus
 }
 #endif

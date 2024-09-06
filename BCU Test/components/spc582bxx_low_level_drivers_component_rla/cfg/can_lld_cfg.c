@@ -41,7 +41,7 @@ CANConfig can_config_mcanconf = {
   /* time segment after sample point */
   3U,
   /* clock prescaler */
-  4U,
+  2U,
   
   /* Canfd configuration */
   FALSE,
@@ -67,14 +67,14 @@ CANConfig can_config_mcanconf = {
   /*can rx interrupt line*/
   CAN_LINE0_INT,
   /*can rx interrupt call back */
-  NULL,
+   mcanconf_rxcb,
   /* FIFO 0 is not used */
   CAN_FIFO0_INT_DISABLE,0,NULL,0,NULL,0,NULL,0,NULL,
   /* FIFO 1 is not used */
   CAN_FIFO1_INT_DISABLE,0,NULL,0,NULL,0,NULL,0,NULL,
   /* rx standard buffer filters */
   {
-  {0x32UL,0x42UL,CAN_FILTER_DUALID,CAN_FIFO0}, /* standard filter 0*/
+  {0x27UL,50UL,0U,7U}, /* standard filter 0*/
   {0UL,0UL,0U,0U},  /* standard_filter unused 0 (MISRA Compliance) */
   {0UL,0UL,0U,0U},  /* standard_filter unused 1 (MISRA Compliance) */
   },

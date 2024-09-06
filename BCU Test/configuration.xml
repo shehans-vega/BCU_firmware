@@ -3851,7 +3851,7 @@
                 </general_configuration>
                 <timings>
                   <clock_prescaler>
-                    <value>4</value>
+                    <value>2</value>
                   </clock_prescaler>
                   <nsjw>
                     <value>1</value>
@@ -3869,10 +3869,10 @@
                     <value>8000000</value>
                   </can_subsytem_1_protocol_clock>
                   <can_subsytem_0_calculated_bit_rate disabled="true">
-                    <value>250000</value>
+                    <value>500000</value>
                   </can_subsytem_0_calculated_bit_rate>
                   <can_subsytem_1_calculated_bit_rate disabled="true">
-                    <value>250000</value>
+                    <value>500000</value>
                   </can_subsytem_1_calculated_bit_rate>
                 </timings>
                 <canfd_operation>
@@ -3918,12 +3918,24 @@
                     <value>LINE0</value>
                   </interrupt>
                   <callback>
-                    <value />
+                    <value>rxcb</value>
                   </callback>
                   <number_of_rx_buffers index="51">
                     <value>51</value>
                   </number_of_rx_buffers>
-                  <rx_buffer_filters />
+                  <rx_buffer_filters>
+                    <filter>
+                      <filter_type index="0">
+                        <value>Standard</value>
+                      </filter_type>
+                      <filter_value>
+                        <value>0x27</value>
+                      </filter_value>
+                      <rx_buffer_number>
+                        <value>50</value>
+                      </rx_buffer_number>
+                    </filter>
+                  </rx_buffer_filters>
                 </rx_buffer_configuration>
                 <fifo_0_configuration>
                   <interrupt_line index="0">
@@ -3956,22 +3968,7 @@
                   <fifo_message_lost_callback disabled="true">
                     <value />
                   </fifo_message_lost_callback>
-                  <fifo_buffer_filters>
-                    <filter>
-                      <id_type index="0">
-                        <value>Standard</value>
-                      </id_type>
-                      <filter_type index="1">
-                        <value>DUALID</value>
-                      </filter_type>
-                      <filter_id_1>
-                        <value>0x32</value>
-                      </filter_id_1>
-                      <filter_id_2>
-                        <value>0x42</value>
-                      </filter_id_2>
-                    </filter>
-                  </fifo_buffer_filters>
+                  <fifo_buffer_filters />
                 </fifo_0_configuration>
                 <fifo_1_configuration>
                   <interrupt_line index="0">
