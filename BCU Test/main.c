@@ -12,6 +12,9 @@ int main(void) {
 	irqIsrEnable();
 	ADC_init();
 	CAN_init();
+	
+	ChannelType channels[MAX_CHANNELS];
+	init_channels_from_config(channels, &pinconfig);
 
 	for (;;) {
 		CAN_send();

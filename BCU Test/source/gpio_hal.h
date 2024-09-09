@@ -10,7 +10,6 @@
 #ifndef GPIO_HAL_H_
 #define GPIO_HAL_H_
 
-
 #define CH1_ON		pal_lld_setpad(PORT_HS_P1, HS_P1)
 #define CH1_OFF		pal_lld_clearpad(PORT_HS_P1, HS_P1)
 #define CH2_ON		pal_lld_setpad(PORT_HS_P2, HS_P2)
@@ -32,6 +31,9 @@
 #define SEL_CH4			pal_lld_clearpad(PORT_HS_P1, HS_P1)
 #define DEN_5_ON		pal_lld_setpad(PORT_DEN_5, DEN_5)
 #define DEN_6_ON		pal_lld_setpad(PORT_DEN_6, DEN_6)
+
+
+
 
 uint16_t IS_1_2;
 uint16_t IS_3_4;

@@ -45,7 +45,6 @@
 #define DEN_6                       15U
 #define DSEL_1_2                    3U
 #define HS_P2                       4U
-#define HS_P6                       0U
 #define PIN_SIN_0                   11U
 #define DEN_1_2                     12U
 #define HS_P1                       13U
@@ -58,7 +57,7 @@
 #define DSEL_3_4                    3U
 #define PIN_SCK_0                   11U
 #define PIN_SOUT_0                  12U
-#define OUT1                        4U
+#define HS_P6                       4U
 #define DEN_5                       1U
 #define HS_P5                       2U
 #define ADC_6                       3U
@@ -79,7 +78,6 @@
 #define PORT_DEN_6                  PORT_C
 #define PORT_DSEL_1_2               PORT_C
 #define PORT_HS_P2                  PORT_C
-#define PORT_HS_P6                  PORT_D
 #define PORT_PIN_SIN_0              PORT_D
 #define PORT_DEN_1_2                PORT_D
 #define PORT_HS_P1                  PORT_D
@@ -92,7 +90,7 @@
 #define PORT_DSEL_3_4               PORT_F
 #define PORT_PIN_SCK_0              PORT_G
 #define PORT_PIN_SOUT_0             PORT_G
-#define PORT_OUT1                   PORT_H
+#define PORT_HS_P6                  PORT_H
 #define PORT_DEN_5                  PORT_I
 #define PORT_HS_P5                  PORT_I
 #define PORT_ADC_6                  PORT_I
@@ -113,7 +111,6 @@
 #define MSCR_IO_DEN_6               MSCR_IO_INDEX(PORT_DEN_6, DEN_6)
 #define MSCR_IO_DSEL_1_2            MSCR_IO_INDEX(PORT_DSEL_1_2, DSEL_1_2)
 #define MSCR_IO_HS_P2               MSCR_IO_INDEX(PORT_HS_P2, HS_P2)
-#define MSCR_IO_HS_P6               MSCR_IO_INDEX(PORT_HS_P6, HS_P6)
 #define MSCR_IO_PIN_SIN_0           MSCR_IO_INDEX(PORT_PIN_SIN_0, PIN_SIN_0)
 #define MSCR_IO_DEN_1_2             MSCR_IO_INDEX(PORT_DEN_1_2, DEN_1_2)
 #define MSCR_IO_HS_P1               MSCR_IO_INDEX(PORT_HS_P1, HS_P1)
@@ -126,7 +123,7 @@
 #define MSCR_IO_DSEL_3_4            MSCR_IO_INDEX(PORT_DSEL_3_4, DSEL_3_4)
 #define MSCR_IO_PIN_SCK_0           MSCR_IO_INDEX(PORT_PIN_SCK_0, PIN_SCK_0)
 #define MSCR_IO_PIN_SOUT_0          MSCR_IO_INDEX(PORT_PIN_SOUT_0, PIN_SOUT_0)
-#define MSCR_IO_OUT1                MSCR_IO_INDEX(PORT_OUT1, OUT1)
+#define MSCR_IO_HS_P6               MSCR_IO_INDEX(PORT_HS_P6, HS_P6)
 #define MSCR_IO_DEN_5               MSCR_IO_INDEX(PORT_DEN_5, DEN_5)
 #define MSCR_IO_HS_P5               MSCR_IO_INDEX(PORT_HS_P5, HS_P5)
 #define MSCR_IO_ADC_6               MSCR_IO_INDEX(PORT_ADC_6, ADC_6)

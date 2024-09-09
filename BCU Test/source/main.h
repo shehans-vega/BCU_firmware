@@ -20,6 +20,7 @@
  ===========================================================================*/
 
 #include "gpio_hal.h"
+#include "gpio_interface.h"
 #include "adc_driver.h"
 #include  "can.h"
 
