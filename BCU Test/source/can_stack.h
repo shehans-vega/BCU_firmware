@@ -53,7 +53,6 @@ struct L_handle_struct {
 volatile struct R_handle_struct R_handle_msg;
 volatile struct L_handle_struct L_handle_msg;
 
-
 void Right_handle_msg(CANRxFrame crfp) {
 	R_handle_msg.fixset1.all = crfp.data8[0];
 }

@@ -11,6 +11,8 @@
 /*===========================================================================
  SPC5 header files
  ===========================================================================*/
+/*Standard header files */
+#include <stdbool.h>
 
 #include "components.h"
 #include "can_lld_cfg.h"
@@ -19,9 +21,10 @@
  Other header files
  ===========================================================================*/
 
-#include "gpio_hal.h"
+#include "board_config.h"
 #include "gpio_interface.h"
 #include "adc_driver.h"
-#include  "can.h"
-
+#include "can.h"
+#include "output_elements.h"
+#include "module_init.h"
 #endif /* SOURCE_MAIN_H_ */

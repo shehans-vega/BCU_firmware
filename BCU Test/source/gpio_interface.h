@@ -1,7 +1,13 @@
+
+#ifndef _GPIO_INTERFACE_H_
+#define _GPIO_INTERFACE_H_
+
 #include <stdint.h>
 #include <stdio.h>
 #include "board.h"
 #include "board_config.h"
+#include "string.h"
+
 
 #define CHANNEL_ON(port, pin)     pal_lld_setpad(port, pin)
 #define CHANNEL_OFF(port, pin)    pal_lld_clearpad(port, pin)
@@ -14,6 +20,15 @@ typedef struct Channel {
     diagnoseType diagnose;
 } ChannelType;
 
+
+//Function to control gpio
+void gpio_control(gpioType* gpio, char cmd[]  ){
+	if(strcmp(cmd, "ON") == 0) {pal_lld_setpad(gpio->port, gpio->pin);}
+	else if(strcmp(cmd, "OFF")==0){pal_lld_clearpad(gpio->port, gpio->pin);}
+	else if(strcmp(cmd, "TOGGLE")==0){pal_lld_togglepad(gpio->port, gpio->pin);}
+	else{}
+}
+
 // Function to turn the channel on (implementation based on the pin/port)
 void channel_on_impl(ChannelType* channel) {
     pal_lld_setpad(channel->gpio.port, channel->gpio.pin);
@@ -23,13 +38,11 @@ void channel_on_impl(ChannelType* channel) {
 void channel_off_impl(ChannelType* channel) {
     pal_lld_clearpad(channel->gpio.port, channel->gpio.pin);
 }
-
 // Function to reset the latch
 void latch_reset_impl(ChannelType* channel) {
     channel->fault_flag = 0;           // Reset fault flag
     channel->hard_fault_counter = 0;   // Reset hard fault counter
     }
-
 void diagnose_en_impl(ChannelType* channel) {
     if(channel->diagnose.den ==1){
     	pal_lld_setpad(channel->diagnose.dns_pins.port, channel->diagnose.dns_pins.pin);
@@ -43,6 +56,15 @@ void diagnose_en_impl(ChannelType* channel) {
     else{
     	pal_lld_clearpad(channel->diagnose.dns_pins.port, channel->diagnose.dns_pins.pin);
     }
+}
+
+void init_channel(ChannelType* channel){
+	  if  (channel->default_state == 0){
+	        	channel_off_impl(channel);
+	        }
+	        else{
+	        	channel_on_impl(channel);
+	                }
 }
 
 void init_channels_from_config(ChannelType* channels, pinconfigType* config) {
@@ -61,8 +83,7 @@ void init_channels_from_config(ChannelType* channels, pinconfigType* config) {
         else{
         	channel_on_impl(&channels[i]);
                 }
-        // Enable diagnosis
-        //diagnose_en_impl(&channels[i]);
     }
 }
 
+#endif

@@ -1,4 +1,6 @@
-build/obj/main.o: main.c source/main.h components/components.h \
+build/obj/main.o: main.c source/main.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stdbool.h \
+ components/components.h \
  components/spc582bxx_platform_component_rla/lib/include/platform.h \
  components/spc582bxx_platform_component_rla/cfg/core.h \
  components/spc582bxx_platform_component_rla/cfg/toolchain.h \
@@ -10,7 +12,6 @@ build/obj/main.o: main.c source/main.h components/components.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\features.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\_intsup.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stddef.h \
- c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stdbool.h \
  components/spc582bxx_platform_component_rla/lib/include/spr.h \
  components/spc582bxx_platform_component_rla/lib/include/spc582b_registry.h \
  components/spc582bxx_platform_component_rla/lib/include/spc582b.h \
@@ -37,7 +38,7 @@ build/obj/main.o: main.c source/main.h components/components.h \
  components/spc582bxx_irq_component_rla/lib/include/eirq.h \
  components/spc582bxx_irq_component_rla/lib/include/irq.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
- source/gpio_hal.h source/gpio_interface.h \
+ source/board_config.h source/gpio_interface.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\stdio.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\_ansi.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\newlib.h \
@@ -53,11 +54,17 @@ build/obj/main.o: main.c source/main.h components/components.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\types.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\machine\types.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\stdio.h \
- source/board_config.h source/adc_driver.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\string.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\string.h \
+ source/adc_driver.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h \
- source/can.h
+ source/can.h source/can_stack.h source/output_elements.h \
+ source/module_init.h source/input_elements.h source/button.h \
+ source/modules.h
 
 source/main.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stdbool.h:
 
 components/components.h:
 
@@ -82,8 +89,6 @@ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\_intsup.h:
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stddef.h:
-
-c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\lib\gcc\powerpc-eabivle\4.9.4\include\stdbool.h:
 
 components/spc582bxx_platform_component_rla/lib/include/spr.h:
 
@@ -137,7 +142,7 @@ components/spc582bxx_irq_component_rla/lib/include/irq.h:
 
 components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h:
 
-source/gpio_hal.h:
+source/board_config.h:
 
 source/gpio_interface.h:
 
@@ -171,10 +176,24 @@ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\stdio.h:
 
-source/board_config.h:
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\string.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\string.h:
 
 source/adc_driver.h:
 
 components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h:
 
 source/can.h:
+
+source/can_stack.h:
+
+source/output_elements.h:
+
+source/module_init.h:
+
+source/input_elements.h:
+
+source/button.h:
+
+source/modules.h:

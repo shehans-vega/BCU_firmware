@@ -26,6 +26,12 @@ typedef struct {
     diagnoseType dns[MAX_CHANNELS];
 } pinconfigType;
 
+gpioType onboardLED[2] = {
+		{.pin = LED1, .port = PORT_LED1},
+		{.pin = LED2, .port = PORT_LED2}
+
+};
+
  pinconfigType pinconfig = {
     .gpio = {
         {.pin = HS_P1, .port = PORT_HS_P1},
