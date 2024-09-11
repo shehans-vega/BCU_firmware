@@ -8,7 +8,6 @@
 #include "board_config.h"
 #include "string.h"
 
-
 #define CHANNEL_ON(port, pin)     pal_lld_setpad(port, pin)
 #define CHANNEL_OFF(port, pin)    pal_lld_clearpad(port, pin)
 
@@ -19,7 +18,6 @@ typedef struct Channel {
     uint8_t hard_fault_counter;   // Counter for hard faults
     diagnoseType diagnose;
 } ChannelType;
-
 
 //Function to control gpio
 void gpio_control(gpioType* gpio, char cmd[]  ){

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <stg format="2.0">
 	<OriginalWsp type="string">debug.wsx</OriginalWsp>
-	<BackupWspFlag type="flag">0</BackupWspFlag>
+	<BackupWspFlag type="flag">1</BackupWspFlag>
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">11.09.2024 08:41:27:000</LastWriteDate>
+	<LastWriteDate type="string">11.09.2024 08:41:29:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -1857,7 +1857,7 @@ End Sub</ScriptSource>
 		<SaveAndCopyWithoutTimeStamps type="flag">0</SaveAndCopyWithoutTimeStamps>
 	</Logging>
 	<TargetInfoFile type="string">..\..\..\..\pls\UDESTK 2021\Targets\stm_spc582b60_premiumkit_debug_jtag.cfg</TargetInfoFile>
-	<UseWspCnt type="int">0</UseWspCnt>
+	<UseWspCnt type="int">1</UseWspCnt>
 	<TargInfoFlags type="key">
 		<Controller0 type="key">
 			<Core2 type="key">

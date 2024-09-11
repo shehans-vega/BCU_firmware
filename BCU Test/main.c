@@ -16,10 +16,13 @@ int main(void) {
 	init_channels_from_config(hschannels, &pinconfig);
 	initialize_modules();
 
+	//initialize_modules();
+
 	for (;;) {
 		CAN_send();
-		hornModule.init(&hornModule);
-		hornModule.activate(&hornModule);
+//		channel_on_impl(&hschannels[2]);
+//
+		activate_modules();
 		osalThreadDelayMilliseconds(10);
 	}
 }

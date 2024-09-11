@@ -5,7 +5,7 @@
 #include "button.h"
 #include "gpio_interface.h"
 
-#define COUNTER_THRESHOLD 300
+#define COUNTER_THRESHOLD 40
 
 
 //================== GENERAL MODULE BLUEPRINT ========================
@@ -14,7 +14,7 @@ typedef struct moduleType{
 	ChannelType channel;
 	buttonInput_t button;
 	uint8_t state;
-	uint8_t counter;
+	uint16_t counter;
 	void (*init)(struct moduleType*);
 	void (*activate)(struct moduleType*);
 	void (*deactivate)(struct moduleType*);
@@ -71,6 +71,12 @@ void activate_toggle(moduleType* self){
 		}
 	}
 	self->counter++;
+	if(self->state == 1){
+		channel_on_impl(&self->channel);
+	}
+	else{
+		channel_off_impl(&self->channel);
+	}
 }
 
 #endif
