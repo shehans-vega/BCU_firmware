@@ -6,6 +6,7 @@
  */
 
 #include "source/main.h"
+uint8_t temp = 0;
 
 int main(void) {
 	componentsInit();
@@ -20,6 +21,8 @@ int main(void) {
 
 	for (;;) {
 		CAN_send();
+		inputs();
+		temp = button_state(&hornButton);
 //		channel_on_impl(&hschannels[2]);
 		activate_modules();
 		osalThreadDelayMilliseconds(10);

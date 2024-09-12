@@ -4,6 +4,7 @@
 #include "button.h"
 #include "gpio_interface.h"
 
+uint8_t deb =0;
 #define COUNTER_THRESHOLD 40
 
 //================== GENERAL MODULE BLUEPRINT ========================
@@ -56,12 +57,17 @@ void activate_moment(moduleType* self) {
 
 // Method to activate a periodic toggle channel
 void activate_toggle(moduleType* self) {
+	deb = self->button->buttonState;
+	if((self->button->buttonPrevState == BUTTON_IDLE) && (self->button->buttonState == BUTTON_PRESSED) ){
     if (self->counter >= COUNTER_THRESHOLD) {
         self->counter = 0;
         self->state = !self->state; // Toggle the state
     }
     self->counter++;
-
+	}
+	else{
+		self->state = 0;
+	}
     if (self->state == 1) {
         channel_on_impl(self->channel);
     } else {

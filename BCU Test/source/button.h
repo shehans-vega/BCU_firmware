@@ -4,10 +4,12 @@
  *  Created on: 10 Jul 2024
  *      Author: Chamath De Silva
  */
-#include <stdbool.h>
+
 
 #ifndef BUTTON_H_
 #define BUTTON_H_
+
+#include <stdbool.h>
 
 #define BUTTON_HOLD_THRESHOLD 250
 #define BUTTON_PRESS_THRESHOLD 20
@@ -28,7 +30,6 @@ typedef struct {
 	uint16_t press_count;
 	uint16_t hold_count;
 } buttonInput_t;
-
 
 
 uint8_t button_state(buttonInput_t *button) {
