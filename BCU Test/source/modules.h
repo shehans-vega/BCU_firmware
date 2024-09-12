@@ -81,7 +81,10 @@ void activate_toggle(moduleType* self) {
         self->state = !self->state; // Toggle the state
     }
     self->counter++;
+	}else{
+		self->state = 0;
 	}
+
     if (self->state == 1) {
         channel_on_impl(self->channel);
     } else {
