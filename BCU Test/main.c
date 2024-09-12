@@ -21,7 +21,6 @@ int main(void) {
 	for (;;) {
 		CAN_send();
 //		channel_on_impl(&hschannels[2]);
-//
 		activate_modules();
 		osalThreadDelayMilliseconds(10);
 	}

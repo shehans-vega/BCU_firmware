@@ -14,10 +14,7 @@ moduleType leftsignalModule;
 moduleType rightsignalModule;
 
 void initialize_modules(void){
- initialize(&hornModule, hschannels[2], hornButton, 0,0 );
- hornModule.init = init;
- hornModule.activate = activate_toggle;
- hornModule.deactivate = NULL;
+ initialize(&hornModule, &hschannels[2], &hornButton, 0,0,init,activate_toggle,NULL );
 }
 
 void activate_modules(void){
