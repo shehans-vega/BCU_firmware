@@ -43,7 +43,7 @@ void mcanconf_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 			//DISP_get_msg(crfp);
 		}
 
-		if ((crfp.EID == LH_ID) && (crfp.IDE == CAN_ID_XTD)) {
+		if ((crfp.EID == LH_ID_TEST) && (crfp.IDE == CAN_ID_STD)) {
 			Left_handle_msg(crfp);
 			gpio_control(&onboardLED[1], "TOGGLE");
 			//LED_toggle;		//for relay controller board

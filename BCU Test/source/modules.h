@@ -5,6 +5,7 @@
 #include "gpio_interface.h"
 
 uint8_t deb =0;
+
 #define COUNTER_THRESHOLD 40
 
 //================== GENERAL MODULE BLUEPRINT ========================
@@ -41,32 +42,45 @@ void init(moduleType* self) {
 
 // Method to activate a latch-type channel
 void activate_latch(moduleType* self) {
-    if (self->button->buttonState == BUTTON_RELEASED) {
+    if ((self->button->buttonState == BUTTON_RELEASED) && (self->button->buttonPrevState == (BUTTON_PRESSED||BUTTON_HOLD))) {
         self->state = !self->state; // Toggle the state
     }
+    if (self->state == 1) {
+           channel_on_impl(self->channel);
+       } else {
+           channel_off_impl(self->channel);
+       }
 }
 
 // Method to activate a momentary channel
 void activate_moment(moduleType* self) {
-    if ((self->button->buttonState == BUTTON_RELEASED) || (self->button->buttonState == BUTTON_HOLD)) {
+    if ((self->button->buttonState == BUTTON_PRESSED) || (self->button->buttonState == BUTTON_HOLD)) {
         self->state = 1;
     } else {
         self->state = 0;
     }
+    if (self->state == 1) {
+           channel_on_impl(self->channel);
+       } else {
+           channel_off_impl(self->channel);
+       }
 }
 
 // Method to activate a periodic toggle channel
 void activate_toggle(moduleType* self) {
 	deb = self->button->buttonState;
-	if((self->button->buttonPrevState == BUTTON_IDLE) && (self->button->buttonState == BUTTON_PRESSED) ){
+	static bool pulse = false;
+
+	 if ((self->button->buttonState == BUTTON_RELEASED) && (self->button->buttonPrevState == (BUTTON_PRESSED||BUTTON_HOLD))) {
+			pulse = !pulse; // Toggle the state
+		}
+
+	if(pulse){
     if (self->counter >= COUNTER_THRESHOLD) {
         self->counter = 0;
         self->state = !self->state; // Toggle the state
     }
     self->counter++;
-	}
-	else{
-		self->state = 0;
 	}
     if (self->state == 1) {
         channel_on_impl(self->channel);

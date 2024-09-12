@@ -22,8 +22,6 @@ int main(void) {
 	for (;;) {
 		CAN_send();
 		inputs();
-		temp = button_state(&hornButton);
-//		channel_on_impl(&hschannels[2]);
 		activate_modules();
 		osalThreadDelayMilliseconds(10);
 	}

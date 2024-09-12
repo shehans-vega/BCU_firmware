@@ -14,11 +14,13 @@ moduleType leftsignalModule;
 moduleType rightsignalModule;
 
 void initialize_modules(void){
- initialize(&hornModule, &hschannels[2], &hornButton, 0,0,init,activate_toggle,NULL );
+ initialize(&hornModule, &hschannels[2], &hornButton, 0,0,init,activate_latch,NULL );
+ initialize(&leftsignalModule, &hschannels[4], &leftButton, 0,0,init,activate_toggle,NULL );
 }
 
 void activate_modules(void){
 	hornModule.activate(&hornModule);
+	leftsignalModule.activate(&leftsignalModule);
 }
 
 #endif

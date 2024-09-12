@@ -11,6 +11,7 @@
 #define EVCU_ID 0x91
 #define DISP_ID 0x92
 #define LH_ID 0xCF00121
+#define LH_ID_TEST 0x27
 #define RH_ID 0x8F00120
 
 struct struct_R {
