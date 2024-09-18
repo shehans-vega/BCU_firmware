@@ -39,7 +39,7 @@ endif
 
 # Enable this if you want to use the C++ linker.
 ifeq ($(USE_CPLUSPLUS_LINKER),)
-  USE_CPLUSPLUS_LINKER = no
+  USE_CPLUSPLUS_LINKER = yes
 endif
 
 # Linker options here.
