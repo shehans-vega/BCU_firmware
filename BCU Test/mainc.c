@@ -8,7 +8,7 @@
 #include "source/main.h"
 uint8_t temp = 0;
 
-int main(void) {
+int mainc(void) {
 	componentsInit();
 	irqIsrEnable();
 	ADC_init();
@@ -19,10 +19,10 @@ int main(void) {
 
 	//initialize_modules();
 
-	for (;;) {
-		CAN_send();
-		inputs();
-		activate_modules();
-		osalThreadDelayMilliseconds(10);
-	}
+	// for (;;) {
+	// 	CAN_send();
+	// 	inputs();
+	// 	activate_modules();
+	// 	osalThreadDelayMilliseconds(10);
+	// }
 }

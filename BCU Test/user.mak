@@ -1,8 +1,8 @@
 # List of all user C source files
-U_C_SRC     = ./main.c
+U_C_SRC     = 
 
 # List of all user C++ source files
-U_CPP_SRC   =
+U_CPP_SRC   = ./main.cpp
 
 # List of all user ASM source files
 U_ASM_SRC   =

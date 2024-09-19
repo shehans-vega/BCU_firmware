@@ -19,17 +19,17 @@ COMPILER=freegcc
 
 # Compiler options here.
 ifeq ($(USE_OPT),)
-  USE_OPT = -O2  -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse -std=gnu99
+  USE_OPT = -O2 -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse -std=gnu99
 endif
 
 # C specific options here (added to USE_OPT).
 ifeq ($(USE_COPT),)
-  USE_COPT = 
+  USE_COPT = -std=gnu99 
 endif
 
 # C++ specific options here (added to USE_OPT).
 ifeq ($(USE_CPPOPT),)
-  USE_CPPOPT = -fno-rtti -fno-exceptions
+  USE_CPPOPT = -fno-rtti -fno-exceptions -std=c++14
 endif
 
 # Enable this if you want the linker to remove unused code and data.
