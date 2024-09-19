@@ -8,7 +8,7 @@
 #include "source/main.h"
 uint8_t temp = 0;
 
-int mainc(void) {
+void mainc(void) {
 	componentsInit();
 	irqIsrEnable();
 	ADC_init();

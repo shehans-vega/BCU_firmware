@@ -1,3 +1,3 @@
-build/obj/main.o: main.cpp mainc.h
+build/obj/main.o: main.cpp source/mainc.h
 
-mainc.h:
+source/mainc.h:
