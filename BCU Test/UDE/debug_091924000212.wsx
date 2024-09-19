@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <stg format="2.0">
 	<OriginalWsp type="string">debug.wsx</OriginalWsp>
-	<BackupWspFlag type="flag">0</BackupWspFlag>
+	<BackupWspFlag type="flag">1</BackupWspFlag>
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">19.09.2024 01:55:16:000</LastWriteDate>
+	<LastWriteDate type="string">19.09.2024 00:02:12:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>330</DockedDimension>
+							<DockedDimension>329</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1223</DockedDimension>
+							<DockedDimension>1222</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -65,7 +65,7 @@
 							<UniqueIdentifier>MainFrame.StdUDEMessageWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>55</DockedDimension>
+							<DockedDimension>56</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -94,10 +94,10 @@
 							</FloatingBounds>
 							<AutoHide>false</AutoHide>
 							<AutoHideByContextSwitch>false</AutoHideByContextSwitch>
-							<DockingIndex>3</DockingIndex>
+							<DockingIndex>4</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>false</Selected>
+							<Selected>true</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
@@ -112,7 +112,7 @@
 							</FloatingBounds>
 							<AutoHide>false</AutoHide>
 							<AutoHideByContextSwitch>false</AutoHideByContextSwitch>
-							<DockingIndex>1</DockingIndex>
+							<DockingIndex>2</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
 							<Selected>false</Selected>
@@ -130,14 +130,14 @@
 							</FloatingBounds>
 							<AutoHide>false</AutoHide>
 							<AutoHideByContextSwitch>false</AutoHideByContextSwitch>
-							<DockingIndex>0</DockingIndex>
+							<DockingIndex>1</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
 							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW03</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>322</DockedDimension>
+							<DockedDimension>323</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -166,11 +166,29 @@
 							</FloatingBounds>
 							<AutoHide>false</AutoHide>
 							<AutoHideByContextSwitch>false</AutoHideByContextSwitch>
-							<DockingIndex>2</DockingIndex>
+							<DockingIndex>3</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>true</Selected>
+							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW00</UniqueIdentifier>
+						</UniqueControlIdDockingControlData>
+						<UniqueControlIdDockingControlData>
+							<DockedDimension>0</DockedDimension>
+							<Cancelled>false</Cancelled>
+							<DockingType>Top</DockingType>
+							<FloatingBounds>
+								<X>0</X>
+								<Y>0</Y>
+								<Width>0</Width>
+								<Height>0</Height>
+							</FloatingBounds>
+							<AutoHide>false</AutoHide>
+							<AutoHideByContextSwitch>false</AutoHideByContextSwitch>
+							<DockingIndex>0</DockingIndex>
+							<PanelIndex>-1</PanelIndex>
+							<ContainerType>TabbedDocument</ContainerType>
+							<Selected>false</Selected>
+							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 					</DockingControls>
 					<LeftDockingContainerControlData>
@@ -258,7 +276,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -375,7 +393,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1006,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>ERROR: Failed to update resources to target !</Text>
+										<Text>WARNING: PowerPc mode is different between target and pattern, VLE mode is forced !</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1027,14 +1045,14 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 not connected</Text>
+										<Text>Core2 halted by reset</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text></Text>
+										<Text>Function disabled</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1168,7 +1186,7 @@
 			<OPEN_VIEW type="key">
 				<FrameCreated type="string">22.08.2024 14:22:00:820</FrameCreated>
 				<ViewSrv type="key">
-					<_ExtentX type="bin" size="8">RQUAAA==</_ExtentX>
+					<_ExtentX type="bin" size="8">YAUAAA==</_ExtentX>
 					<_ExtentY type="bin" size="8">SxIAAA==</_ExtentY>
 					<_StockProps type="bin" size="8">AAAAAA==</_StockProps>
 					<Columns type="bin" size="8">CAAAAA==</Columns>
@@ -1235,7 +1253,7 @@
 			<MacroLib type="string">..\..\..\..\Program Files\pls\UDE Starterkit 2021\StdLibrary.mso</MacroLib>
 		</Macro>
 		<PLACEMENT type="key">
-			<MULTICORELOADERDLG type="string">300,981,-635,-388</MULTICORELOADERDLG>
+			<MULTICORELOADERDLG type="string">343,1024,261,508</MULTICORELOADERDLG>
 		</PLACEMENT>
 		<EXTRAVALUE type="key">
 			<MULTICORELOADERDLG type="int">0</MULTICORELOADERDLG>
@@ -1255,7 +1273,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_19_09_24_00_02_11_0 type="key">
+				<Macro_18_09_24_23_40_42_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1535,7 +1553,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_19_09_24_01_55_16_0</NextNodeName>
+					<NextNodeName type="string">Macro_19_09_24_00_02_11_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1592,7 +1610,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_19_09_24_00_02_11_0>
+				</Macro_18_09_24_23_40_42_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1690,11 +1708,11 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">14</CaretIndex>
-						<NameWidth type="int">631</NameWidth>
+						<TopIndex type="int">15</TopIndex>
+						<CaretIndex type="int">44</CaretIndex>
+						<NameWidth type="int">527</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
-						<ValueWidth type="int">429</ValueWidth>
+						<ValueWidth type="int">357</ValueWidth>
 						<Value2Width type="int">0</Value2Width>
 						<MinMaxWidth type="int">0</MinMaxWidth>
 						<Watches type="key">
@@ -1781,7 +1799,7 @@ End Sub</ScriptSource>
 					<NETFrameSaveIndex type="int">7</NETFrameSaveIndex>
 					<FrameUserTitle type="string"></FrameUserTitle>
 				</OPEN_VIEW00>
-				<SAVED_VIEW_OBJS type="int">1</SAVED_VIEW_OBJS>
+				<SAVED_VIEW_OBJS type="int">2</SAVED_VIEW_OBJS>
 				<SAVED_VIEW00 type="int">0</SAVED_VIEW00>
 				<OPEN_VIEW01 type="key">
 					<FrameCreated type="string">18.09.2024 23:42:02:739</FrameCreated>
@@ -1920,7 +1938,7 @@ End Sub</ScriptSource>
 		<SaveAndCopyWithoutTimeStamps type="flag">0</SaveAndCopyWithoutTimeStamps>
 	</Logging>
 	<TargetInfoFile type="string">..\..\..\..\pls\UDESTK 2021\Targets\stm_spc582b60_premiumkit_debug_jtag.cfg</TargetInfoFile>
-	<UseWspCnt type="int">0</UseWspCnt>
+	<UseWspCnt type="int">1</UseWspCnt>
 	<TargInfoFlags type="key">
 		<Controller0 type="key">
 			<Core2 type="key">

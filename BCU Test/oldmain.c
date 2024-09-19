@@ -16,7 +16,7 @@ void mainc(void) {
 	//Initialize all the channels to hschannels array
 	init_channels_from_config(hschannels, &pinconfig);
 	initialize_modules();
-
+	return
 	//initialize_modules();
 
 	// for (;;) {
