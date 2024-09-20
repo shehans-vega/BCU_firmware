@@ -1,4 +1,4 @@
-build/obj/main.o: main.cpp source/mainc.h components/components.h \
+build/obj/main.o: main.cpp components/components.h \
  components/spc582bxx_platform_component_rla/lib/include/platform.h \
  components/spc582bxx_platform_component_rla/cfg/core.h \
  components/spc582bxx_platform_component_rla/cfg/toolchain.h \
@@ -35,9 +35,9 @@ build/obj/main.o: main.cpp source/mainc.h components/components.h \
  components/spc582bxx_low_level_drivers_component_rla/lib/include/can_lld.h \
  components/spc582bxx_low_level_drivers_component_rla/lib/include/saradc_lld.h \
  components/spc582bxx_irq_component_rla/lib/include/eirq.h \
- components/spc582bxx_irq_component_rla/lib/include/irq.h
-
-source/mainc.h:
+ components/spc582bxx_irq_component_rla/lib/include/irq.h \
+ source/adc_driver.h \
+ components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h
 
 components/components.h:
 
@@ -114,3 +114,7 @@ components/spc582bxx_low_level_drivers_component_rla/lib/include/saradc_lld.h:
 components/spc582bxx_irq_component_rla/lib/include/eirq.h:
 
 components/spc582bxx_irq_component_rla/lib/include/irq.h:
+
+source/adc_driver.h:
+
+components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h:

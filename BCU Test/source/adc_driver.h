@@ -10,6 +10,9 @@
 #ifndef ADC_DRIVER_H_
 #define ADC_DRIVER_H_
 
+#ifdef __cplusplus
+extern "C" {
+#endif
 
 #define NUMOFCHANNELS 4
 uint32_t value[NUMOFCHANNELS];
@@ -28,5 +31,9 @@ void saradcconf_conv_cb(SARADCDriver *saradcp) {
 		value[i] = saradc_lld_readchannel(saradcp, anp[i]);
 	}
 }
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* ADC_DRIVER_H_ */
