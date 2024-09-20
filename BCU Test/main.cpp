@@ -10,7 +10,7 @@ int main(){
     for(;;){
         pal_lld_togglepad(PORT_LED1,LED1);
         pal_lld_togglepad(PORT_LED2,LED2);
-         osalThreadDelayMilliseconds(140);
+         osalThreadDelayMilliseconds(500);
 
     }
 }
