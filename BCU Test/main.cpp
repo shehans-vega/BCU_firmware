@@ -1,10 +1,10 @@
 
 
 #include "components.h"
-#include "adc_driver.h"
-#include "board_config.h"
-#include "gpio_interface.h"
-#include "output_elements.h"
+#include "MCAL/adc_driver.h"
+#include "MCAL/board_config.h"
+#include "APP/gpio_interface.hpp"
+#include "MCAL/output_elements.h"
 
 int main(){
    
@@ -18,7 +18,7 @@ int main(){
         channel_off_impl(&hschannels[4]);
         pal_lld_togglepad(PORT_LED1,LED1);
         pal_lld_togglepad(PORT_LED2,LED2);
-         osalThreadDelayMilliseconds(500);
+        osalThreadDelayMilliseconds(500);
 
     }
 }

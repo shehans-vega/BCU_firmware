@@ -1,11 +1,11 @@
 
 #ifndef _OUTPUT_ELEMENTS_H
 #define	_OUTPUT_ELEMENTS_H
-#include "board_config.h"
+#include "gpio_interface.hpp"
+
+Channel hschannels[MAX_CHANNELS];
 
 
-
-ChannelType hschannels[MAX_CHANNELS];
 
 
 
