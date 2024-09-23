@@ -1,3 +1,6 @@
+#ifndef _GPIO_INTERFACE_H
+#define _GPIO_INTERFACE_H
+
 #include "board.h"
 #include "MCAL/board_config.h"
 #include "components.h"
@@ -56,10 +59,12 @@ public:
     }
 };
 
-// Initialize channels from the config array
-void init_channels_from_config(std::vector<Channel>& channels, const pinconfigType* config) {
-    channels.resize(MAX_CHANNELS);
-    for (int i = 0; i < MAX_CHANNELS; i++) {
-        channels[i] = Channel(&config[i]);
-    }
-}
+// // Initialize channels from the config array
+// void init_channels_from_config(std::vector<Channel>& channels, const pinconfigType* config) {
+//     channels.resize(MAX_CHANNELS);
+//     for (int i = 0; i < MAX_CHANNELS; i++) {
+//         channels[i] = Channel(&config[i]);
+//     }
+// }
+
+#endif
