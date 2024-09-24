@@ -15,7 +15,9 @@ public:
     bool fault_flag;
     uint8_t hard_fault_counter;
 
-    // Constructor to initialize Channel using a pointer to a pinconfigType object
+   // Default Constructor
+    Channel() : pins(nullptr), fault_flag(false), hard_fault_counter(0) {}
+ // Constructor to initialize Channel using a pointer to a pinconfigType object
     Channel(pinconfigType* config) 
         : pins(config), fault_flag(false), hard_fault_counter(0) {}
 
@@ -52,15 +54,13 @@ public:
     }
 };
 
-// void init_channels_from_config(std::vector<Channel>& vec, pinconfigType config) {
-//     // Resize the vector to hold the maximum number of channels
-//     vec.resize(MAX_CHANNELS);
+ 
 
-//     // Initialize each Channel using the provided pin configurations
-//     for (int i = 0; i < MAX_CHANNELS; i++) {
-//         // Create Channel objects using the configPtr
-//         vec.emplace_back(config[i]); // Pass the pointer to the specific pinconfigType
-//     }
-// }
+void initialize_channels_from_config(pinconfigType* configs, Channel* channels) {
+    for (int i = 0; i < MAX_CHANNELS; ++i) {
+        // Initialize each Channel with the corresponding pinconfigType
+        channels[i] = Channel(&configs[i]);  // Use the parameterized constructor
+    }
+}
 
 #endif

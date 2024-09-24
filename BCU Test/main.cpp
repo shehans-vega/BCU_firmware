@@ -8,21 +8,22 @@
 #include "APP/gpio_interface.hpp"
 #include "MCAL/output_elements.h"
 
+Channel channels[MAX_CHANNELS];
+int main()
+{
 
-
-int main(){
-   
     componentsInit();
     irqIsrEnable();
     ADC_init();
-     Channel channel5(&pinconfig[5]);
-    // channel5.channel_on_impl();
-
-   std::vector<Channel> channels;
-    channels.emplace_back(channel5); // Make sure Channel is copyable
-       
-        // pal_lld_togglepad(PORT_LED1,LED1);
-        // pal_lld_togglepad(PORT_LED2,LED2);
-        osalThreadDelayMilliseconds(500);
-      //  channels.emplace_back(&pinconfig[5]);
+    initialize_channels_from_config(pinconfig, channels);
+    channels[0].channel_on_impl();
+    channels[1].channel_on_impl();
+    channels[2].channel_on_impl();
+    channels[3].channel_on_impl();
+    channels[4].channel_on_impl();
+    channels[5].channel_on_impl();
+    // pal_lld_togglepad(PORT_LED1,LED1);
+    // pal_lld_togglepad(PORT_LED2,LED2);
+    osalThreadDelayMilliseconds(500);
+    //  channels.emplace_back(&pinconfig[5]);
 }
