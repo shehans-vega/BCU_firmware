@@ -72,4 +72,6 @@ uint8_t button_state(buttonInput_t *button) {
 	return button->buttonState;
 }
 
+
+
 #endif /* BUTTON_H_ */

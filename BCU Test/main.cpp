@@ -7,7 +7,6 @@
 #include "MCAL/board_config.h"
 #include "APP/gpio_interface.hpp"
 #include "APP/output_elements.h"
-#include "input_elements.h"
 #include "devices.hpp"
 
 int main()
@@ -19,7 +18,6 @@ int main()
     initialize_channels_from_config(pinconfig, channels);
     create_devices();
     devices[2].device_channel->channel_on_impl();
-   
     // pal_lld_togglepad(PORT_LED1,LED1);
     // pal_lld_togglepad(PORT_LED2,LED2);
     osalThreadDelayMilliseconds(500);

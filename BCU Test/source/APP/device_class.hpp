@@ -22,6 +22,15 @@ class Device{
     bool fault;
     };
 
+bool evaluate_latch(Device* device){
+        bool latch;
+    if ((device->button->buttonState == BUTTON_RELEASED) && (device->button->buttonPrevState == (BUTTON_PRESSED||BUTTON_HOLD))) {
+           latch = true; // Toggle the state
+        }
+    else{
+        latch = false;
+    }
+    return latch;
+    }
+
 #endif
-
-

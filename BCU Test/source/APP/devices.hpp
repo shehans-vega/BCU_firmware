@@ -1,7 +1,7 @@
 #ifndef _DEVICES_H
 #define _DEVICES_H
 
-#include "device_maker.hpp"
+#include "device_class.hpp"
 #include "input_elements.h"
 
 extern Device devices[MAX_CHANNELS];
