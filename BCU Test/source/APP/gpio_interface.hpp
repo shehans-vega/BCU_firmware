@@ -55,7 +55,6 @@ public:
 };
 
  
-
 void initialize_channels_from_config(pinconfigType* configs, Channel* channels) {
     for (int i = 0; i < MAX_CHANNELS; ++i) {
         // Initialize each Channel with the corresponding pinconfigType

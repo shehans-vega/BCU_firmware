@@ -6,9 +6,10 @@
 #include "MCAL/adc_driver.h"
 #include "MCAL/board_config.h"
 #include "APP/gpio_interface.hpp"
-#include "MCAL/output_elements.h"
+#include "APP/output_elements.h"
+#include "input_elements.h"
+#include "devices.hpp"
 
-Channel channels[MAX_CHANNELS];
 int main()
 {
 
@@ -16,14 +17,11 @@ int main()
     irqIsrEnable();
     ADC_init();
     initialize_channels_from_config(pinconfig, channels);
-    channels[0].channel_on_impl();
-    channels[1].channel_on_impl();
-    channels[2].channel_on_impl();
-    channels[3].channel_on_impl();
-    channels[4].channel_on_impl();
-    channels[5].channel_on_impl();
+    create_devices();
+    devices[2].device_channel->channel_on_impl();
+   
     // pal_lld_togglepad(PORT_LED1,LED1);
     // pal_lld_togglepad(PORT_LED2,LED2);
     osalThreadDelayMilliseconds(500);
-    //  channels.emplace_back(&pinconfig[5]);
+    
 }

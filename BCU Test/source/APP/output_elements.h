@@ -5,8 +5,6 @@
 
 #include "APP/gpio_interface.hpp"
 
-
-
-
+Channel channels[MAX_CHANNELS];
 
 #endif

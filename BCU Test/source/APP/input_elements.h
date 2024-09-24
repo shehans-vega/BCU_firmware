@@ -4,11 +4,17 @@
  *  Created on: Sep 11, 2024
  *      Author: shehans
  */
-#include "button.h"
+
 
 #ifndef INPUT_ELEMENTS_H_
 #define INPUT_ELEMENTS_H_
 
+#include "button.h"
+#include "can_stack.h"
+
+#ifdef __cplusplus
+extern"C"{
+#endif
 buttonInput_t passButton;
 buttonInput_t highbeamButton;
 buttonInput_t lowbeamButton;
@@ -17,16 +23,12 @@ buttonInput_t leftButton;
 buttonInput_t rightButton;
 buttonInput_t hornButton;
 
-void inputs(void){
-	can_decode();
-	proceses_buttons();
-		}
+
 
  void proceses_buttons(){
 	button_state(&hornButton);
 	button_state(&leftButton);
 }
-
  void can_decode(){
 	if (L_handle_msg.fixset1.bit.horn == 1) {
 				hornButton.button_in = 1;
@@ -71,6 +73,15 @@ void inputs(void){
 			 rightButton.button_in = 0;
 			 }
 }
+
+void inputs(void){
+	can_decode();
+	proceses_buttons();
+		}
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif /* INPUT_ELEMENTS_H_ */
 
