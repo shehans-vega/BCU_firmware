@@ -1,0 +1,652 @@
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+ .data          0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+ .bss           0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+ .text          0x0000000000000000       0x20 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .data          0x0000000000000000        0x8 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.call___do_global_dtors_aux
+                0x0000000000000000        0xc c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.call_frame_dummy
+                0x0000000000000000        0xc c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ wm4.0.60f507322a3babf64035f9c60919eff5
+                0x0000000000000000        0x8 src/main.o
+ .text          0x0000000000000000        0x0 src/main.o
+ .data          0x0000000000000000        0x0 src/main.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .text_vle      0x0000000000000000        0x0 src/main.o
+ .text_vle.main
+                0x0000000000000000        0xe src/main.o
+ .text          0x0000000000000000       0x10 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .data          0x0000000000000000        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .bss           0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .jcr           0x0000000000000000        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .text.call___do_global_ctors_aux
+                0x0000000000000000        0xc c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .text          0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+ .data          0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+ .bss           0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+
+----- BEGIN EXTENDED MAP LISTING -----
+
+>>> Linker and link run information
+
+Linker version: GNU ld version (GNU Binutils) 2.20 (ppc-vle) using BFD version (GNU Binutils) 2.20 (v2.4), Tool Version v2.1
+Name of linker executable: c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/../../../../ppc-ht-eabi/bin/ld.exe
+Date of link run: Wed Sep 25 05:13:23 2024
+Name of linker map file: ppc.map
+
+>>> Symbols (global (S = g) and static (S = l); sorted by address)
+
+==========================================================================================================================================================================================
+Start      End        Size S Name                  Memory   O-Sec           I-Sec                       Input object                                                                      
+==========================================================================================================================================================================================
+0x00000000 0x00000000    0 g NULL                  *ABS*    *ABS*           *ABS*                       *ABS*
+0x00000000 0x00000000    0 g __init                code_mem .init           .init                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+0x00000001 0x00000001    0 g _.                    *ABS*    *ABS*           *ABS*                       *ABS*
+0x00000024 0x00000024    0 g __fini                code_mem .init           .fini                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+0x00000048 0x00000048    0 l deregister_tm_clones  code_mem .text           .text.deregister_tm_clones  c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000080 0x00000080    0 l register_tm_clones    code_mem .text           .text.register_tm_clones    c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x000000bc 0x000000bc    0 l __do_global_dtors_aux code_mem .text           .text.__do_global_dtors_aux c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x0000014c 0x0000014c    0 l frame_dummy           code_mem .text           .text.frame_dummy           c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000194 0x00000194    0 l __do_global_ctors_aux code_mem .text           .text.__do_global_ctors_aux c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+0x000001d8 0x000001d8    0 l __JCR_LIST__          code_mem .jcr            .jcr                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000278 0x00000278    0 g __CTOR_LIST__         code_mem .ctors          .ctors                      ppc.elf
+0x00000278 0x00000278    0 g __EH_FRAME_BEGIN__    data_mem .bss            .bss                        ppc.elf
+0x00000278 0x00000278    0 g __EH_FRAME_END__      data_mem .bss            .bss                        ppc.elf
+0x0000027c 0x0000027c    0 l __CTOR_LIST__         code_mem .ctors          .ctors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000280 0x00000280    0 l __CTOR_END__          code_mem .ctors          .ctors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+0x00000288 0x00000288    0 g __CTOR_END__          code_mem .ctors          .ctors                      ppc.elf
+0x00000288 0x00000288    0 g __DTOR_LIST__         code_mem .dtors          .dtors                      ppc.elf
+0x0000028c 0x0000028c    0 l __DTOR_LIST__         code_mem .dtors          .dtors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000298 0x00000298    0 g __DTOR_END__          code_mem .dtors          .dtors                      ppc.elf
+0x00001000 0x00001000    0 g __HEAP_MIN            *ABS*    *ABS*           *ABS*                       *ABS*
+0x00001000 0x00001000    0 g __HEAP_SIZE           *ABS*    *ABS*           *ABS*                       *ABS*
+0x00001000 0x00001000    0 g __USTACK_SIZE         *ABS*    *ABS*           *ABS*                       *ABS*
+0x40000000 0x40000000    0 g BSS_BASE              data_mem .bss            .bss                        ppc.elf
+0x40000000 0x40000000    0 g DATA_BASE             code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 g DATA_END              code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 g FIXUP_BASE            code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT1_BASE             code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT2_BASE             code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT_BASE              code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g __TMC_END__           code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 l __TMC_LIST__          data_mem .tm_clone_table .tm_clone_table             c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000000 0x40000000    0 l completed.5866        data_mem .bss            .bss                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000004 0x40000004    0 l dtor_idx.5868         data_mem .bss            .bss                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000008 0x40000008    0 g __HEAP                data_mem .stack          .stack                      ppc.elf
+0x40000008 0x40000008    0 g _end                  data_mem .stack          .stack                      ppc.elf
+0x40000008 0x40000008    0 g end                   data_mem .stack          .stack                      ppc.elf
+0x40001008 0x40001008    0 g __HEAP_END            data_mem .stack          .stack                      ppc.elf
+0x40001008 0x40001008    0 g _stack_end            data_mem .stack          .stack                      ppc.elf
+0x4000fff8 0x4000fff8    0 g __USTACK              data_mem .stack          .stack                      ppc.elf
+0x4000fff8 0x4000fff8    0 g __stack               data_mem .stack          .stack                      ppc.elf
+0x4000fff8 0x4000fff8    0 g _stack_addr           data_mem .stack          .stack                      ppc.elf
+
+>>> Symbols (global (S = g) and static (S = l); sorted by name)
+
+==========================================================================================================================================================================================
+Start      End        Size S Name                  Memory   O-Sec           I-Sec                       Input object                                                                      
+==========================================================================================================================================================================================
+0x40000000 0x40000000    0 g BSS_BASE              data_mem .bss            .bss                        ppc.elf
+0x40000000 0x40000000    0 g DATA_BASE             code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 g DATA_END              code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 g FIXUP_BASE            code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT1_BASE             code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT2_BASE             code_mem .dtors          .dtors                      ppc.elf
+0x40000000 0x40000000    0 g GOT_BASE              code_mem .dtors          .dtors                      ppc.elf
+0x00000000 0x00000000    0 g NULL                  *ABS*    *ABS*           *ABS*                       *ABS*
+0x00000001 0x00000001    0 g _.                    *ABS*    *ABS*           *ABS*                       *ABS*
+0x00000288 0x00000288    0 g __CTOR_END__          code_mem .ctors          .ctors                      ppc.elf
+0x00000280 0x00000280    0 l __CTOR_END__          code_mem .ctors          .ctors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+0x00000278 0x00000278    0 g __CTOR_LIST__         code_mem .ctors          .ctors                      ppc.elf
+0x0000027c 0x0000027c    0 l __CTOR_LIST__         code_mem .ctors          .ctors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000298 0x00000298    0 g __DTOR_END__          code_mem .dtors          .dtors                      ppc.elf
+0x00000288 0x00000288    0 g __DTOR_LIST__         code_mem .dtors          .dtors                      ppc.elf
+0x0000028c 0x0000028c    0 l __DTOR_LIST__         code_mem .dtors          .dtors                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000278 0x00000278    0 g __EH_FRAME_BEGIN__    data_mem .bss            .bss                        ppc.elf
+0x00000278 0x00000278    0 g __EH_FRAME_END__      data_mem .bss            .bss                        ppc.elf
+0x40000008 0x40000008    0 g __HEAP                data_mem .stack          .stack                      ppc.elf
+0x40001008 0x40001008    0 g __HEAP_END            data_mem .stack          .stack                      ppc.elf
+0x00001000 0x00001000    0 g __HEAP_MIN            *ABS*    *ABS*           *ABS*                       *ABS*
+0x00001000 0x00001000    0 g __HEAP_SIZE           *ABS*    *ABS*           *ABS*                       *ABS*
+0x000001d8 0x000001d8    0 l __JCR_LIST__          code_mem .jcr            .jcr                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000000 0x40000000    0 g __TMC_END__           code_mem .bss_init_info  .bss_init_info              ppc.elf
+0x40000000 0x40000000    0 l __TMC_LIST__          data_mem .tm_clone_table .tm_clone_table             c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x4000fff8 0x4000fff8    0 g __USTACK              data_mem .stack          .stack                      ppc.elf
+0x00001000 0x00001000    0 g __USTACK_SIZE         *ABS*    *ABS*           *ABS*                       *ABS*
+0x00000194 0x00000194    0 l __do_global_ctors_aux code_mem .text           .text.__do_global_ctors_aux c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+0x000000bc 0x000000bc    0 l __do_global_dtors_aux code_mem .text           .text.__do_global_dtors_aux c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000024 0x00000024    0 g __fini                code_mem .init           .fini                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+0x00000000 0x00000000    0 g __init                code_mem .init           .init                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+0x4000fff8 0x4000fff8    0 g __stack               data_mem .stack          .stack                      ppc.elf
+0x40000008 0x40000008    0 g _end                  data_mem .stack          .stack                      ppc.elf
+0x4000fff8 0x4000fff8    0 g _stack_addr           data_mem .stack          .stack                      ppc.elf
+0x40001008 0x40001008    0 g _stack_end            data_mem .stack          .stack                      ppc.elf
+0x40000000 0x40000000    0 l completed.5866        data_mem .bss            .bss                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000048 0x00000048    0 l deregister_tm_clones  code_mem .text           .text.deregister_tm_clones  c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000004 0x40000004    0 l dtor_idx.5868         data_mem .bss            .bss                        c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x40000008 0x40000008    0 g end                   data_mem .stack          .stack                      ppc.elf
+0x0000014c 0x0000014c    0 l frame_dummy           code_mem .text           .text.frame_dummy           c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+0x00000080 0x00000080    0 l register_tm_clones    code_mem .text           .text.register_tm_clones    c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+
+
+----- END EXTENDED MAP LISTING -----
+
+
+Memory Configuration
+
+Name             Origin             Length             Used               Free               Attributes
+code_mem         0x0000000000000000 0x000000000017a000         0x0000000000000298         0x0000000000179d68 xr
+data_mem         0x0000000040000000 0x0000000000010000         0x0000000000010000         0x0000000000000000 w !x
+*default*        0x0000000000000000 0xffffffffffffffff         0x000000000000371c         0xffffffffffffc8e3
+
+List of aliases
+
+code_mem        : SDATA2_MEM CODE_MEM
+data_mem        : BSS_MEM SDATA_MEM DATA_MEM
+
+Linker script and memory map
+
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+LOAD src/main.o
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/../../../../ppc-ht-eabi/lib\libstdc++.a
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4\libgcc.a
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/../../../../ppc-ht-eabi/lib\libdnk_c.a
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/../../../../ppc-ht-eabi/lib\libos.a
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4\libgcc.a
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+LOAD c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+                0x0000000000000000                PROVIDE (__stack, 0x0)
+                0x0000000000000000                PROVIDE (___stack, 0x0)
+                [0x0000000000001000]                __USTACK_SIZE = DEFINED (__USTACK_SIZE)?__USTACK_SIZE:0x1000
+                [0x0000000000001000]                __HEAP_MIN = DEFINED (__HEAP_MIN)?__HEAP_MIN:0x1000
+                [0x0000000000001000]                __HEAP_SIZE = DEFINED (__HEAP_SIZE)?__HEAP_SIZE:0x1000
+
+.startup        memory region -> code_mem
+                0x0000000000000000        0x0
+ *(.startup_code)
+ *(.startup)
+                0x0000000000000000                . = ALIGN (0x8)
+
+.traptable
+ *(.traptab)
+ *(.traptable)
+
+.inttable
+ *(.inttab)
+ *(.inttable)
+
+.init_vle
+ *(SORT(.init_vle))
+ *(SORT(.fini_vle))
+
+.init           memory region -> code_mem
+                0x0000000000000000       0x44
+ *(SORT(.init*))
+ .init          0x0000000000000000        0xc c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+                0x0000000000000000                __init
+ .init          0x000000000000000c        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .init          0x0000000000000010        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .init          0x0000000000000014       0x10 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+ *(SORT(.fini*))
+ .fini          0x0000000000000024        0xc c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+                0x0000000000000024                __fini
+ .fini          0x0000000000000030        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .fini          0x0000000000000034       0x10 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+
+.text_vle
+ *(.text_vle)
+ *(.text_vle.*)
+ *(.gnu.linkonce.t_vle.*)
+ *(.gnu.warning)
+
+.text           memory region -> code_mem
+                0x0000000000000048      0x190
+ *(.text)
+ *(.text.*)
+ .text.deregister_tm_clones
+                0x0000000000000048       0x38 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.register_tm_clones
+                0x0000000000000080       0x3c c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.__do_global_dtors_aux
+                0x00000000000000bc       0x90 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.frame_dummy
+                0x000000000000014c       0x48 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .text.__do_global_ctors_aux
+                0x0000000000000194       0x44 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ *(.gnu.linkonce.t.*)
+ *(.gnu.warning)
+
+.glink          memory region -> code_mem
+                0x00000000000001d8        0x0
+ .glink         0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+
+.rodata         memory region -> code_mem
+                0x00000000000001d8        0x0
+ *(.rodata)
+ *(.rodata.*)
+ *(.gnu.linkonce.r.*)
+ *(.rodata1)
+ *(.toc)
+                0x00000000000001d8                . = ALIGN (0x8)
+
+.jcr            memory region -> code_mem
+                0x00000000000001d8        0x0
+ *(.jcr)
+ .jcr           0x00000000000001d8        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+
+.rom_copy_info  memory region -> code_mem
+                0x00000000000001d8       0x54
+                0x00000000000001d8                PROVIDE (__rom_copy_info, .)
+                0x00000000000001d8        0x4 LONG 0x298 LOADADDR (.data)
+                0x00000000000001dc        0x4 LONG 0x40000000 (0x0 + ADDR (.data))
+                0x00000000000001e0        0x4 LONG 0x0 SIZEOF (.data)
+                0x00000000000001e4        0x4 LONG 0x298 LOADADDR (.sdata)
+                0x00000000000001e8        0x4 LONG 0x40000000 (0x0 + ADDR (.sdata))
+                0x00000000000001ec        0x4 LONG 0x0 SIZEOF (.sdata)
+                0x00000000000001f0        0x4 LONG 0x298 LOADADDR (.sdata14)
+                0x00000000000001f4        0x4 LONG 0x40000000 (0x0 + ADDR (.sdata14))
+                0x00000000000001f8        0x4 LONG 0x0 SIZEOF (.sdata14)
+                0x00000000000001fc        0x4 LONG 0x298 LOADADDR (.sdata15)
+                0x0000000000000200        0x4 LONG 0x40000000 (0x0 + ADDR (.sdata15))
+                0x0000000000000204        0x4 LONG 0x0 SIZEOF (.sdata15)
+                0x0000000000000208        0x4 LONG 0x298 LOADADDR (.sdata16)
+                0x000000000000020c        0x4 LONG 0x40000000 (0x0 + ADDR (.sdata16))
+                0x0000000000000210        0x4 LONG 0x0 SIZEOF (.sdata16)
+                0x0000000000000214        0x4 LONG 0x298 LOADADDR (.sdata17)
+                0x0000000000000218        0x4 LONG 0x40000000 (0x0 + ADDR (.sdata17))
+                0x000000000000021c        0x4 LONG 0x0 SIZEOF (.sdata17)
+                0x0000000000000220        0x4 LONG 0x0
+                0x0000000000000224        0x4 LONG 0x0
+                0x0000000000000228        0x4 LONG 0x0
+
+.bss_init_info  memory region -> code_mem
+                0x0000000000000230       0x44
+                0x0000000000000230                PROVIDE (__bss_init_info, .)
+                0x0000000000000230        0x4 LONG 0x40000000 (0x0 + ADDR (.bss))
+                0x0000000000000234        0x4 LONG 0x8 SIZEOF (.bss)
+                0x0000000000000238        0x4 LONG 0x40000000 (0x0 + ADDR (.sbss))
+                0x000000000000023c        0x4 LONG 0x0 SIZEOF (.sbss)
+                0x0000000000000240        0x4 LONG 0x298 (0x0 + ADDR (.sbss2))
+                0x0000000000000244        0x4 LONG 0x0 SIZEOF (.sbss2)
+                0x0000000000000248        0x4 LONG 0x40000000 (0x0 + ADDR (.sbss14))
+                0x000000000000024c        0x4 LONG 0x0 SIZEOF (.sbss14)
+                0x0000000000000250        0x4 LONG 0x40000000 (0x0 + ADDR (.sbss15))
+                0x0000000000000254        0x4 LONG 0x0 SIZEOF (.sbss15)
+                0x0000000000000258        0x4 LONG 0x40000000 (0x0 + ADDR (.sbss16))
+                0x000000000000025c        0x4 LONG 0x0 SIZEOF (.sbss16)
+                0x0000000000000260        0x4 LONG 0x40000000 (0x0 + ADDR (.sbss17))
+                0x0000000000000264        0x4 LONG 0x0 SIZEOF (.sbss17)
+                0x0000000000000268        0x4 LONG 0x0
+                0x000000000000026c        0x4 LONG 0x0
+                0x0000000000000270        0x4 LONG 0x0
+
+.eh_frame       memory region -> code_mem
+                0x0000000000000278        0x0
+ *(.gcc_except_table)
+                0x0000000000000278                __EH_FRAME_BEGIN__ = .
+ *(.eh_frame)
+                0x0000000000000278                __EH_FRAME_END__ = .
+
+.ctors          memory region -> code_mem
+                0x0000000000000278       0x10
+                0x0000000000000278                __CTOR_LIST__ = .
+                0x0000000000000278        0x4 LONG 0x2 (((__CTOR_END__ - __CTOR_LIST__) / 0x4) - 0x2)
+ *crtbegin.o(.ctors)
+ .ctors         0x000000000000027c        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .ctors)
+ *(SORT(.ctors.*))
+ *(.ctors)
+ .ctors         0x0000000000000280        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+                0x0000000000000284        0x4 LONG 0x0
+                0x0000000000000288                __CTOR_END__ = .
+                0x0000000000000288                . = ALIGN (0x8)
+
+.dtors          memory region -> code_mem
+                0x0000000000000288       0x10
+                0x0000000000000288                __DTOR_LIST__ = .
+                0x0000000000000288        0x4 LONG 0x2 (((__DTOR_END__ - __DTOR_LIST__) / 0x4) - 0x2)
+ *crtbegin.o(.dtors)
+ .dtors         0x000000000000028c        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ *(EXCLUDE_FILE(*crtend.o) .dtors)
+ *(SORT(.dtors.*))
+ *(.dtors)
+ .dtors         0x0000000000000290        0x4 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+                0x0000000000000294        0x4 LONG 0x0
+                0x0000000000000298                __DTOR_END__ = .
+                0x0000000000000298                . = ALIGN (0x8)
+
+.fixup          memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+ *(.fixup)
+                0x0000000040000000                FIXUP_BASE = .
+ *(.fixup)
+ *(.fixup.*)
+
+.got1           memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+ *(.got1)
+                0x0000000040000000                GOT1_BASE = .
+ *(.got1)
+ *(.got1.*)
+
+.got2           memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+ *(.got2)
+                0x0000000040000000                GOT2_BASE = .
+ *(.got2)
+ *(.got2.*)
+
+.got            memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                GOT_BASE = .
+ *(.got)
+ *(.got.*)
+
+.sdata2         memory region -> code_mem
+                0x0000000000000298        0x0 load address 0x0000000040000000
+                0x0000000000008298                PROVIDE (_SDA2_BASE_, 0x8000)
+ *(.sdata.rodata)
+ *(.sdata.rodata.*)
+ *(.srodata)
+ *(.srodata.*)
+ *(.sdata2)
+ *(.sdata2.*)
+ *(.PPC.EMB.sdata2*)
+
+.rela.dyn       memory region -> code_mem
+                0x0000000000000298        0x0 load address 0x0000000040000000
+ .rela.iplt     0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+
+.sbss2          memory region -> code_mem
+                0x0000000000000298        0x0 load address 0x0000000040000000
+                0x0000000000000298                PROVIDE (__sbss2_start, .)
+ *(.sbss2)
+ *(.sbss2.*)
+ *(.PPC.EMB.sbss2*)
+
+.sdata          memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040008000                PROVIDE (_SDA_BASE_, 0x8000)
+ *(.sdata)
+ *(.sdata.*)
+ *(.gnu.linkonce.s.*)
+
+.sbss           memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__sbss_start, .)
+ *(.sbss)
+ *(.sbss.*)
+ *(.gnu.linkonce.sb.*)
+                0x0000000040000000                PROVIDE (__sbss_end, .)
+
+.sdata14        memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040008000                PROVIDE (_SDA14_BASE_, 0x8000)
+ *(.sdata14)
+ *(.sdata14.*)
+
+.sbss14         memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__sbss14_start, .)
+ *(.sbss14)
+ *(.sbss14.*)
+                0x0000000040000000                PROVIDE (__sbss14_end, .)
+
+.sdata15        memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040008000                PROVIDE (_SDA15_BASE_, 0x8000)
+ *(.sdata15)
+ *(.sdata15.*)
+
+.sbss15         memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__sbss15_start, .)
+ *(.sbss15)
+ *(.sbss15.*)
+                0x0000000040000000                PROVIDE (__sbss15_end, .)
+
+.sdata16        memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040008000                PROVIDE (_SDA16_BASE_, 0x8000)
+ *(.sdata16)
+ *(.sdata16.*)
+
+.sbss16         memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__sbss16_start, .)
+ *(.sbss16)
+ *(.sbss16.*)
+                0x0000000040000000                PROVIDE (__sbss16_end, .)
+
+.sdata17        memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040008000                PROVIDE (_SDA17_BASE_, 0x8000)
+ *(.sdata17)
+ *(.sdata17.*)
+
+.sbss17         memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__sbss17_start, .)
+ *(.sbss17)
+ *(.sbss17.*)
+                0x0000000040000000                PROVIDE (__sbss17_end, .)
+
+.data           memory region -> data_mem
+                0x0000000040000000        0x0 load address 0x0000000000000298
+                0x0000000040000000                DATA_BASE = .
+ *(.data)
+ *(.data.*)
+ *(.gnu.linkonce.d.*)
+                0x0000000040000000                DATA_END = .
+
+.tm_clone_table memory region -> data_mem
+                0x0000000040000000        0x0
+ .tm_clone_table
+                0x0000000040000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .tm_clone_table
+                0x0000000040000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+
+.bss            memory region -> data_mem
+                0x0000000040000000        0x8 load address 0x0000000000000298
+                0x0000000040000000                PROVIDE (__bss_start, .)
+                0x0000000040000000                BSS_BASE = .
+ *(.bss)
+ .bss           0x0000000040000000        0x8 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ *(.bss.*)
+ *(.gnu.linkonce.b.*)
+ *(COMMON)
+                0x0000000040000008                PROVIDE (__bss_end, .)
+
+.iplt           memory region -> data_mem
+                0x0000000040000010        0x0
+ .iplt          0x0000000000000000        0x0 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+
+.stack          memory region -> data_mem
+                0x0000000040000008     0xfff8 load address 0x0000000000000298
+                0x0000000040000008                . = ALIGN (0x8)
+                0x0000000040000008                __HEAP = .
+                0x0000000040000008                end = .
+                0x0000000040000008                _end = .
+                0x0000000040001008                . = (. + __HEAP_SIZE)
+ *fill*         0x0000000040000008     0x1000 00
+                0x0000000040001008                __HEAP_END = .
+                0x0000000040001008                _stack_end = .
+                0x0000000040002008                . = (. + __USTACK_SIZE)
+ *fill*         0x0000000040001008     0x1000 00
+                0x000000004000fff8                . = (0x4000fff8 - ABSOLUTE (_end))
+ *fill*         0x0000000040002008     0xdff0 00
+                0x000000004000fff8                __stack = .
+                0x000000004000fff8                _stack_addr = .
+                0x000000004000fff8                __USTACK = .
+                0x0000000040010000                . = (. + 0x8)
+ *fill*         0x000000004000fff8        0x8 00
+                0x0000000000000001                _. = ASSERT (((__USTACK & 0x7) == 0x0), USTACK not doubleword aligned)
+                0x0000000000000001                _. = ASSERT (((__HEAP_END & 0x7) == 0x0), HEAP not doubleword aligned)
+                0x0000000000000001                _. = ASSERT (((__HEAP_END - __HEAP) >= __HEAP_MIN), not enough memory for HEAP)
+                0x0000000000000001                _. = ASSERT ((0x40010000 >= _stack_addr), stack begins outside of available memory)
+                [0x0000000000000000]                NULL = DEFINED (NULL)?NULL:0x0
+
+.PPC.EMB.apuinfo memory region -> *default*
+                0x0000000000000000       0x1c
+ .PPC.EMB.apuinfo
+                0x0000000000000000       0x18 src/main.o
+
+.comment        memory region -> *default*
+                0x0000000000000000       0x60
+ *(.comment)
+ .comment       0x0000000000000000        0xd c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+                                          0xe (size before relaxing)
+ .comment       0x000000000000000d       0x46 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+                                         0x47 (size before relaxing)
+ .comment       0x0000000000000000       0x47 src/main.o
+ .comment       0x0000000000000000       0x47 c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+ .comment       0x0000000000000053        0xd c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrtn.o
+                                          0xe (size before relaxing)
+ *(.comment)
+
+.debug
+ *(.debug)
+ *(.debug)
+
+.line
+ *(.line)
+ *(.line)
+
+.debug_srcinfo
+ *(.debug_srcinfo)
+ *(.debug_srcinfo)
+
+.debug_sfnames
+ *(.debug_sfnames)
+ *(.debug_sfnames)
+
+.debug_aranges  memory region -> *default*
+                0x0000000000000000       0x20
+ *(.debug_aranges)
+ .debug_aranges
+                0x0000000000000000       0x20 src/main.o
+ *(.debug_aranges)
+
+.debug_pubnames
+ *(.debug_pubnames)
+ *(.debug_pubnames)
+
+.debug_info     memory region -> *default*
+                0x0000000000000000       0x67
+ *(.debug_info)
+ .debug_info    0x0000000000000000       0x67 src/main.o
+ *(.debug_info .gnu.linkonce.wi.*)
+
+.debug_abbrev   memory region -> *default*
+                0x0000000000000000       0x56
+ *(.debug_abbrev)
+ .debug_abbrev  0x0000000000000000       0x56 src/main.o
+ *(.debug_abbrev)
+
+.debug_line     memory region -> *default*
+                0x0000000000000000       0x41
+ *(.debug_line)
+ .debug_line    0x0000000000000000       0x41 src/main.o
+ *(.debug_line)
+
+.debug_frame    memory region -> *default*
+                0x0000000000000000       0x28
+ *(.debug_frame)
+ .debug_frame   0x0000000000000000       0x28 src/main.o
+ *(.debug_frame)
+
+.debug_str      memory region -> *default*
+                0x0000000000000000     0x198e
+ *(.debug_str)
+ .debug_str     0x0000000000000000     0x198e src/main.o
+                                       0x1994 (size before relaxing)
+ *(.debug_str)
+
+.debug_loc
+ *(.debug_loc)
+ *(.debug_loc)
+
+.debug_macinfo
+ *(.debug_macinfo)
+ *(.debug_macinfo)
+
+.debug_ranges   memory region -> *default*
+                0x0000000000000000       0x10
+ *(.debug_ranges)
+ .debug_ranges  0x0000000000000000       0x10 src/main.o
+ *(.debug_ranges)
+
+.debug_weaknames
+ *(.debug_weaknames)
+ *(.debug_weaknames)
+
+.debug_funcnames
+ *(.debug_funcnames)
+ *(.debug_funcnames)
+
+.debug_typenames
+ *(.debug_typenames)
+ *(.debug_typenames)
+
+.debug_varnames
+ *(.debug_varnames)
+ *(.debug_varnames)
+
+.stab
+ *(.stab)
+
+.stabstr
+ *(.stabstr)
+
+.stab.excl
+ *(.stab.excl)
+
+.stab.exclstr
+ *(.stab.exclstr)
+
+.stab.index
+ *(.stab.index)
+
+.stab.indexstr
+ *(.stab.indexstr)
+
+.debug_control_flow
+ *(.debug_control_flow)
+
+.debug_pubtypes
+ *(.debug_pubtypes)
+
+.gnu.attributes
+ *(.gnu.attributes)
+
+.version_info   memory region -> *default*
+                0x0000000000000000     0x371c
+ *(.version_info)
+ .version_info  0x0000000000000000     0x161f c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+ .version_info  0x000000000000161f      0xaf0 src/main.o
+ .version_info  0x000000000000210f     0x160d c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+OUTPUT(ppc.elf elf32-powerpc)
+
+.debug_macro    memory region -> *default*
+                0x0000000000000000      0x5af
+ .debug_macro   0x0000000000000000       0x11 src/main.o
+ .debug_macro   0x0000000000000011      0x59e src/main.o
+
+Cross Reference Table
+
+Symbol                                            File
+_ITM_deregisterTMCloneTable                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+_ITM_registerTMCloneTable                         c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+_Jv_RegisterClasses                               c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+__DTOR_END__                                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+                                                  c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+__TMC_END__                                       c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtend.o
+                                                  c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+__dso_handle                                      c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/crtbegin.o
+__fini                                            c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+__init                                            c:/hightec/toolchains/powerpc/v4.9.3.0/bin/../lib/gcc/ppc-ht-eabi/4.9.4/ecrti.o
+main                                              src/main.o

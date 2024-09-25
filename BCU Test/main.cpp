@@ -20,6 +20,7 @@ int main()
     initialize_channels_from_config(pinconfig, channels);
      
     create_devices();
+
     //highbeam_device.device_channel->channel_on_impl();
     for(;;){
    //highbeam_device.device_channel->channel_on_impl(); 
