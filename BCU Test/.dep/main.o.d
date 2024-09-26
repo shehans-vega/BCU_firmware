@@ -85,7 +85,17 @@ build/obj/main.o: main.cpp \
  source/APP/input_elements.h source/MCAL/button.h \
  source/COMMS/can_stack.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
- source/APP/output_elements.h
+ source/APP/output_elements.h source/syscalls.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\errno.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\errno.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\reent.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\_ansi.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\newlib.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\config.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\machine\ieeefp.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\_types.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\machine\_types.h \
+ c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\lock.h
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\c++\4.9.4\vector:
 
@@ -268,3 +278,25 @@ source/COMMS/can_stack.h:
 components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h:
 
 source/APP/output_elements.h:
+
+source/syscalls.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\errno.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\errno.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\reent.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\_ansi.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\newlib.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\config.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\machine\ieeefp.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\_types.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\machine\_types.h:
+
+c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\lock.h:
