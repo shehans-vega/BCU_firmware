@@ -11,7 +11,7 @@
 
 class Device
 {
-
+    
 private:
 public:
     Channel *device_channel;
@@ -27,6 +27,7 @@ public:
     };
     virtual void activate() = 0;
     virtual bool evaluate_press() = 0;
+    virtual void control_signal() = 0; // the master module will call this function
     bool fault;
 };
 
@@ -49,7 +50,8 @@ public:
             return false;
         }
     }
-    void activate() override
+
+    void control_signal() override
     {
         if (this->evaluate_press())
         {
@@ -59,6 +61,11 @@ public:
         {
             this->state = 0;
         }
+    }
+
+    void activate() override
+    {
+
         if (this->state == 1)
         {
             this->device_channel->channel_on_impl();
@@ -90,13 +97,12 @@ public:
         }
     }
 
+    void control_signal() override {
+         this->state = !this->state;
+    }
+
     void activate() override
     {
-
-        if (this->evaluate_press())
-        {
-            this->state = !this->state;
-        }
 
         if (this->state == 1)
         {
@@ -130,30 +136,29 @@ public:
         }
     }
 
+    void control_signal() override {
+         this->state = !this->state;
+    }
+
     void activate() override
     {
         static bool pulse = false;
 
-        if (this->evaluate_press())
-        {
-            pulse = !pulse; // Toggle the state
-        }
-
-        if (pulse)
+        if (state)
         {
             if (this->counter >= COUNTER_THRESHOLD)
             {
                 this->counter = 0;
-                this->state = !this->state; // Toggle the state
+                pulse = !pulse; // Toggle the state
             }
             this->counter++;
         }
         else
         {
-            this->state = 0;
+           pulse = 0;
         }
 
-        if (this->state == 1)
+        if (pulse == true)
         {
             this->device_channel->channel_on_impl();
         }

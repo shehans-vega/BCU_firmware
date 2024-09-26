@@ -11,6 +11,11 @@
 #ifndef CAN_H_
 #define CAN_H_
 
+#ifdef __cplusplus
+ extern"C"{
+#endif
+
+
 #define CAN_SEND_ID 0x50U
 #define CAN_RECV_ID 0x27U
 
@@ -56,5 +61,10 @@ void mcanconf_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 
 	(void) msgbuf;
 }
+
+#ifdef __cplusplus
+ }
+#endif
+
 
 #endif /* CAN_H_ */
