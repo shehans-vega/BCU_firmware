@@ -30,7 +30,7 @@ public:
     };
     virtual void activate() = 0;
     virtual bool evaluate_press() = 0;
-    virtual void control_signal() = 0; // the master module will call this function
+    virtual void control_signal(bool x ) = 0; // the master module will call this function
     bool fault;
 };
 
@@ -54,16 +54,9 @@ public:
         }
     }
 
-    void control_signal() override
+    void control_signal(bool control) override
     {
-        if (this->evaluate_press())
-        {
-            this->state = 1;
-        }
-        else
-        {
-            this->state = 0;
-        }
+       this->state = control;
     }
 
     void activate() override
@@ -72,7 +65,7 @@ public:
         if (this->state == 1)
         {
             this->device_channel->channel_on_impl();
-        }
+         }  
         else
         {
             this->device_channel->channel_off_impl();
@@ -100,7 +93,7 @@ public:
         }
     }
 
-    void control_signal() override {
+    void control_signal(bool control) override {
          this->state = !this->state;
     }
 
@@ -139,8 +132,9 @@ public:
         }
     }
 
-    void control_signal() override {
-         this->state = !this->state;
+    void control_signal(bool control) override {
+        if(control){
+         this->state = !this->state;}
     }
 
     void activate() override

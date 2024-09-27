@@ -8,7 +8,7 @@
 HeadLight_Module* headlight_unit = nullptr;
 
 void create_modules(){
-   headlight_unit = new HeadLight_Module(devices[5],devices[1],devices[2]);
+   headlight_unit = new HeadLight_Module(devices[0],devices[1],devices[2]);
 }
 
 #endif

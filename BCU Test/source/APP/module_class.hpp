@@ -23,12 +23,22 @@ class HeadLight_Module:public Module{
 
 void HeadLight_Module::activate(void){
     if(highbeam->evaluate_press()==true){
-        highbeam->control_signal();
+        highbeam->control_signal(true);
     }
-    else if(passbeam->evaluate_press()==true){
-        passbeam->control_signal();
+    else{
+         highbeam->control_signal(false);
+         if(passbeam->evaluate_press()==true){
+            passbeam->control_signal(true);
+         }
+         else{
+            passbeam->control_signal(false);
+            if(lowbeam->evaluate_press()==true){
+                 lowbeam->control_signal(true);
+            }
+            else{
+                lowbeam->control_signal(false);
+            }
+         }
     }
-    else if(lowbeam->evaluate_press()==true){
-         lowbeam->control_signal();
-    }
+
 }

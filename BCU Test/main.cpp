@@ -30,6 +30,10 @@ int main()
     CAN_send();
     inputs();
     headlight_unit->activate();
+    headlight_unit->highbeam->activate();
+    
+    //devices[0]->device_channel->channel_on_impl();
+    
     // headlight_unit->highbeam->device_channel->channel_on_impl();
     // hl = headlight_unit->highbeam->device_button->buttonState;
     
