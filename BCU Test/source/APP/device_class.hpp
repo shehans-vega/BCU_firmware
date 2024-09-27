@@ -9,6 +9,9 @@
 #define lowbeam_current 1
 #define COUNTER_THRESHOLD 40
 
+uint8_t temp = 0;
+
+
 class Device
 {
     
@@ -42,7 +45,7 @@ public:
     bool evaluate_press() override
     {
         if ((this->device_button->buttonState == BUTTON_PRESSED) || (this->device_button->buttonState == BUTTON_HOLD))
-        {
+        {   temp++ ;
             return true;
         }
         else
@@ -86,9 +89,9 @@ public:
         counter = 0;
     }
     bool evaluate_press() override
-    {
+    {   
         if ((this->device_button->buttonState == BUTTON_RELEASED) && (this->device_button->buttonPrevState == (BUTTON_PRESSED || BUTTON_HOLD)))
-        {
+        {   
             return true;
         }
         else

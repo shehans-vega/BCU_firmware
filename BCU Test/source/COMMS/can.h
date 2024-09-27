@@ -8,6 +8,8 @@
 #include "can_lld_cfg.h"
 #include "can_stack.h"
 
+#include "input_elements.h"
+
 #ifndef CAN_H_
 #define CAN_H_
 
@@ -50,6 +52,7 @@ void mcanconf_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 
 		if ((crfp.EID == LH_ID_TEST) && (crfp.IDE == CAN_ID_STD)) {
 			Left_handle_msg(crfp);
+			
 			
 			//LED_toggle;		//for relay controller board
 		}
