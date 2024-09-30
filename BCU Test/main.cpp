@@ -33,17 +33,6 @@ int main()
     headlight_unit->highbeam->activate();
     headlight_unit->lowbeam->activate();
     headlight_unit->passbeam->activate();
-
-    
-    //devices[0]->device_channel->channel_on_impl();
-    
-    // headlight_unit->highbeam->device_channel->channel_on_impl();
-    // hl = headlight_unit->highbeam->device_button->buttonState;
-    
-       /// devices[2]->activate();
-   //highbeam_device.device_channel->channel_on_impl(); 
-   //channels[4].channel_on_impl();  // pal_lld_togglepad(PORT_LED1,LED1);
-    // pal_lld_togglepad(PORT_LED2,LED2);
     osalThreadDelayMilliseconds(1);
     }
 }

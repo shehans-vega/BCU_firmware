@@ -25,14 +25,6 @@ buttonInput_t hornButton;
 
 
 
- void proceses_buttons(){
-	button_state(&hornButton);
-	button_state(&leftButton);
-	button_state(&passButton);
-	button_state(&highbeamButton);
-	button_state(&lowbeamButton);
-	button_state(&rightButton);
-}
  void can_decode(){
 	if (L_handle_msg.fixset1.bit.horn == 1) {
 				hornButton.button_in = 1;
@@ -80,7 +72,6 @@ buttonInput_t hornButton;
 
 void inputs(void){
 	can_decode();
-	proceses_buttons();
 		}
 
 #ifdef __cplusplus
@@ -88,4 +79,3 @@ void inputs(void){
 #endif
 
 #endif /* INPUT_ELEMENTS_H_ */
-

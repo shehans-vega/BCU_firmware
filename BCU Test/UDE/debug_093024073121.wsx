@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">30.09.2024 07:14:19:000</LastWriteDate>
+	<LastWriteDate type="string">30.09.2024 07:31:21:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -97,7 +97,7 @@
 							<DockingIndex>2</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>false</Selected>
+							<Selected>true</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
@@ -169,7 +169,7 @@
 							<DockingIndex>3</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>true</Selected>
+							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 					</DockingControls>
@@ -1027,7 +1027,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 running</Text>
+										<Text>Core2 halted by reset</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
