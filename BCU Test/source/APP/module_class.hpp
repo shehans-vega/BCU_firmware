@@ -87,3 +87,23 @@ void Horn_Module::activate(void){
          horn->control_signal(false);
     }
 }
+
+
+/*===================WIPER MODULE IMPLEMENTATION===================*/
+
+class Wiper_Module:public Module{
+    private:
+    public:
+        Wiper_Module(Device* wiper):wiper(wiper) {}
+        Device* wiper;
+        void activate(void);
+};
+
+void Wiper_Module::activate(void){
+    if(wiper->evaluate_press()==true){
+        wiper->control_signal(true);
+    }
+    else{
+         wiper->control_signal(false);
+    }
+}
