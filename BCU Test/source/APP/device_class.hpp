@@ -7,7 +7,7 @@
 
 #define highbeam_current 1
 #define lowbeam_current 1
-#define COUNTER_THRESHOLD 40
+#define COUNTER_THRESHOLD 300
 
 uint8_t temp = 0;
 
@@ -20,7 +20,7 @@ public:
     Channel *device_channel;
     buttonInput_t *device_button;
     uint8_t max_current;
-    uint8_t counter;
+    uint16_t counter;
     bool state;
 
     Device();
@@ -123,7 +123,7 @@ public:
 
     bool evaluate_press() override
     {
-        if ((this->device_button->buttonState == BUTTON_RELEASED) && (this->device_button->buttonPrevState == (BUTTON_PRESSED || BUTTON_HOLD)))
+        if ((this->device_button->buttonState == BUTTON_RELEASED) && ((this->device_button->buttonPrevState ==  BUTTON_HOLD)||(this->device_button->buttonPrevState ==  BUTTON_PRESSED)))
         {
             return true;
         }
