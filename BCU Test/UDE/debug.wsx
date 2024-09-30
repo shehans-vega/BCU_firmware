@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">30.09.2024 07:31:19:000</LastWriteDate>
+	<LastWriteDate type="string">30.09.2024 09:26:31:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>186</DockedDimension>
+							<DockedDimension>187</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1065</DockedDimension>
+							<DockedDimension>1066</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -65,7 +65,7 @@
 							<UniqueIdentifier>MainFrame.StdUDEMessageWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>37</DockedDimension>
+							<DockedDimension>36</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -137,7 +137,7 @@
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW03</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>158</DockedDimension>
+							<DockedDimension>157</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -258,7 +258,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -375,7 +375,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1168,7 +1168,7 @@
 			<OPEN_VIEW type="key">
 				<FrameCreated type="string">22.08.2024 14:22:00:820</FrameCreated>
 				<ViewSrv type="key">
-					<_ExtentX type="bin" size="8">aQMAAA==</_ExtentX>
+					<_ExtentX type="bin" size="8">TwMAAA==</_ExtentX>
 					<_ExtentY type="bin" size="8">SxIAAA==</_ExtentY>
 					<_StockProps type="bin" size="8">AAAAAA==</_StockProps>
 					<Columns type="bin" size="8">CAAAAA==</Columns>
@@ -1235,7 +1235,7 @@
 			<MacroLib type="string">..\..\..\..\Program Files\pls\UDE Starterkit 2021\StdLibrary.mso</MacroLib>
 		</Macro>
 		<PLACEMENT type="key">
-			<MULTICORELOADERDLG type="string">296,977,286,533</MULTICORELOADERDLG>
+			<MULTICORELOADERDLG type="string">343,1024,261,508</MULTICORELOADERDLG>
 		</PLACEMENT>
 		<EXTRAVALUE type="key">
 			<MULTICORELOADERDLG type="int">0</MULTICORELOADERDLG>
@@ -1255,7 +1255,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_30_09_24_07_14_17_0 type="key">
+				<Macro_30_09_24_07_15_29_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1535,7 +1535,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_30_09_24_07_15_29_0</NextNodeName>
+					<NextNodeName type="string">Macro_30_09_24_09_26_30_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1592,7 +1592,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_30_09_24_07_14_17_0>
+				</Macro_30_09_24_07_15_29_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1691,8 +1691,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">10</CaretIndex>
+						<TopIndex type="int">23</TopIndex>
+						<CaretIndex type="int">26</CaretIndex>
 						<NameWidth type="int">525</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">359</ValueWidth>
@@ -1720,16 +1720,22 @@ End Sub</ScriptSource>
 							</Watch2>
 							<Watch3 type="key">
 								<Name type="string">highbeamButton (global) @1</Name>
-								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<Status type="string">#0#0,0$0,2$#0,1$-1,0$#0,2$-1,0$</Status>
 								<RunningPeriod3 type="int">500</RunningPeriod3>
 								<HoldedPeriod3 type="int">0</HoldedPeriod3>
 							</Watch3>
 							<Watch4 type="key">
 								<Name type="string">passButton (global) @1</Name>
-								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<Status type="string">#0#0,0$0,2$#0,1$-1,0$#0,2$-1,0$</Status>
 								<RunningPeriod4 type="int">500</RunningPeriod4>
 								<HoldedPeriod4 type="int">0</HoldedPeriod4>
 							</Watch4>
+							<Watch5 type="key">
+								<Name type="string">?(devices[3])</Name>
+								<Status type="string">#0#0,0#0,0,2#0,0,2,0#</Status>
+								<RunningPeriod5 type="int">500</RunningPeriod5>
+								<HoldedPeriod5 type="int">0</HoldedPeriod5>
+							</Watch5>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>

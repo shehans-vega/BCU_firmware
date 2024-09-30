@@ -68,3 +68,22 @@ void TurnSignal_Module::activate(void){
      rightsignal->control_signal(true);
    }
 }
+
+/*===================HORN MODULE IMPLEMENTATION===================*/
+
+class Horn_Module:public Module{
+    private:
+    public:
+        Horn_Module(Device* horn):horn(horn) {}
+        Device* horn;
+        void activate(void);
+};
+
+void Horn_Module::activate(void){
+    if(horn->evaluate_press()==true){
+        horn->control_signal(true);
+    }
+    else{
+         horn->control_signal(false);
+    }
+}
