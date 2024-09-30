@@ -42,7 +42,7 @@ button_t button_state(buttonInput_t *button) {
             } else {
                 button->press_count = 0;
             }
-            button->buttonPrevState = BUTTON_IDLE;
+           
             button->hold_count = 0;
             button->release_count = 0; // Reset release counter in idle state
             break;
@@ -63,6 +63,7 @@ button_t button_state(buttonInput_t *button) {
         case BUTTON_HOLD:
             if (button->button_in == 0) {
                 button->buttonState = BUTTON_RELEASED;
+                button->buttonPrevState = BUTTON_HOLD;
             }
             break;
 

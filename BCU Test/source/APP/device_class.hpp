@@ -83,7 +83,7 @@ public:
     }
     bool evaluate_press() override
     {   
-        if ((this->device_button->buttonState == BUTTON_RELEASED) && (this->device_button->buttonPrevState == (BUTTON_PRESSED || BUTTON_HOLD)))
+        if ((this->device_button->buttonState == BUTTON_RELEASED) && (this->device_button->buttonPrevState ==  BUTTON_HOLD))
         {   
             return true;
         }
@@ -94,7 +94,8 @@ public:
     }
 
     void control_signal(bool control) override {
-         this->state = !this->state;
+        if(control){
+         this->state = !this->state;}
     }
 
     void activate() override
