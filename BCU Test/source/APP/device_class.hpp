@@ -83,7 +83,7 @@ public:
     }
     bool evaluate_press() override
     {   
-        if ((this->device_button->buttonState == BUTTON_RELEASED) && (this->device_button->buttonPrevState ==  BUTTON_HOLD))
+        if ((this->device_button->buttonState == BUTTON_RELEASED) && ((this->device_button->buttonPrevState ==  BUTTON_HOLD)||(this->device_button->buttonPrevState ==  BUTTON_PRESSED)))
         {   
             return true;
         }
