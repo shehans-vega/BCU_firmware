@@ -11,6 +11,8 @@ class Module{
 
 };
 
+/*================HEADLIGHT MODULE IMPLEMENTATION======================*/
+
 class HeadLight_Module:public Module{
     private:
     public:
@@ -42,4 +44,27 @@ void HeadLight_Module::activate(void){
          }
     }
 
+}
+
+
+/*================TURN SIGNAL MODULE IMPLEMENTATION======================*/
+
+class TurnSignal_Module:public Module{
+    private:
+    public:
+        TurnSignal_Module(Device* left,Device* right):leftsignal(left), rightsignal(right) {}
+        Device* leftsignal;
+        Device* rightsignal;
+        void activate(void);
+};
+
+void TurnSignal_Module::activate(void){
+   if(leftsignal->evaluate_press() == TRUE){
+    rightsignal->state = false;
+    leftsignal->control_signal(true);
+   }
+   if(rightsignal->evaluate_press()==TRUE){
+     leftsignal->state = false;
+     rightsignal->control_signal(true);
+   }
 }
