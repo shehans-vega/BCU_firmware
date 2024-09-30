@@ -28,6 +28,10 @@ buttonInput_t hornButton;
  void proceses_buttons(){
 	button_state(&hornButton);
 	button_state(&leftButton);
+	button_state(&passButton);
+	button_state(&highbeamButton);
+	button_state(&lowbeamButton);
+	button_state(&rightButton);
 }
  void can_decode(){
 	if (L_handle_msg.fixset1.bit.horn == 1) {

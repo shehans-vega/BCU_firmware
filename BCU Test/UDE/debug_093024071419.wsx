@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">30.09.2024 06:47:44:000</LastWriteDate>
+	<LastWriteDate type="string">30.09.2024 07:14:19:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -258,7 +258,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -375,7 +375,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1255,7 +1255,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_30_09_24_06_37_18_0 type="key">
+				<Macro_30_09_24_07_14_17_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1535,7 +1535,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_30_09_24_06_48_18_0</NextNodeName>
+					<NextNodeName type="string">Macro_30_09_24_07_15_29_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1592,7 +1592,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_30_09_24_06_37_18_0>
+				</Macro_30_09_24_07_14_17_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1692,10 +1692,10 @@ End Sub</ScriptSource>
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
 						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">7</CaretIndex>
-						<NameWidth type="int">535</NameWidth>
+						<CaretIndex type="int">10</CaretIndex>
+						<NameWidth type="int">525</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
-						<ValueWidth type="int">365</ValueWidth>
+						<ValueWidth type="int">359</ValueWidth>
 						<Value2Width type="int">0</Value2Width>
 						<MinMaxWidth type="int">0</MinMaxWidth>
 						<Watches type="key">
@@ -1714,10 +1714,22 @@ End Sub</ScriptSource>
 							</Watch1>
 							<Watch2 type="key">
 								<Name type="string">hornButton (global) @1</Name>
-								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<Status type="string">#0#</Status>
 								<RunningPeriod2 type="int">500</RunningPeriod2>
 								<HoldedPeriod2 type="int">0</HoldedPeriod2>
 							</Watch2>
+							<Watch3 type="key">
+								<Name type="string">highbeamButton (global) @1</Name>
+								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<RunningPeriod3 type="int">500</RunningPeriod3>
+								<HoldedPeriod3 type="int">0</HoldedPeriod3>
+							</Watch3>
+							<Watch4 type="key">
+								<Name type="string">passButton (global) @1</Name>
+								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<RunningPeriod4 type="int">500</RunningPeriod4>
+								<HoldedPeriod4 type="int">0</HoldedPeriod4>
+							</Watch4>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>

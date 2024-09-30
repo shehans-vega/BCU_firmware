@@ -24,6 +24,7 @@ class HeadLight_Module:public Module{
 void HeadLight_Module::activate(void){
     if(highbeam->evaluate_press()==true){
         highbeam->control_signal(true);
+         lowbeam->state = false;
     }
     else{
          highbeam->control_signal(false);

@@ -31,6 +31,9 @@ int main()
     inputs();
     headlight_unit->activate();
     headlight_unit->highbeam->activate();
+    headlight_unit->lowbeam->activate();
+    headlight_unit->passbeam->activate();
+
     
     //devices[0]->device_channel->channel_on_impl();
     
