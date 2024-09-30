@@ -7,7 +7,7 @@
 
 #define highbeam_current 1
 #define lowbeam_current 1
-#define COUNTER_THRESHOLD 300
+#define COUNTER_THRESHOLD 500
 
 uint8_t temp = 0;
 
@@ -116,10 +116,11 @@ public:
 class toggle_Device : public Device
 {
 public:
+    bool pulse = false;
     toggle_Device(Channel *channel, buttonInput_t *button, uint8_t current) : Device(channel, button, current)
     {
-        state = 0;
-        counter = 0;
+        this->state = 0;
+        this->counter = 0;
     }
 
     bool evaluate_press() override
@@ -141,9 +142,9 @@ public:
 
     void activate() override
     {
-        static bool pulse = false;
+        
 
-        if (state)
+        if (this->state)
         {
             if (this->counter >= COUNTER_THRESHOLD)
             {
