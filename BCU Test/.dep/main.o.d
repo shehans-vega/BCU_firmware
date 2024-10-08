@@ -79,9 +79,9 @@ build/obj/main.o: main.cpp \
  components/spc582bxx_irq_component_rla/lib/include/irq.h \
  source/MCAL/adc_driver.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h \
- source/MCAL/board_config.h source/APP/gpio_interface.hpp \
+ source/MCAL/board_config.h source/APP/channel_class.hpp \
  source/APP/output_elements.h source/APP/devices.hpp \
- source/APP/device_class.hpp source/APP/gpio_interface.hpp \
+ source/APP/device_class.hpp source/APP/channel_class.hpp \
  source/APP/input_elements.h source/MCAL/button.h \
  source/COMMS/can_stack.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
@@ -262,7 +262,7 @@ components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h:
 
 source/MCAL/board_config.h:
 
-source/APP/gpio_interface.hpp:
+source/APP/channel_class.hpp:
 
 source/APP/output_elements.h:
 
@@ -270,7 +270,7 @@ source/APP/devices.hpp:
 
 source/APP/device_class.hpp:
 
-source/APP/gpio_interface.hpp:
+source/APP/channel_class.hpp:
 
 source/APP/input_elements.h:
 

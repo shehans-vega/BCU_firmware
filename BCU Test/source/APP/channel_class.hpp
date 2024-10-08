@@ -1,10 +1,11 @@
-#ifndef _GPIO_INTERFACE_H
-#define _GPIO_INTERFACE_H
+#ifndef _CHANNEL_CLASS_H
+#define _CHANNEL_CLASS_H
 
 #include "board.h"
 #include "MCAL/board_config.h"
+#include "adc_driver.h"
 #include "components.h"
-#include <vector>
+
 
 // Define the Channel class
 class Channel {
@@ -52,9 +53,15 @@ public:
             }
         }
     }
+    uint16_t diagnose(void);
 };
 
- 
+uint16_t Channel::diagnose(void){
+    diagnose_en_impl();
+    uint16_t current = adc_value[this->pins->adc_channel];
+    return current;
+}
+
 void initialize_channels_from_config(pinconfigType* configs, Channel* channels) {
     for ( int i = 0; i < MAX_CHANNELS; ++i) {
         // Initialize each Channel with the corresponding pinconfigType

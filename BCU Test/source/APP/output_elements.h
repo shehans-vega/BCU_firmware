@@ -3,7 +3,7 @@
 #define	_OUTPUT_ELEMENTS_H
 
 
-#include "APP/gpio_interface.hpp"
+#include "APP/channel_class.hpp"
 
 Channel channels[MAX_CHANNELS];
 

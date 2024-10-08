@@ -1,7 +1,7 @@
 #ifndef _DEVICE_MAKER_H
 #define _DEVICE_MAKER_H
 
-#include "gpio_interface.hpp"
+#include "channel_class.hpp"
 #include "input_elements.h"
 #include "output_elements.h"
 
@@ -10,7 +10,6 @@
 #define COUNTER_THRESHOLD 500
 
 uint8_t temp = 0;
-
 
 class Device
 {
@@ -143,7 +142,6 @@ public:
     void activate() override
     {
         
-
         if (this->state)
         {
             if (this->counter >= COUNTER_THRESHOLD)

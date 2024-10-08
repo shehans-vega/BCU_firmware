@@ -43,6 +43,9 @@ void HeadLight_Module::activate(void){
             }
          }
     }
+    highbeam->activate();
+    lowbeam->activate();
+    passbeam->activate();
 
 }
 
@@ -67,6 +70,8 @@ void TurnSignal_Module::activate(void){
      leftsignal->state = false;
      rightsignal->control_signal(true);
    }
+   leftsignal->activate();
+   rightsignal->activate();
 }
 
 /*===================HORN MODULE IMPLEMENTATION===================*/
@@ -86,6 +91,7 @@ void Horn_Module::activate(void){
     else{
          horn->control_signal(false);
     }
+    horn->activate();
 }
 
 
