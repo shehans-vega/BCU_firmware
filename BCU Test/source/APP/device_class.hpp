@@ -18,14 +18,15 @@ private:
 public:
     Channel *device_channel;
     buttonInput_t *device_button;
-    uint8_t max_current;
+    uint16_t device_max_current;
     uint16_t counter;
     bool state;
 
     Device();
-    Device(Channel *channel, buttonInput_t *button, uint8_t current) : device_channel(channel), device_button(button), max_current(current)
+    Device(Channel *channel, buttonInput_t *button, uint8_t current) : device_channel(channel), device_button(button), device_max_current(current)
     {
-        state = 1;
+        this->device_channel->max_current = device_max_current;
+        state = 0;
     };
     virtual void activate() = 0;
     virtual bool evaluate_press() = 0;
@@ -33,6 +34,9 @@ public:
     bool fault;
 };
 
+
+
+//=======================Derived Classes======================
 class momentary_Device : public Device
 {
 public:
@@ -63,12 +67,13 @@ public:
 
         if (this->state == 1)
         {
-            this->device_channel->channel_on_impl();
+            this->device_channel->state = true;
          }  
         else
         {
-            this->device_channel->channel_off_impl();
+            this->device_channel->state = false;
         }
+        this->device_channel->activate();
     }
 };
 
@@ -103,12 +108,13 @@ public:
 
         if (this->state == 1)
         {
-            this->device_channel->channel_on_impl();
+            this->device_channel->state = true;
         }
         else
         {
-            this->device_channel->channel_off_impl();
+            this->device_channel->state = false;
         }
+        this->device_channel->activate();
     }
 };
 
@@ -158,12 +164,13 @@ public:
 
         if (pulse == true)
         {
-            this->device_channel->channel_on_impl();
+            this->device_channel->state = true;
         }
         else
         {
-            this->device_channel->channel_off_impl();
+            this->device_channel->state = false;
         }
+        this->device_channel->activate();
     }
 };
 

@@ -80,10 +80,10 @@ build/obj/main.o: main.cpp \
  source/MCAL/adc_driver.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h \
  source/MCAL/board_config.h source/APP/channel_class.hpp \
- source/APP/output_elements.h source/APP/devices.hpp \
- source/APP/device_class.hpp source/APP/channel_class.hpp \
- source/APP/input_elements.h source/MCAL/button.h \
- source/COMMS/can_stack.h \
+ source/MCAL/adc_driver.h source/APP/output_elements.h \
+ source/APP/devices.hpp source/APP/device_class.hpp \
+ source/APP/channel_class.hpp source/APP/input_elements.h \
+ source/MCAL/button.h source/COMMS/can_stack.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
  source/APP/output_elements.h source/syscalls.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\errno.h \
@@ -263,6 +263,8 @@ components/spc582bxx_low_level_drivers_component_rla/cfg/saradc_lld_cfg.h:
 source/MCAL/board_config.h:
 
 source/APP/channel_class.hpp:
+
+source/MCAL/adc_driver.h:
 
 source/APP/output_elements.h:
 
