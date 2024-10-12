@@ -16,7 +16,7 @@ private:
     void channel_off_impl();
     void latch_reset_impl();
     void diagnose_en_impl();
-    uint16_t get_current();
+    float get_current();
     bool evaluate_fault();
    
 public:
@@ -24,6 +24,7 @@ public:
     bool fault_flag;
     uint8_t hard_fault_counter;
     uint16_t max_current;
+    float now_current;
 
    // Default Constructor
     Channel() : pins(nullptr), fault_flag(false), hard_fault_counter(0) {}
@@ -36,11 +37,11 @@ public:
 
 //private method definitions
 
- void Channel::channel_on_impl() {
-        if (pins) {  // Check if pins is not null
-            pal_lld_setpad(this->pins->gpio.port, this->pins->gpio.pin);
+    void Channel::channel_on_impl() {
+            if (pins) {  // Check if pins is not null
+                pal_lld_setpad(this->pins->gpio.port, this->pins->gpio.pin);
+            }
         }
-    }
 
     void Channel:: channel_off_impl() {
         if (pins) {  // Check if pins is not null
@@ -68,15 +69,16 @@ public:
         }
     }
 
-    uint16_t Channel::get_current(void){
+    float Channel::get_current(void){
         diagnose_en_impl();
-        uint16_t current = adc_value[this->pins->adc_channel];
-        return current;
+        uint16_t adc_reading = adc_value[this->pins->adc_channel];
+        this->now_current = 0.009420295208393764*(float)adc_reading  -0.017804935401956976;
+        return this->now_current;
     }
 
     bool Channel::evaluate_fault(){
-        uint16_t current = this->get_current();
-        if(current>= this->max_current){
+         this->now_current = this->get_current();
+        if(this->now_current>= this->max_current){
             this->fault_flag = true;
             return this->fault_flag;
         }
@@ -85,25 +87,23 @@ public:
 // public method definitions
 uint8_t Channel::activate(void){
    if(state){
+        this->channel_on_impl();
         if(this->hard_fault_counter < FAULT_COUNTER_LIMIT){
             this->evaluate_fault();    
             while(this->fault_flag == true){
                 this->fault_flag = false;
-                this->activate();
                 this->hard_fault_counter++;
                 this->evaluate_fault();
                 if(this->hard_fault_counter>= FAULT_COUNTER_LIMIT){
+                    state = false;
                     return -1;
                 }
             }
-
-            this->hard_fault_counter = 0;
-            
-        }
-    
+            this->hard_fault_counter = 0;         
+        }  
    }
    else{
-    this->activate();
+    this->channel_off_impl();
    }
 }
 
