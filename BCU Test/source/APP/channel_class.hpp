@@ -8,6 +8,9 @@
 
 #define FAULT_COUNTER_LIMIT 2
 
+uint32_t global_adc;
+uint8_t debug;
+
 // Define the Channel class
 class Channel {
 private:
@@ -71,7 +74,8 @@ public:
 
     float Channel::get_current(void){
         diagnose_en_impl();
-        uint16_t adc_reading = adc_value[this->pins->adc_channel];
+        uint32_t adc_reading = adc_value[this->pins->adc_channel];
+        global_adc = adc_reading;
         this->now_current = 0.009420295208393764*(float)adc_reading  -0.017804935401956976;
         return this->now_current;
     }
@@ -87,20 +91,26 @@ public:
 // public method definitions
 uint8_t Channel::activate(void){
    if(state){
-        this->channel_on_impl();
+
         if(this->hard_fault_counter < FAULT_COUNTER_LIMIT){
-            this->evaluate_fault();    
+            this->channel_on_impl();
+            this->evaluate_fault();
+        }
+            
             while(this->fault_flag == true){
-                this->fault_flag = false;
                 this->hard_fault_counter++;
+                this->channel_off_impl();
+                this->channel_on_impl(); // resetting the hardware latch
                 this->evaluate_fault();
-                if(this->hard_fault_counter>= FAULT_COUNTER_LIMIT){
-                    state = false;
-                    return -1;
+                if(this->hard_fault_counter >= FAULT_COUNTER_LIMIT){
+                     state = false;
+                     this->fault_flag = false;
+                     this->channel_off_impl();
+                     debug = 20;
+                     return 1; // error code 1 for hard fault event
+
                 }
             }
-            this->hard_fault_counter = 0;         
-        }  
    }
    else{
     this->channel_off_impl();
