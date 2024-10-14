@@ -32,6 +32,7 @@ int main()
     // headlight_unit->highbeam->activate();
     // headlight_unit->lowbeam->activate();
     // headlight_unit->passbeam->activate();
+    osalThreadDelayMilliseconds(1);
     turnsignal_unit->activate();
     // turnsignal_unit->leftsignal->activate();
     // turnsignal_unit->rightsignal->activate();

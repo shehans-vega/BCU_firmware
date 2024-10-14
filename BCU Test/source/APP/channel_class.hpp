@@ -76,7 +76,7 @@ public:
         diagnose_en_impl();
         uint32_t adc_reading = adc_value[this->pins->adc_channel];
         global_adc = adc_reading;
-        this->now_current = 0.009420295208393764*(float)adc_reading  -0.017804935401956976;
+        this->now_current = 0.00941917392531239*(float)adc_reading -0.016621870615556342;
         return this->now_current;
     }
 
@@ -90,6 +90,7 @@ public:
 
 // public method definitions
 uint8_t Channel::activate(void){
+    
    if(state){
 
         if(this->hard_fault_counter < FAULT_COUNTER_LIMIT){

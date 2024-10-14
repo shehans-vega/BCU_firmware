@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">14.10.2024 06:53:50:000</LastWriteDate>
+	<LastWriteDate type="string">14.10.2024 09:35:34:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -97,7 +97,7 @@
 							<DockingIndex>2</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>true</Selected>
+							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
@@ -169,7 +169,7 @@
 							<DockingIndex>3</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>false</Selected>
+							<Selected>true</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 					</DockingControls>
@@ -258,7 +258,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -375,7 +375,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1006,7 +1006,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>WARNING: PowerPc mode is different between target and pattern, VLE mode is forced !</Text>
+										<Text>WARNING: Failed to determine user application running state ! Assume still running.</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1027,7 +1027,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 halted by reset</Text>
+										<Text>Core2 inactive</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1255,7 +1255,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_14_10_24_06_48_43_0 type="key">
+				<Macro_14_10_24_08_16_42_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1535,7 +1535,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_14_10_24_06_53_47_0</NextNodeName>
+					<NextNodeName type="string">Macro_14_10_24_09_35_30_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1592,7 +1592,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_14_10_24_06_48_43_0>
+				</Macro_14_10_24_08_16_42_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1691,8 +1691,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">41</TopIndex>
-						<CaretIndex type="int">49</CaretIndex>
+						<TopIndex type="int">26</TopIndex>
+						<CaretIndex type="int">35</CaretIndex>
 						<NameWidth type="int">524</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">360</ValueWidth>
@@ -1732,7 +1732,7 @@ End Sub</ScriptSource>
 							</Watch4>
 							<Watch5 type="key">
 								<Name type="string">horn_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
+								<Status type="string">#0#0,0#</Status>
 								<RunningPeriod5 type="int">500</RunningPeriod5>
 								<HoldedPeriod5 type="int">0</HoldedPeriod5>
 							</Watch5>
@@ -1754,10 +1754,16 @@ End Sub</ScriptSource>
 							</Watch8>
 							<Watch9 type="key">
 								<Name type="string">headlight_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,1,0,5$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
+								<Status type="string">#0#0,0#0,0,2#0,0,2,0#0,0,2,0,1#0,0,2,0,1,0#</Status>
 								<RunningPeriod9 type="int">500</RunningPeriod9>
 								<HoldedPeriod9 type="int">0</HoldedPeriod9>
 							</Watch9>
+							<Watch10 type="key">
+								<Name type="string">turnsignal_unit (global) @1</Name>
+								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,1,0,5$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
+								<RunningPeriod10 type="int">500</RunningPeriod10>
+								<HoldedPeriod10 type="int">0</HoldedPeriod10>
+							</Watch10>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>
