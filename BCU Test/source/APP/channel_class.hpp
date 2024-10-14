@@ -96,7 +96,6 @@ uint8_t Channel::activate(void){
             this->channel_on_impl();
             this->evaluate_fault();
         }
-            
             while(this->fault_flag == true){
                 this->hard_fault_counter++;
                 this->channel_off_impl();
