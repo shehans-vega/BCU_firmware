@@ -16,7 +16,7 @@ extern "C" {
 
 #define NUMOFCHANNELS 4
 uint32_t adc_value[NUMOFCHANNELS];
-uint8_t anp[NUMOFCHANNELS] = { 13U,49U, 17U, 39U};
+uint8_t anp[NUMOFCHANNELS] = {  13U, 49U ,17U, 39U};
 
 void ADC_init(void){
 	SARADCDriver* driverUnderTest;

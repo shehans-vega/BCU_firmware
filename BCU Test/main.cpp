@@ -36,6 +36,7 @@ int main()
     // turnsignal_unit->leftsignal->activate();
     // turnsignal_unit->rightsignal->activate();
     horn_unit->activate();
+    headlight_unit->activate();
     // horn_unit->horn->activate();
     osalThreadDelayMilliseconds(1);
     }
