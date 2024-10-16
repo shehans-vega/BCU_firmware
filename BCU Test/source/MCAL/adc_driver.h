@@ -15,8 +15,9 @@ extern "C" {
 #endif
 
 #define NUMOFCHANNELS 4
-uint32_t adc_value[NUMOFCHANNELS];
+volatile uint32_t adc_value[NUMOFCHANNELS];
 uint8_t anp[NUMOFCHANNELS] = {  13U, 49U ,17U, 39U};
+volatile uint8_t adc_cb;
 
 void ADC_init(void){
 	SARADCDriver* driverUnderTest;
@@ -29,6 +30,7 @@ void saradcconf_conv_cb(SARADCDriver *saradcp) {
 	// Read converted channels //
 	for (uint8_t i = 0; i < NUMOFCHANNELS; i++) {
 		adc_value[i] = saradc_lld_readchannel(saradcp, anp[i]);
+		adc_cb++;
 	}
 }
 
