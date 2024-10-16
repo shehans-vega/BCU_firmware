@@ -77,8 +77,7 @@ public:
         osalThreadDelayMicroseconds(2);
         uint32_t adc_reading = adc_value[this->pins->adc_channel];
         global_adc = adc_reading;
-        if(adc_cb>10){
-        this->now_current = 0.00941917392531239*(float)adc_reading -0.016621870615556342;}
+        this->now_current = 0.00941917392531239*(float)adc_reading -0.016621870615556342;
         adc_cb = 0;
         return this->now_current;
     }
