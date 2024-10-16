@@ -79,6 +79,56 @@ SARADCConfig saradc_config_saradcconf = {
   0U,
 };
 
+
+  /* Channels Configurations (DMA is not used)*/
+static channelConfig _saradcconf_oneshot_ch_configs[SPC5_SARADC_MAX_NUMOFCHANNELS] =
+{
+  {SARADC_CHANNEL_INTERNAL, 13U,SARADC_REFERENCE_DEFAULT, SARADC_PRECHARGE_DISABLED, SARADC_CTR0, SARADC_WATCHDOG_REGISTER_NONE,NULL},
+  {SARADC_CHANNEL_INTERNAL, 49U,SARADC_REFERENCE_DEFAULT, SARADC_PRECHARGE_DISABLED, SARADC_CTR0, SARADC_WATCHDOG_REGISTER_NONE,NULL},
+  {SARADC_CHANNEL_INTERNAL, 17U,SARADC_REFERENCE_DEFAULT, SARADC_PRECHARGE_DISABLED, SARADC_CTR0, SARADC_WATCHDOG_REGISTER_NONE,NULL},
+  {SARADC_CHANNEL_INTERNAL, 39U,SARADC_REFERENCE_DEFAULT, SARADC_PRECHARGE_DISABLED, SARADC_CTR0, SARADC_WATCHDOG_REGISTER_NONE,NULL},
+};
+
+
+/**
+ * @brief   Structure defining the configuration "saradcconf_oneshot".
+ */
+SARADCConfig saradc_config_saradcconf_oneshot = {
+   /* conversion mode */
+  SARADC_MODE_SCAN,
+  
+  /* Trigger Mode */
+  SARADC_TRIGGER_DISABLED,
+  
+  /* CTR registers configuration (CRES,PRECHG,INPSAMP) */
+  {
+  /* CTR0 */ {SARADC_CRES_HIGH, 0U, 100U},
+  /* CTR1 */ {SARADC_CRES_LOW, 0U, 100U},
+  /* CTR2 */ {SARADC_CRES_HIGH, 0U, 100U},
+  /* CTR3 */ {SARADC_CRES_HIGH, 0U, 100U},
+  },
+  /* No DMA configuration */
+  FALSE,
+  {0U, 0U, 0U, 0U, 0U, 0U, 0U},
+  NULL,
+  
+  /* Channels Configurations */
+  _saradcconf_oneshot_ch_configs,
+  
+  /* Number of channels */
+  4U,
+  
+  /* Conversion callback */
+  NULL,
+
+  /* No analog watchdog configured */
+  {
+  {(float)0,(float)0},
+  },
+  (float)0,
+  0U,
+};
+
 /*===========================================================================*/
 /* Driver local types.                                                       */
 /*===========================================================================*/
