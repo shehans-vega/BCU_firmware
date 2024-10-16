@@ -27,8 +27,15 @@ public:
     bool fault_flag;
     uint8_t hard_fault_counter;
     uint16_t max_current;
+    uint16_t inrush_current;
+    uint16_t inrush_time;
     float now_current;
     float rec_peak_current;
+    //current curve parameters
+    uint32_t ch_on_tstamp;
+    uint32_t ch_on_duration;
+    uint32_t peak_I_tstamp;
+    uint32_t peak_duration;
 
    // Default Constructor
     Channel() : pins(nullptr), fault_flag(false), hard_fault_counter(0) {}
@@ -44,6 +51,7 @@ public:
     void Channel::channel_on_impl() {
             if (pins) {  // Check if pins is not null
                 pal_lld_setpad(this->pins->gpio.port, this->pins->gpio.pin);
+                this->ch_on_tstamp = osalThreadGetMicroseconds();
             }
         }
 
@@ -81,16 +89,27 @@ public:
         this->now_current = 0.00941917392531239*(float)adc_reading -0.016621870615556342;
         if(this->now_current>this->rec_peak_current){
             this->rec_peak_current = this->now_current;
+            this->peak_I_tstamp = osalThreadGetMicroseconds();
+            this->peak_duration = this->peak_I_tstamp - this->ch_on_tstamp;
         }
         adc_cb = 0;
         return this->now_current;
     }
 
     bool Channel::evaluate_fault(){
-         this->now_current = this->get_current();
+        
+        this->now_current = this->get_current();
+        this->ch_on_duration = osalThreadGetMicroseconds()-this->ch_on_tstamp;
+        if(this->ch_on_duration<=this->inrush_time){
+            if(this->now_current>= this->inrush_current){
+            this->fault_flag = true;
+            return this->fault_flag;
+        }}
+        else{
         if(this->now_current>= this->max_current){
             this->fault_flag = true;
             return this->fault_flag;
+        }
         }
     }
 
