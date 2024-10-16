@@ -28,6 +28,7 @@ public:
     uint8_t hard_fault_counter;
     uint16_t max_current;
     float now_current;
+    float rec_peak_current;
 
    // Default Constructor
     Channel() : pins(nullptr), fault_flag(false), hard_fault_counter(0) {}
@@ -78,6 +79,9 @@ public:
         uint32_t adc_reading = adc_value[this->pins->adc_channel];
         global_adc = adc_reading;
         this->now_current = 0.00941917392531239*(float)adc_reading -0.016621870615556342;
+        if(this->now_current>this->rec_peak_current){
+            this->rec_peak_current = this->now_current;
+        }
         adc_cb = 0;
         return this->now_current;
     }
