@@ -19,13 +19,17 @@ public:
     Channel *device_channel;
     buttonInput_t *device_button;
     uint16_t device_max_current;
+    uint16_t device_inrush_current;
+    uint16_t device_inrush_time; // microseconds
     uint16_t counter;
     bool state;
 
     Device();
-    Device(Channel *channel, buttonInput_t *button, uint8_t current) : device_channel(channel), device_button(button), device_max_current(current)
+    Device(Channel *channel, buttonInput_t *button, uint16_t current,uint16_t inrush_current,uint16_t inrush_time) : device_channel(channel), device_button(button), device_max_current(current),device_inrush_current(inrush_current),device_inrush_time(inrush_time)
     {
         this->device_channel->max_current = device_max_current;
+        this->device_channel->inrush_current = device_inrush_current;
+        this->device_channel->inrush_time = device_inrush_time;
         state = 0;
     };
     virtual void activate() = 0;
@@ -40,7 +44,7 @@ public:
 class momentary_Device : public Device
 {
 public:
-    momentary_Device(Channel *channel, buttonInput_t *button, uint8_t current) : Device(channel, button, current)
+    momentary_Device(Channel *channel, buttonInput_t *button, uint16_t current,uint16_t inrush_current,uint16_t inrush_time ) : Device(channel, button, current,inrush_current,inrush_time)
     {
         state = 0;
         counter = 0;
@@ -80,7 +84,7 @@ public:
 class latch_Device : public Device
 {
 public:
-    latch_Device(Channel *channel, buttonInput_t *button, uint8_t current) : Device(channel, button, current)
+    latch_Device(Channel *channel, buttonInput_t *button, uint16_t current,uint16_t inrush_current,uint16_t inrush_time ) : Device(channel, button, current,inrush_current,inrush_time)
     {
         state = 0;
         counter = 0;
@@ -122,7 +126,7 @@ class toggle_Device : public Device
 {
 public:
     bool pulse = false;
-    toggle_Device(Channel *channel, buttonInput_t *button, uint8_t current) : Device(channel, button, current)
+    toggle_Device(Channel *channel, buttonInput_t *button, uint16_t current,uint16_t inrush_current,uint16_t inrush_time ) : Device(channel, button, current,inrush_current,inrush_time)
     {
         this->state = 0;
         this->counter = 0;

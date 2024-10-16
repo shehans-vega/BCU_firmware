@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">16.10.2024 03:40:17:000</LastWriteDate>
+	<LastWriteDate type="string">16.10.2024 04:24:40:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -1024,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>WARNING: PowerPc mode is different between target and pattern, VLE mode is forced !</Text>
+										<Text>WARNING: Failed to determine user application running state ! Assume still running.</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1045,7 +1045,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 halted by reset</Text>
+										<Text>Core2 running</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1273,7 +1273,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_16_10_24_03_23_57_0 type="key">
+				<Macro_16_10_24_03_58_09_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1553,7 +1553,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_16_10_24_03_40_17_0</NextNodeName>
+					<NextNodeName type="string">Macro_16_10_24_04_24_40_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1610,7 +1610,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_16_10_24_03_23_57_0>
+				</Macro_16_10_24_03_58_09_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1738,8 +1738,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">14</CaretIndex>
+						<TopIndex type="int">59</TopIndex>
+						<CaretIndex type="int">71</CaretIndex>
 						<NameWidth type="int">677</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">469</ValueWidth>
@@ -1760,56 +1760,38 @@ End Sub</ScriptSource>
 								<HoldedPeriod1 type="int">0</HoldedPeriod1>
 							</Watch1>
 							<Watch2 type="key">
-								<Name type="string">hornButton (global) @1</Name>
+								<Name type="string">adc_value (global) @1</Name>
 								<Status type="string">#0#</Status>
 								<RunningPeriod2 type="int">500</RunningPeriod2>
 								<HoldedPeriod2 type="int">0</HoldedPeriod2>
 							</Watch2>
 							<Watch3 type="key">
-								<Name type="string">highbeamButton (global) @1</Name>
-								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<Name type="string">global_adc (global) @1</Name>
 								<RunningPeriod3 type="int">500</RunningPeriod3>
 								<HoldedPeriod3 type="int">0</HoldedPeriod3>
 							</Watch3>
 							<Watch4 type="key">
-								<Name type="string">passButton (global) @1</Name>
-								<Status type="string">#0#0,0$0,2$#0,1$0,0$#0,2$0,0$</Status>
+								<Name type="string">debug (global) @1</Name>
 								<RunningPeriod4 type="int">500</RunningPeriod4>
 								<HoldedPeriod4 type="int">0</HoldedPeriod4>
 							</Watch4>
 							<Watch5 type="key">
-								<Name type="string">adc_value (global) @1</Name>
-								<Status type="string">#0#</Status>
+								<Name type="string">headlight_unit (global) @1</Name>
+								<Status type="string">#0#0,0#0,0,2#0,0,2,0#0,0,2,0,1#0,0,2,0,1,0#</Status>
 								<RunningPeriod5 type="int">500</RunningPeriod5>
 								<HoldedPeriod5 type="int">0</HoldedPeriod5>
 							</Watch5>
 							<Watch6 type="key">
-								<Name type="string">global_adc (global) @1</Name>
+								<Name type="string">turnsignal_unit (global) @1</Name>
+								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,0#0,0,0,0,1,0,0,0#0,0,0,0,1,0,0,0,2#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,1,0,5$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
 								<RunningPeriod6 type="int">500</RunningPeriod6>
 								<HoldedPeriod6 type="int">0</HoldedPeriod6>
 							</Watch6>
 							<Watch7 type="key">
-								<Name type="string">debug (global) @1</Name>
+								<Name type="string">adc_cb (global) @1</Name>
 								<RunningPeriod7 type="int">500</RunningPeriod7>
 								<HoldedPeriod7 type="int">0</HoldedPeriod7>
 							</Watch7>
-							<Watch8 type="key">
-								<Name type="string">headlight_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,2#0,0,2,0#0,0,2,0,1#0,0,2,0,1,0#</Status>
-								<RunningPeriod8 type="int">500</RunningPeriod8>
-								<HoldedPeriod8 type="int">0</HoldedPeriod8>
-							</Watch8>
-							<Watch9 type="key">
-								<Name type="string">turnsignal_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,0#0,0,0,0,1,0,0,0#0,0,0,0,1,0,0,0,2#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,1,0,5$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
-								<RunningPeriod9 type="int">500</RunningPeriod9>
-								<HoldedPeriod9 type="int">0</HoldedPeriod9>
-							</Watch9>
-							<Watch10 type="key">
-								<Name type="string">adc_cb (global) @1</Name>
-								<RunningPeriod10 type="int">500</RunningPeriod10>
-								<HoldedPeriod10 type="int">0</HoldedPeriod10>
-							</Watch10>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>

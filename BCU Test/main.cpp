@@ -30,6 +30,6 @@ int main()
     inputs();
     headlight_unit->activate();
     turnsignal_unit->activate();
-    osalThreadDelayMilliseconds(2);
+    osalThreadDelayMilliseconds(1);
     }
 }
