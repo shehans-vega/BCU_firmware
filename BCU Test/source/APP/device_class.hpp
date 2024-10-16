@@ -7,7 +7,7 @@
 
 #define highbeam_current 1
 #define lowbeam_current 1
-#define COUNTER_THRESHOLD 500
+#define COUNTER_THRESHOLD 300
 
 uint8_t temp = 0;
 
@@ -37,8 +37,6 @@ public:
     virtual void control_signal(bool x ) = 0; // the master module will call this function
     bool fault;
 };
-
-
 
 //=======================Derived Classes======================
 class momentary_Device : public Device
@@ -92,7 +90,7 @@ public:
     bool evaluate_press() override
     {   
         button_state(this->device_button);
-        if ((this->device_button->buttonState == BUTTON_RELEASED) && ((this->device_button->buttonPrevState ==  BUTTON_HOLD)||(this->device_button->buttonPrevState ==  BUTTON_PRESSED)))
+        if ((this->device_button->buttonState == BUTTON_PRESSED) || (this->device_button->buttonState == BUTTON_HOLD))
         {   
             return true;
         }
@@ -103,8 +101,7 @@ public:
     }
 
     void control_signal(bool control) override {
-        if(control){
-         this->state = !this->state;}
+           this->state = control;
     }
 
     void activate() override
@@ -134,7 +131,7 @@ public:
 
     bool evaluate_press() override
     {   button_state(this->device_button);
-        if ((this->device_button->buttonState == BUTTON_RELEASED) && ((this->device_button->buttonPrevState ==  BUTTON_HOLD)||(this->device_button->buttonPrevState ==  BUTTON_PRESSED)))
+        if ((this->device_button->buttonState == BUTTON_PRESSED) || (this->device_button->buttonState == BUTTON_HOLD))
         {
             return true;
         }
@@ -145,8 +142,7 @@ public:
     }
 
     void control_signal(bool control) override {
-        if(control){
-         this->state = !this->state;}
+         this->state = control;
     }
 
     void activate() override

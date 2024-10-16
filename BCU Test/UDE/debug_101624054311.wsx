@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">16.10.2024 04:24:42:000</LastWriteDate>
+	<LastWriteDate type="string">16.10.2024 05:43:11:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>217</DockedDimension>
+							<DockedDimension>218</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1328</DockedDimension>
+							<DockedDimension>1329</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -65,7 +65,7 @@
 							<UniqueIdentifier>MainFrame.StdUDEMessageWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>36</DockedDimension>
+							<DockedDimension>35</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -155,7 +155,7 @@
 							<UniqueIdentifier>Core2.ViewSrv.StdUDESFRView.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>168</DockedDimension>
+							<DockedDimension>167</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -1024,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>WARNING: Failed to determine user application running state ! Assume still running.</Text>
+										<Text>WARNING: Process Debug Manager not installed - script debugger is not available</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1045,7 +1045,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 running</Text>
+										<Text>Core2 halted by reset</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1186,7 +1186,7 @@
 			<OPEN_VIEW type="key">
 				<FrameCreated type="string">22.08.2024 14:22:00:820</FrameCreated>
 				<ViewSrv type="key">
-					<_ExtentX type="bin" size="8">TwMAAA==</_ExtentX>
+					<_ExtentX type="bin" size="8">NAMAAA==</_ExtentX>
 					<_ExtentY type="bin" size="8">bhMAAA==</_ExtentY>
 					<_StockProps type="bin" size="8">AAAAAA==</_StockProps>
 					<Columns type="bin" size="8">CAAAAA==</Columns>
@@ -1273,7 +1273,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_16_10_24_03_58_09_0 type="key">
+				<Macro_16_10_24_05_43_08_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1553,7 +1553,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_16_10_24_04_24_40_0</NextNodeName>
+					<NextNodeName type="string">Macro_16_10_24_05_59_23_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1610,7 +1610,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_16_10_24_03_58_09_0>
+				</Macro_16_10_24_05_43_08_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1738,8 +1738,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">59</TopIndex>
-						<CaretIndex type="int">71</CaretIndex>
+						<TopIndex type="int">22</TopIndex>
+						<CaretIndex type="int">31</CaretIndex>
 						<NameWidth type="int">677</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">469</ValueWidth>
@@ -1783,7 +1783,7 @@ End Sub</ScriptSource>
 							</Watch5>
 							<Watch6 type="key">
 								<Name type="string">turnsignal_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#0,0,0,0,1,0,0#0,0,0,0,1,0,0,0#0,0,0,0,1,0,0,0,2#0,0,0,0,1,0,1$0,2$#0,0,0,0,1,0,2$0,2$#0,0,0,0,1,0,3$0,2$#0,0,0,0,1,0,5$0,2$#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
+								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,5$0,2$#0,0,0,0,6$0,2$</Status>
 								<RunningPeriod6 type="int">500</RunningPeriod6>
 								<HoldedPeriod6 type="int">0</HoldedPeriod6>
 							</Watch6>

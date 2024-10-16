@@ -29,9 +29,9 @@ public:
     uint16_t max_current;
     uint16_t inrush_current;
     uint16_t inrush_time;
+    //current curve parameters
     float now_current;
     float rec_peak_current;
-    //current curve parameters
     uint32_t ch_on_tstamp;
     uint32_t ch_on_duration;
     uint32_t peak_I_tstamp;

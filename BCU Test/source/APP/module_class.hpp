@@ -66,9 +66,15 @@ void TurnSignal_Module::activate(void){
     rightsignal->state = false;
     leftsignal->control_signal(true);
    }
+   else{
+    leftsignal->control_signal(false);
+   }
    if(rightsignal->evaluate_press()==TRUE){
      leftsignal->state = false;
      rightsignal->control_signal(true);
+   }
+   else{
+    rightsignal->control_signal(false);
    }
    leftsignal->activate();
    rightsignal->activate();
