@@ -51,6 +51,7 @@
 
 /* List of the SARADCConfig structures defined in saradc_lld_cfg.c.*/
 extern SARADCConfig saradc_config_saradcconf;
+extern SARADCConfig saradc_config_saradcconf_oneshot;
 
 #ifdef __cplusplus
 extern "C" {
