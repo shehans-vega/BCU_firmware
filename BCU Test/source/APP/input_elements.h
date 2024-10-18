@@ -24,7 +24,6 @@ buttonInput_t rightButton;
 buttonInput_t hornButton;
 
 
-
  void can_decode(){
 	if (L_handle_msg.fixset1.bit.horn == 1) {
 				hornButton.button_in = 1;
