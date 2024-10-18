@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">18.10.2024 08:29:43:000</LastWriteDate>
+	<LastWriteDate type="string">18.10.2024 09:01:35:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>219</DockedDimension>
+							<DockedDimension>220</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1330</DockedDimension>
+							<DockedDimension>1331</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -65,7 +65,7 @@
 							<UniqueIdentifier>MainFrame.StdUDEMessageWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>34</DockedDimension>
+							<DockedDimension>33</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -97,7 +97,7 @@
 							<DockingIndex>3</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>true</Selected>
+							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
@@ -155,7 +155,7 @@
 							<UniqueIdentifier>Core2.ViewSrv.StdUDESFRView.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>166</DockedDimension>
+							<DockedDimension>165</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -187,7 +187,7 @@
 							<DockingIndex>4</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>false</Selected>
+							<Selected>true</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 					</DockingControls>
@@ -276,7 +276,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -393,7 +393,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1045,7 +1045,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 halted by reset</Text>
+										<Text>Core2 running</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1186,7 +1186,7 @@
 			<OPEN_VIEW type="key">
 				<FrameCreated type="string">22.08.2024 14:22:00:820</FrameCreated>
 				<ViewSrv type="key">
-					<_ExtentX type="bin" size="8">GgMAAA==</_ExtentX>
+					<_ExtentX type="bin" size="8">/wIAAA==</_ExtentX>
 					<_ExtentY type="bin" size="8">bhMAAA==</_ExtentY>
 					<_StockProps type="bin" size="8">AAAAAA==</_StockProps>
 					<Columns type="bin" size="8">CAAAAA==</Columns>
@@ -1273,7 +1273,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_16_10_24_06_17_22_0 type="key">
+				<Macro_16_10_24_06_24_22_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1553,7 +1553,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_16_10_24_06_24_22_0</NextNodeName>
+					<NextNodeName type="string">Macro_18_10_24_09_01_33_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1610,7 +1610,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_16_10_24_06_17_22_0>
+				</Macro_16_10_24_06_24_22_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1738,8 +1738,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">55</TopIndex>
-						<CaretIndex type="int">54</CaretIndex>
+						<TopIndex type="int">0</TopIndex>
+						<CaretIndex type="int">9</CaretIndex>
 						<NameWidth type="int">677</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">469</ValueWidth>
@@ -1792,6 +1792,26 @@ End Sub</ScriptSource>
 								<RunningPeriod7 type="int">500</RunningPeriod7>
 								<HoldedPeriod7 type="int">0</HoldedPeriod7>
 							</Watch7>
+							<Watch8 type="key">
+								<Name type="string">left [C:\Users\shehans\Documents\VEGA_Work\BCU\BCU_firmware\BCU Test\source\APP\module_class.hpp] @1</Name>
+								<RunningPeriod8 type="int">500</RunningPeriod8>
+								<HoldedPeriod8 type="int">0</HoldedPeriod8>
+							</Watch8>
+							<Watch9 type="key">
+								<Name type="string">right [C:\Users\shehans\Documents\VEGA_Work\BCU\BCU_firmware\BCU Test\source\APP\module_class.hpp] @1</Name>
+								<RunningPeriod9 type="int">500</RunningPeriod9>
+								<HoldedPeriod9 type="int">0</HoldedPeriod9>
+							</Watch9>
+							<Watch10 type="key">
+								<Name type="string">invert_r [C:\Users\shehans\Documents\VEGA_Work\BCU\BCU_firmware\BCU Test\source\APP\module_class.hpp] @1</Name>
+								<RunningPeriod10 type="int">500</RunningPeriod10>
+								<HoldedPeriod10 type="int">0</HoldedPeriod10>
+							</Watch10>
+							<Watch11 type="key">
+								<Name type="string">invert_l [C:\Users\shehans\Documents\VEGA_Work\BCU\BCU_firmware\BCU Test\source\APP\module_class.hpp] @1</Name>
+								<RunningPeriod11 type="int">500</RunningPeriod11>
+								<HoldedPeriod11 type="int">0</HoldedPeriod11>
+							</Watch11>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>

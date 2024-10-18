@@ -23,7 +23,6 @@ buttonInput_t leftButton;
 buttonInput_t rightButton;
 buttonInput_t hornButton;
 
-
  void can_decode(){
 	if (L_handle_msg.fixset1.bit.horn == 1) {
 				hornButton.button_in = 1;
@@ -55,13 +54,13 @@ buttonInput_t hornButton;
 				passButton.button_in = 0;
 			}
 
-			 if (L_handle_msg.fixset1.bit.turn == 2) {
+			 if (L_handle_msg.fixset1.bit.turn == 1) {
 			 leftButton.button_in = 1;
 
 			 } else {
 			 leftButton.button_in = 0;
 			 }
-			 if (L_handle_msg.fixset1.bit.turn == 1) {
+			 if (L_handle_msg.fixset1.bit.turn == 2) {
 			 rightButton.button_in = 1;
 
 			 } else {
