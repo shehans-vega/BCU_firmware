@@ -119,7 +119,7 @@ CANConfig can_config_mcanconf_ext = {
   /* time segment after sample point */
   3U,
   /* clock prescaler */
-  2U,
+  4U,
   
   /* Canfd configuration */
   FALSE,

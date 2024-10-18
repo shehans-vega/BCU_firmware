@@ -3958,7 +3958,7 @@
                 </general_configuration>
                 <timings>
                   <clock_prescaler>
-                    <value>2</value>
+                    <value>4</value>
                   </clock_prescaler>
                   <nsjw>
                     <value>1</value>
@@ -3976,10 +3976,10 @@
                     <value>8000000</value>
                   </can_subsytem_1_protocol_clock>
                   <can_subsytem_0_calculated_bit_rate disabled="true">
-                    <value>500000</value>
+                    <value>250000</value>
                   </can_subsytem_0_calculated_bit_rate>
                   <can_subsytem_1_calculated_bit_rate disabled="true">
-                    <value>500000</value>
+                    <value>250000</value>
                   </can_subsytem_1_calculated_bit_rate>
                 </timings>
                 <canfd_operation>
