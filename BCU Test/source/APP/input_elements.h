@@ -54,13 +54,13 @@ buttonInput_t hornButton;
 				passButton.button_in = 0;
 			}
 
-			 if (L_handle_msg.fixset1.bit.turn == 1) {
+			 if ((L_handle_msg.fixset1.bit.turn&0b01) == 1) {
 			 leftButton.button_in = 1;
 
 			 } else {
 			 leftButton.button_in = 0;
 			 }
-			 if (L_handle_msg.fixset1.bit.turn == 2) {
+			 if ((L_handle_msg.fixset1.bit.turn>>1 & 0b01) == 1) {
 			 rightButton.button_in = 1;
 
 			 } else {

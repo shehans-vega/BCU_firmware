@@ -1,9 +1,11 @@
 #include "device_class.hpp"
 
-    static bool left;
-    static bool right;
-    static bool invert_r;
-    static bool invert_l;
+     bool left;
+     bool right;
+     bool invert_r;
+     bool invert_l;
+     bool eval_left;
+     bool eval_right;
 
 class Module{
     private:
@@ -67,8 +69,8 @@ class TurnSignal_Module:public Module{
 
 void TurnSignal_Module::activate(void){
 
-    bool eval_left = leftsignal->evaluate_press();
-    bool eval_right = rightsignal->evaluate_press();
+     eval_left = leftsignal->evaluate_press();
+     eval_right = rightsignal->evaluate_press();
 
     if(eval_left and eval_right){
         if(left){
@@ -97,14 +99,14 @@ void TurnSignal_Module::activate(void){
     }
 
 //    if(leftsignal->evaluate_press() == TRUE){
-//     rightsignal->state = false;
+//     rightsignal->control_signal(false);
 //     leftsignal->control_signal(true);
 //    }
 //    else{
 //     leftsignal->control_signal(false);
 //    }
 //    if(rightsignal->evaluate_press()==TRUE){
-//      leftsignal->state = false;
+//      leftsignal->control_signal(false);
 //      rightsignal->control_signal(true);
 //    }
 //    else{
