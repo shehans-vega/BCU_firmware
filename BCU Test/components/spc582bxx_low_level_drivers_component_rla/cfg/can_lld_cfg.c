@@ -158,7 +158,7 @@ CANConfig can_config_mcanconf_ext = {
   },
     /* rx extended buffer filters */
   {
-  {0x20f00121UL,50UL,0U,7U}, /* Extended filter 0*/
+  {0xcf00121UL,50UL,0U,7U}, /* Extended filter 0*/
   {0UL,0UL,0U,0U},  /* extended_filter unused 0 (MISRA Compliance) */
   {0UL,0UL,0U,0U},  /* extended_filter unused 1 (MISRA Compliance) */
   },

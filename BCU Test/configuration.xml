@@ -4036,7 +4036,7 @@
                         <value>Extended</value>
                       </filter_type>
                       <filter_value>
-                        <value>0x20f00121</value>
+                        <value>0xcf00121</value>
                       </filter_value>
                       <rx_buffer_number>
                         <value>50</value>

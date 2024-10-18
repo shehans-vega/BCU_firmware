@@ -62,56 +62,56 @@ class TurnSignal_Module:public Module{
 
 void TurnSignal_Module::activate(void){
 
-    static bool left;
-    static bool right;
-    static bool invert_r;
-    static bool invert_l;
+    // static bool left;
+    // static bool right;
+    // static bool invert_r;
+    // static bool invert_l;
 
-    bool eval_left = leftsignal->evaluate_press();
-    bool eval_right = rightsignal->evaluate_press();
+    // bool eval_left = leftsignal->evaluate_press();
+    // bool eval_right = rightsignal->evaluate_press();
 
-    if(eval_left and eval_right){
-        if(left){
-            invert_l = !invert_l;
-        }
-        if(right){
-            invert_r = !invert_r;
-        }
-    }
+    // if(eval_left and eval_right){
+    //     if(left){
+    //         invert_l = !invert_l;
+    //     }
+    //     if(right){
+    //         invert_r = !invert_r;
+    //     }
+    // }
 
-    if(invert_l){
-        leftsignal->control_signal(!eval_left);
-        left = !eval_left;
-    }
-    else{
-         leftsignal->control_signal(eval_left);
-         left = eval_left;
-    }
-      if(invert_r){
-        rightsignal->control_signal(!eval_right);
-        right = !eval_right;
-    }
-    else{
-         rightsignal->control_signal(eval_right);
-         right = eval_right;
-    }
+    // if(invert_l){
+    //     leftsignal->control_signal(!eval_left);
+    //     left = !eval_left;
+    // }
+    // else{
+    //      leftsignal->control_signal(eval_left);
+    //      left = eval_left;
+    // }
+    //   if(invert_r){
+    //     rightsignal->control_signal(!eval_right);
+    //     right = !eval_right;
+    // }
+    // else{
+    //      rightsignal->control_signal(eval_right);
+    //      right = eval_right;
+    // }
 
-//    if(leftsignal->evaluate_press() == TRUE){
-//     left = true;
-//     leftsignal->control_signal(true);
-//    }
-//    else{
-//     leftsignal->control_signal(false);
-//    }
-//    if(rightsignal->evaluate_press()==TRUE){
-//      leftsignal->state = false;
-//      rightsignal->control_signal(true);
-//    }
-//    else{
-//     rightsignal->control_signal(false);
-//    }
-//    leftsignal->activate();
-//    rightsignal->activate();
+   if(leftsignal->evaluate_press() == TRUE){
+    rightsignal->state = false;
+    leftsignal->control_signal(true);
+   }
+   else{
+    leftsignal->control_signal(false);
+   }
+   if(rightsignal->evaluate_press()==TRUE){
+     leftsignal->state = false;
+     rightsignal->control_signal(true);
+   }
+   else{
+    rightsignal->control_signal(false);
+   }
+   leftsignal->activate();
+   rightsignal->activate();
 }
 
 /*===================HORN MODULE IMPLEMENTATION===================*/
