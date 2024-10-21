@@ -24,6 +24,7 @@ int main()
     initialize_channels_from_config(pinconfig, channels);
     create_devices();
     create_modules();
+    
     for(;;){
     CAN_send();
     inputs();
