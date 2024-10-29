@@ -7,7 +7,7 @@
 
 #define highbeam_current 1
 #define lowbeam_current 1
-#define COUNTER_THRESHOLD 300
+#define COUNTER_THRESHOLD 250
 
 uint8_t temp = 0;
 
