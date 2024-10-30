@@ -7,8 +7,6 @@
 
 Device* devices[MAX_CHANNELS];
 
-//Device* devices[MAX_CHANNELS];
-
 void create_devices() {
     // Initialize devices at runtime
     devices[0] = new momentary_Device(&channels[3], &hornButton, 10 , 15, 2000);
@@ -17,6 +15,6 @@ void create_devices() {
     devices[3] = new toggle_Device(&channels[2], &leftButton, 10,15,2000);
     devices[4] = new toggle_Device(&channels[1], &rightButton, 10,15,2000);
     devices[5] = new momentary_Device(&channels[5], &highbeamButton, 10,15,2000);
-}       
+} 
 
 #endif

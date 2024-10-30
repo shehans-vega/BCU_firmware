@@ -11,12 +11,11 @@
 #include "modules.hpp"
 #include "syscalls.h"
 #include "can.h"
- 
+
 uint8_t hl = false;
 
 int main()
-{
-    
+{ 
     componentsInit();
     irqIsrEnable();
     ADC_init();

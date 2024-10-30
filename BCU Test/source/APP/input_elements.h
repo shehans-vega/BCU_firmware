@@ -37,10 +37,10 @@ buttonInput_t hornButton;
 				wiperButton.button_in = 0;
 			}
 
-			 if (L_handle_msg.fixset1.bit.head_lamp == 1) {
+			 if (L_handle_msg.fixset1.bit.head_lamp == 2) {
 				 highbeamButton.button_in = 1;
 			 }
-			 else if (L_handle_msg.fixset1.bit.head_lamp == 2) {
+			 else if (L_handle_msg.fixset1.bit.head_lamp == 1) {
 					 lowbeamButton.button_in = 1;}
 			 else {
 				 highbeamButton.button_in = 0;
