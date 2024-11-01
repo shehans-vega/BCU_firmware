@@ -36,18 +36,18 @@ void HeadLight_Module::activate(void)
     if (highbeam->evaluate_press() == true)
     {
         highbeam->control_signal(true);
-        lowbeam->state = false;
+        //lowbeam->state = false;
     }
     else
     {
         highbeam->control_signal(false);
-        if (passbeam->evaluate_press() == true)
-        {
-            passbeam->control_signal(true);
-        }
-        else
-        {
-            passbeam->control_signal(false);
+        // if (passbeam->evaluate_press() == true)
+        // {
+        //     passbeam->control_signal(true);
+        // }
+        // else
+        // {
+        //     passbeam->control_signal(false);
             if (lowbeam->evaluate_press() == true)
             {
                 lowbeam->control_signal(true);
@@ -56,11 +56,11 @@ void HeadLight_Module::activate(void)
             {
                 lowbeam->control_signal(false);
             }
-        }
+        //}
     }
     highbeam->activate();
     lowbeam->activate();
-    passbeam->activate();
+    //passbeam->activate(); 
 }
 
 /*================TURN SIGNAL MODULE IMPLEMENTATION======================*/

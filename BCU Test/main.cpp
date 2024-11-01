@@ -12,12 +12,16 @@
 #include "syscalls.h"
 #include "can.h"
 
+#include "hal.h"
+
 uint8_t hl = false;
+uint32_t timedebug = 0;
 
 int main()
-{ 
+{
     componentsInit();
     irqIsrEnable();
+    digitalWrite(switcharm.port,switcharm.pin, 1);
     ADC_init();
     CAN_init();
     initialize_channels_from_config(pinconfig, channels);
@@ -25,6 +29,11 @@ int main()
     create_modules();
     
     for(;;){
+    digitalToggle(onboardLED[0].port,onboardLED[0].pin);
+    timedebug = osalThreadGetMilliseconds();
+    if(osalThreadGetMilliseconds()>=2000){
+    digitalWrite(switcharm.port,switcharm.pin, 0);
+    }
     CAN_send();
     inputs();
     headlight_unit->activate();

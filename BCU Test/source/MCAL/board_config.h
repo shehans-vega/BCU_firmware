@@ -1,5 +1,4 @@
 
-
 #ifndef _BOARD_CONFIG_H_
 #define _BOARD_CONFIG_H_
 
@@ -34,6 +33,11 @@ gpioType onboardLED[2] = {
 		{.pin = LED1, .port = PORT_LED1},
 		{.pin = LED2, .port = PORT_LED2}
 
+};
+
+gpioType switcharm = {
+.pin = SWITCH_EN,
+.port = PORT_SWITCH_EN
 };
 
 // Create and initialize the array of pinconfigType

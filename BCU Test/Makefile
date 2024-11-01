@@ -19,12 +19,12 @@ COMPILER=freegcc
 
 # Compiler options here.
 ifeq ($(USE_OPT),)
-  USE_OPT = -O2 -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse
+  USE_OPT = -O2  -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse 
 endif
 
 # C specific options here (added to USE_OPT).
 ifeq ($(USE_COPT),)
-  USE_COPT = -std=gnu99 
+  USE_COPT = -std=gnu99
 endif
 
 # C++ specific options here (added to USE_OPT).
@@ -49,7 +49,7 @@ endif
 
 # If enabled, this option allows to compile the application in VLE mode.
 ifeq ($(USE_VLE),)
-  USE_VLE = no
+  USE_VLE = yes
 endif
 
 # Enable this if you want to see the full log while compiling.

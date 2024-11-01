@@ -98,7 +98,7 @@ build/obj/main.o: main.cpp \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\lock.h \
  source/APP/modules.hpp source/APP/module_class.hpp \
  source/APP/devices.hpp source/COMMS/can.h source/COMMS/can_stack.h \
- source/APP/input_elements.h
+ source/APP/input_elements.h source/MCAL/hal.h
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\c++\4.9.4\vector:
 
@@ -317,3 +317,5 @@ source/COMMS/can.h:
 source/COMMS/can_stack.h:
 
 source/APP/input_elements.h:
+
+source/MCAL/hal.h:

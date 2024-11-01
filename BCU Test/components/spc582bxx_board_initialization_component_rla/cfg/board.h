@@ -35,6 +35,7 @@
  */
 #define PIN_TX_4_1                  10U
 #define PIN_RX_4_1                  11U
+#define SWITCH_EN                   2U
 #define LS_P7                       10U
 #define LS_CS                       11U
 #define LS_IDLE                     8U
@@ -68,6 +69,7 @@
  */
 #define PORT_PIN_TX_4_1             PORT_A
 #define PORT_PIN_RX_4_1             PORT_A
+#define PORT_SWITCH_EN              PORT_A
 #define PORT_LS_P7                  PORT_B
 #define PORT_LS_CS                  PORT_B
 #define PORT_LS_IDLE                PORT_B
@@ -101,6 +103,7 @@
  */
 #define MSCR_IO_PIN_TX_4_1          MSCR_IO_INDEX(PORT_PIN_TX_4_1, PIN_TX_4_1)
 #define MSCR_IO_PIN_RX_4_1          MSCR_IO_INDEX(PORT_PIN_RX_4_1, PIN_RX_4_1)
+#define MSCR_IO_SWITCH_EN           MSCR_IO_INDEX(PORT_SWITCH_EN, SWITCH_EN)
 #define MSCR_IO_LS_P7               MSCR_IO_INDEX(PORT_LS_P7, LS_P7)
 #define MSCR_IO_LS_CS               MSCR_IO_INDEX(PORT_LS_CS, LS_CS)
 #define MSCR_IO_LS_IDLE             MSCR_IO_INDEX(PORT_LS_IDLE, LS_IDLE)
