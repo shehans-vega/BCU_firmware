@@ -13,6 +13,7 @@
 #include "can.h"
 
 #include "hal.h"
+#include "timer.h"
 
 uint8_t hl = false;
 uint32_t timedebug = 0;
@@ -29,7 +30,8 @@ int main()
     create_modules();
     
     for(;;){
-    digitalToggle(onboardLED[0].port,onboardLED[0].pin);
+    if(pseudo_delay(50)){
+    digitalToggle(onboardLED[0].port,onboardLED[0].pin);}
     timedebug = osalThreadGetMilliseconds();
     if(osalThreadGetMilliseconds()>=2000){
     digitalWrite(switcharm.port,switcharm.pin, 0);
