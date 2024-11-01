@@ -3,17 +3,27 @@
 
 #include "components.h"
 
-bool pseudo_delay(unsigned long interval){
+//Standalone delay function
+bool pseudo_delay(unsigned long interval) {
     static unsigned long previousMillis = 0;
     unsigned long currentMillis = osalThreadGetMilliseconds();
-  
-  if (currentMillis - previousMillis >= interval) {
-    previousMillis = currentMillis; // Update to the current time
+
+    if (currentMillis - previousMillis >= interval) {
+        previousMillis = currentMillis;
         return true;
-  }
-  else {
+    }
     return false;
-  }
 }
+// delay function with an explicit previousMillis parameter // used function overloading feature
+bool pseudo_delay(unsigned long interval, unsigned long &previousMillis) {
+    unsigned long currentMillis = osalThreadGetMilliseconds();
+
+    if (currentMillis - previousMillis >= interval) {
+        previousMillis = currentMillis;
+        return true;
+    }
+    return false;
+}
+
 
 #endif

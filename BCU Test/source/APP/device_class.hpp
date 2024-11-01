@@ -4,12 +4,13 @@
 #include "channel_class.hpp"
 #include "input_elements.h"
 #include "output_elements.h"
+#include "timer.h"
 
-#define highbeam_current 1
-#define lowbeam_current 1
-#define COUNTER_THRESHOLD 250
+#define TOGGLE_INTERVAL 600
 
-uint8_t temp = 0;
+uint8_t temp = 0; // delete this
+bool debug_delay;
+
 
 class Device
 {
@@ -50,7 +51,7 @@ public:
     bool evaluate_press() override
     {   button_state(this->device_button);
         if ((this->device_button->buttonState == BUTTON_PRESSED) || (this->device_button->buttonState == BUTTON_HOLD))
-        {   temp++ ;
+        {    
             return true;
         }
         else
@@ -122,6 +123,7 @@ public:
 class toggle_Device : public Device
 {
 public:
+    unsigned long previousMillis = 0;
     bool pulse = false;
     toggle_Device(Channel *channel, buttonInput_t *button, uint16_t current,uint16_t inrush_current,uint16_t inrush_time ) : Device(channel, button, current,inrush_current,inrush_time)
     {
@@ -149,13 +151,13 @@ public:
     {
         
         if (this->state)
-        {
-            if (this->counter >= COUNTER_THRESHOLD)
+        {    temp++;
+            debug_delay = pseudo_delay(TOGGLE_INTERVAL,previousMillis);
+            if (debug_delay)
             {
-                this->counter = 0;
                 pulse = !pulse; // Toggle the state
             }
-            this->counter++;
+            
         }
         else
         {

@@ -86,7 +86,7 @@ build/obj/main.o: main.cpp \
  source/APP/input_elements.h source/MCAL/button.h \
  source/COMMS/can_stack.h \
  components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h \
- source/APP/output_elements.h source/syscalls.h \
+ source/APP/output_elements.h source/MCAL/timer.h source/syscalls.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\errno.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\errno.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\sys\reent.h \
@@ -101,7 +101,7 @@ build/obj/main.o: main.cpp \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\_ansi.h \
  source/APP/modules.hpp source/APP/module_class.hpp \
  source/APP/devices.hpp source/COMMS/can.h source/COMMS/can_stack.h \
- source/APP/input_elements.h source/MCAL/hal.h source/MCAL/timer.h
+ source/APP/input_elements.h source/MCAL/hal.h
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\c++\4.9.4\vector:
 
@@ -289,6 +289,8 @@ components/spc582bxx_low_level_drivers_component_rla/cfg/can_lld_cfg.h:
 
 source/APP/output_elements.h:
 
+source/MCAL/timer.h:
+
 source/syscalls.h:
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\errno.h:
@@ -328,5 +330,3 @@ source/COMMS/can_stack.h:
 source/APP/input_elements.h:
 
 source/MCAL/hal.h:
-
-source/MCAL/timer.h:
