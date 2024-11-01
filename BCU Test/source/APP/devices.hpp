@@ -14,7 +14,7 @@ void create_devices() {
     devices[2] = new momentary_Device(&channels[4], &passButton, 10,15,2000);
     devices[3] = new toggle_Device(&channels[2], &leftButton, 10,15,2000);
     devices[4] = new toggle_Device(&channels[1], &rightButton, 10,15,2000);
-    devices[5] = new momentary_Device(&channels[5], &highbeamButton, 10,15,2000);
+    devices[5] = new momentary_Device(&channels[5], &highbeamButton, 5,15,300);
 } 
 
 #endif

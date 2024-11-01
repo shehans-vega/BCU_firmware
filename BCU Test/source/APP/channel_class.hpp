@@ -5,6 +5,7 @@
 #include "MCAL/board_config.h"
 #include "adc_driver.h"
 #include "components.h"
+#include "settings.h"
 
 #define FAULT_COUNTER_LIMIT 2
 
@@ -67,6 +68,7 @@ public:
     }
 
     void Channel:: diagnose_en_impl() {
+
         if (pins && this->pins->den == 1) {  // Check if pins is not null
             pal_lld_setpad(this->pins->dns_pins.port, this->pins->dns_pins.pin);
             if (this->pins->dsel == 1) {
@@ -118,6 +120,7 @@ uint8_t Channel::activate(void){
     
    if(state){
 
+        #if DIAGNOSE_ENABLE == 1
         if(this->hard_fault_counter < FAULT_COUNTER_LIMIT){
             this->channel_on_impl();
             this->evaluate_fault();
@@ -136,6 +139,9 @@ uint8_t Channel::activate(void){
 
                 }
             }
+        #else 
+        this->channel_on_impl();
+        #endif
    }
    else{
     this->channel_off_impl();
