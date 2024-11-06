@@ -11,7 +11,6 @@
 uint8_t temp = 0; // delete this
 bool debug_delay;
 
-
 class Device
 {
     
