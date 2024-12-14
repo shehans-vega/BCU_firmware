@@ -52,8 +52,6 @@ void mcanconf_ext_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 
 		if ((crfp.EID == LH_ID) && (crfp.IDE == CAN_ID_XTD)) {
 			Left_handle_msg(crfp);
-			
-			
 			//LED_toggle;		//for relay controller board
 		}
 

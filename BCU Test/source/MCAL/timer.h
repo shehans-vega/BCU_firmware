@@ -25,5 +25,4 @@ bool pseudo_delay(unsigned long interval, unsigned long &previousMillis) {
     return false;
 }
 
-
 #endif

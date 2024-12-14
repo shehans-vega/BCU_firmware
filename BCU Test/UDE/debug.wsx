@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">14.12.2024 07:39:32:000</LastWriteDate>
+	<LastWriteDate type="string">14.12.2024 09:08:27:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1338</DockedDimension>
+							<DockedDimension>1260</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -97,7 +97,7 @@
 							<DockingIndex>3</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>false</Selected>
+							<Selected>true</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEProgWin.OPEN_VIEW01</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
@@ -187,7 +187,7 @@
 							<DockingIndex>4</DockingIndex>
 							<PanelIndex>-1</PanelIndex>
 							<ContainerType>TabbedDocument</ContainerType>
-							<Selected>true</Selected>
+							<Selected>false</Selected>
 							<UniqueIdentifier>Core2.ViewSrv.StdUDEWatchWin.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 					</DockingControls>
@@ -1024,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>ERROR: Failed to update resources to target !</Text>
+										<Text>ERROR: Connection to target lost !</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1289,7 +1289,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_06_11_24_08_05_13_0 type="key">
+				<Macro_14_12_24_09_05_54_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1569,7 +1569,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_14_12_24_07_39_32_0</NextNodeName>
+					<NextNodeName type="string">Macro_14_12_24_09_08_27_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1626,7 +1626,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_06_11_24_08_05_13_0>
+				</Macro_14_12_24_09_05_54_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1675,7 +1675,7 @@ End Sub</ScriptSource>
 							<HoldedPeriod type="int">0</HoldedPeriod>
 						</AnimateQueue>
 					</ViewSrv>
-					<SourceFile type="string">code &lt;0xFC0000-0xFC03FF&gt;</SourceFile>
+					<SourceFile type="string">code &lt;0xFC0004-0xFC0403&gt;</SourceFile>
 					<SourceFileInstFlag type="int">4</SourceFileInstFlag>
 					<NETFrameMode type="int">73728</NETFrameMode>
 					<NETFrameSaveIndex type="int">3</NETFrameSaveIndex>
@@ -1754,8 +1754,8 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">17</CaretIndex>
+						<TopIndex type="int">18</TopIndex>
+						<CaretIndex type="int">34</CaretIndex>
 						<NameWidth type="int">610</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
 						<ValueWidth type="int">450</ValueWidth>
@@ -1790,6 +1790,7 @@ End Sub</ScriptSource>
 							</Watch4>
 							<Watch5 type="key">
 								<Name type="string">headlight_unit (global) @1</Name>
+								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,1#0,0,0,0,1,0#</Status>
 								<RunningPeriod5 type="int">500</RunningPeriod5>
 								<HoldedPeriod5 type="int">0</HoldedPeriod5>
 							</Watch5>
@@ -1805,7 +1806,6 @@ End Sub</ScriptSource>
 							</Watch7>
 							<Watch8 type="key">
 								<Name type="string">turnsignal_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,2#0,0,0,0,2,0#0,0,0,0,2,0,0$0,2$#0,0,0,0,2,0,1$0,0$#0,0,0,0,2,0,2$0,0$#0,0,0,0,7$0,2$#0,0,0,0,8$0,2$#0,0,1#</Status>
 								<RunningPeriod8 type="int">500</RunningPeriod8>
 								<HoldedPeriod8 type="int">0</HoldedPeriod8>
 							</Watch8>
@@ -1817,6 +1817,16 @@ End Sub</ScriptSource>
 							<Watch10 type="key">
 								<Name type="string">debug_delay (global)</Name>
 							</Watch10>
+							<Watch11 type="key">
+								<Name type="string">debug_pass (global) @1</Name>
+								<RunningPeriod11 type="int">500</RunningPeriod11>
+								<HoldedPeriod11 type="int">0</HoldedPeriod11>
+							</Watch11>
+							<Watch12 type="key">
+								<Name type="string">debug_hbeam (global) @1</Name>
+								<RunningPeriod12 type="int">500</RunningPeriod12>
+								<HoldedPeriod12 type="int">0</HoldedPeriod12>
+							</Watch12>
 						</Watches>
 					</ViewSrv>
 					<NETFrameMode type="int">73728</NETFrameMode>

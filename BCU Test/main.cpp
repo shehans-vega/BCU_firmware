@@ -30,12 +30,9 @@ int main()
     create_modules();
     
     for(;;){
-    // if(pseudo_delay(50)){
-    // digitalToggle(onboardLED[0].port,onboardLED[0].pin);}
-    // timedebug = osalThreadGetMilliseconds();
-    // if(osalThreadGetMilliseconds()>=2000){
-    // digitalWrite(switcharm.port,switcharm.pin, 0);
-    // }
+    if(pseudo_delay(50)){
+    digitalToggle(onboardLED[0].port,onboardLED[0].pin);}
+    
     CAN_send();
     inputs();
     headlight_unit->activate();
