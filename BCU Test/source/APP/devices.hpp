@@ -5,16 +5,25 @@
 #include "input_elements.h"
 #include "syscalls.h"
 
+enum{
+    horn,
+    lbeam,
+    pass,
+    left,
+    right,
+    hbeam
+}device_ids;
+
 Device* devices[MAX_CHANNELS];
 
 void create_devices() {
     // Initialize devices at runtime
-    devices[0] = new momentary_Device(&channels[3], &hornButton, 10 , 15, 2000);
-    devices[1] = new momentary_Device(&channels[0], &lowbeamButton, 10,15,2000);
-    devices[2] = new momentary_Device(&channels[4], &passButton, 10,15,2000);
-    devices[3] = new toggle_Device(&channels[2], &leftButton, 10,15,2000);
-    devices[4] = new toggle_Device(&channels[1], &rightButton, 10,15,2000);
-    devices[5] = new momentary_Device(&channels[5], &highbeamButton, 5,15,300);
+    devices[horn] = new momentary_Device(&channels[3], &(buttons[HRN_BTN]), 10 , 15, 2000);
+    devices[lbeam] = new latch_Device(&channels[0], &(buttons[HLAMP_BTN]), 10,15,2000);
+    devices[pass] = new momentary_Device(&channels[4], &(buttons[PASS_BTN]), 10,15,2000);
+    devices[left] = new toggle_Device(&channels[1], &(buttons[LEFT_BTN]), 10,15,2000);
+    devices[right] = new toggle_Device(&channels[2], &(buttons[RGT_BTN]), 10,15,2000);
+    devices[hbeam] = new latch_Device(&channels[5], &(buttons[HLAMP_BTN]), 5,15,300);
 } 
 
 #endif

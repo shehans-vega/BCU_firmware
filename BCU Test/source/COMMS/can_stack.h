@@ -23,11 +23,12 @@
 #endif
 
 struct struct_R {
+	uint8_t reserved:1;
+	uint8_t trigger :1;
 	uint8_t D :1;
-	uint8_t max_regen :1;
 	uint8_t regen :1;
-	uint8_t page :1;
-	uint8_t mode :2;
+	uint8_t setting :1;
+	uint8_t mode :1;
 	uint8_t reverse :1;
 	uint8_t IGN_N :1;
 };
@@ -42,12 +43,13 @@ struct R_handle_struct {
 };
 
 struct struct_L {
-	uint8_t reserved :1;
+	uint8_t reserved :2;
 	uint8_t pass :1;
 	uint8_t horn :1;
 	uint8_t wiper :1;
-	uint8_t head_lamp :2;
-	uint8_t turn :2;
+	uint8_t head_lamp :1;
+	uint8_t right:1;
+	uint8_t left :1;
 };
 
 union union_L {
