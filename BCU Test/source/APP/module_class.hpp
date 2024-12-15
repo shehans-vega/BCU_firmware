@@ -6,6 +6,10 @@ uint8_t debug_hbeam;
 
 //========================================================
 
+// ========== PATCH VARIABLES =======
+bool hbeam_state = false;
+//===================================
+
 class Module
 {
 private:
@@ -37,11 +41,11 @@ void HeadLight_Module::activate(void)
     if (highbeam->evaluate_press() == true)
     {
         highbeam->control_signal(true);
+        hbeam_state = !hbeam_state;
         lowbeam->state = false;
         highbeam->activate();
     }
-
-    if (highbeam->device_channel->state == false)
+    if (hbeam_state == false)
     {
         if (passbeam->evaluate_press() == true)
         {
@@ -49,8 +53,7 @@ void HeadLight_Module::activate(void)
             highbeam->device_channel->state = true;
             highbeam->device_channel->activate();
         }
-        else
-        {
+        else{
             highbeam->device_channel->state = false;
             highbeam->device_channel->activate();
         }
