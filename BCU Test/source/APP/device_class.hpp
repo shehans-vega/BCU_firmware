@@ -179,6 +179,33 @@ public:
 };
 
 
+//##################### PATCH AREA ####################################
 
+/*NOTE : Below code snippets are firmware patches for immediate development requests and the snippets are breaking the firmware architecture. 
+Therefore please implement them again in the device module such a way that follows the original architecture of the firmware*/
+
+    bool evaluate_short_press(buttonInput_t *button)
+    {   button_state(button);
+        if ((button->buttonState == BUTTON_RELEASED) && (button->buttonPrevState ==  BUTTON_PRESSED))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
+
+       bool evaluate_long_press(buttonInput_t *button)
+    {   button_state(button);
+        if ((button->buttonState == BUTTON_RELEASED) && (button->buttonPrevState ==  BUTTON_HOLD))
+        {
+            return true;
+        }
+        else
+        {
+            return false;
+        }
+    }
 
 #endif

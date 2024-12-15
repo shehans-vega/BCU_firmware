@@ -4,7 +4,7 @@
 #include <stdbool.h>
 #include <stdint.h>
 
-#define BUTTON_HOLD_THRESHOLD 250
+#define BUTTON_HOLD_THRESHOLD 500
 #define BUTTON_PRESS_THRESHOLD 20
 #define BUTTON_RELEASE_DELAY 50 // Delay threshold for the button to go to idle state
 

@@ -3,11 +3,13 @@
 // =================Temporary Debug Area =================
 uint8_t debug_pass = 0;
 uint8_t debug_hbeam;
-
+uint8_t debug_lpress;
+uint8_t debug_spress;
 //========================================================
 
 // ========== PATCH VARIABLES =======
 bool hbeam_state = false;
+
 //===================================
 
 class Module
@@ -36,15 +38,29 @@ public:
 
 void HeadLight_Module::activate(void)
 {
-    static uint32_t lastControlSignalTime = 0;
 
-    if (highbeam->evaluate_press() == true)
+    if (evaluate_long_press(this->highbeam->device_button) == true)
     {
-        highbeam->control_signal(true);
         hbeam_state = !hbeam_state;
-        lowbeam->state = false;
+        highbeam->control_signal(hbeam_state);
         highbeam->activate();
+        debug_lpress++;
+        this->highbeam->device_button->buttonState = BUTTON_IDLE;
+        this->highbeam->device_button->buttonState = BUTTON_IDLE;
     }
+    if (evaluate_short_press(this->highbeam->device_button) == true)
+    {
+        this->highbeam->device_button->buttonState = BUTTON_IDLE;
+        this->highbeam->device_button->buttonState = BUTTON_IDLE;
+        debug_spress++;
+
+        highbeam->device_channel->state = false;
+        hbeam_state  = false;
+        highbeam->device_channel->activate();
+        lowbeam->control_signal(true);
+        lowbeam->activate();
+    }
+
     if (hbeam_state == false)
     {
         if (passbeam->evaluate_press() == true)
@@ -53,22 +69,12 @@ void HeadLight_Module::activate(void)
             highbeam->device_channel->state = true;
             highbeam->device_channel->activate();
         }
-        else{
+        else
+        {
             highbeam->device_channel->state = false;
             highbeam->device_channel->activate();
         }
     }
-
-    // else
-    // {
-    //     if(lowbeam->evaluate_press()==true){
-    //          lowbeam->control_signal(true);
-    //     }
-    //     else{
-    //         lowbeam->control_signal(false);
-    //     }
-    //     lowbeam->activate();
-    // }
 }
 
 /*================TURN SIGNAL MODULE IMPLEMENTATION======================*/
