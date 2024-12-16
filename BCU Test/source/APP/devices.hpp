@@ -5,6 +5,8 @@
 #include "input_elements.h"
 #include "syscalls.h"
 
+#define  MAX_DEVICES 7
+
 enum{
     horn,
     lbeam,
@@ -15,7 +17,7 @@ enum{
     pdu_fan
 }device_ids;
 
-Device* devices[MAX_CHANNELS];
+Device* devices[MAX_DEVICES];
 
 void create_devices() {
     // Initialize devices at runtime

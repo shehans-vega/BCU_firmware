@@ -152,9 +152,9 @@ CANConfig can_config_mcanconf_ext = {
   CAN_FIFO1_INT_DISABLE,0,NULL,0,NULL,0,NULL,0,NULL,
   /* rx standard buffer filters */
   {
+  {0x32UL,50UL,0U,7U}, /* standard filter 0*/
   {0UL,0UL,0U,0U},  /* standard_filter unused 0 (MISRA Compliance) */
   {0UL,0UL,0U,0U},  /* standard_filter unused 1 (MISRA Compliance) */
-  {0UL,0UL,0U,0U},  /* standard_filter unused 2 (MISRA Compliance) */
   },
     /* rx extended buffer filters */
   {
@@ -163,7 +163,7 @@ CANConfig can_config_mcanconf_ext = {
   {0UL,0UL,0U,0U},  /* extended_filter unused 1 (MISRA Compliance) */
   },
 /* number of standard filters */
-  0U,
+  1U,
 /* number of extended filters */
   1U,
   /* number of Rx Buffers */

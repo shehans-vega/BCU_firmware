@@ -5,7 +5,7 @@
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">16.12.2024 03:22:38:000</LastWriteDate>
+	<LastWriteDate type="string">16.12.2024 03:39:58:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>387</DockedDimension>
+							<DockedDimension>388</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -155,7 +155,7 @@
 							<UniqueIdentifier>Core2.ViewSrv.StdUDESFRView.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>254</DockedDimension>
+							<DockedDimension>253</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -276,7 +276,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -393,7 +393,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1024,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text></Text>
+										<Text>ERROR: Connection to target lost !</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1289,7 +1289,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_16_12_24_03_20_39_0 type="key">
+				<Macro_16_12_24_03_38_31_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1569,7 +1569,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_16_12_24_03_20_55_0</NextNodeName>
+					<NextNodeName type="string">Macro_16_12_24_03_39_56_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1626,7 +1626,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_16_12_24_03_20_39_0>
+				</Macro_16_12_24_03_38_31_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -1754,11 +1754,11 @@ End Sub</ScriptSource>
 				<OPEN_VIEW00 type="key">
 					<FrameCreated type="string">22.08.2024 14:22:21:884</FrameCreated>
 					<ViewSrv type="key">
-						<TopIndex type="int">0</TopIndex>
-						<CaretIndex type="int">0</CaretIndex>
-						<NameWidth type="int">620</NameWidth>
+						<TopIndex type="int">10</TopIndex>
+						<CaretIndex type="int">36</CaretIndex>
+						<NameWidth type="int">610</NameWidth>
 						<AddressWidth type="int">0</AddressWidth>
-						<ValueWidth type="int">456</ValueWidth>
+						<ValueWidth type="int">450</ValueWidth>
 						<Value2Width type="int">0</Value2Width>
 						<MinMaxWidth type="int">0</MinMaxWidth>
 						<Watches type="key">
@@ -1804,7 +1804,7 @@ End Sub</ScriptSource>
 							</Watch7>
 							<Watch8 type="key">
 								<Name type="string">turnsignal_unit (global) @1</Name>
-								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,2#0,0,0,0,2,0#0,0,0,0,2,0,0$0,2$#0,0,0,0,2,0,1$-1,0$#0,0,0,0,2,0,2$-1,0$#0,0,0,0,7$0,2$#0,0,0,0,8$0,2$#0,0,1#</Status>
+								<Status type="string">#0#0,0#0,0,0#0,0,0,0#0,0,0,0,2#0,0,0,0,2,0#0,0,0,0,2,0,0$0,2$#0,0,0,0,2,0,1$0,0$#0,0,0,0,2,0,2$0,0$#0,0,0,0,7$0,2$#0,0,0,0,8$0,2$#0,0,1#</Status>
 								<RunningPeriod8 type="int">500</RunningPeriod8>
 								<HoldedPeriod8 type="int">0</HoldedPeriod8>
 							</Watch8>
