@@ -8,11 +8,12 @@
 HeadLight_Module* headlight_unit = nullptr;
 TurnSignal_Module* turnsignal_unit = nullptr;
 Horn_Module* horn_unit = nullptr;
+PDU_FAN_Module* fan_unit = nullptr;
 
 void create_modules(){
    headlight_unit = new HeadLight_Module(devices[hbeam],devices[lbeam],devices[pass]);
    turnsignal_unit = new TurnSignal_Module(devices[left],devices[right]);
    horn_unit = new Horn_Module(devices[horn]);
+   fan_unit = new PDU_FAN_Module(devices[pdu_fan]);
 }
-
 #endif

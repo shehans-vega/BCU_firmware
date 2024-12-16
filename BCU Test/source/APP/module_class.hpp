@@ -1,4 +1,5 @@
 #include "device_class.hpp"
+#include "CANMatrix_pdu.h"
 
 // =================Temporary Debug Area =================
 uint8_t debug_pass = 0;
@@ -150,4 +151,25 @@ void Wiper_Module::activate(void)
     {
         wiper->control_signal(false);
     }
+}
+
+/*===================PDU_FAN MODULE IMPLEMENTATION===================*/
+
+#define PDU_TEMP_H 40
+#define PDU_TEMP_L 30
+bool fan_state = false;
+
+class PDU_FAN_Module : public Module
+{
+private:
+public:
+    PDU_FAN_Module(Device *fan) : fan(fan){}
+    Device *fan;
+    void activate(void);
+};
+
+void PDU_FAN_Module :: activate(void){
+   fan_state = get_fan_state();
+  this->fan->state = fan_state;
+  this->fan->activate();
 }

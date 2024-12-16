@@ -11,7 +11,8 @@ enum{
     pass,
     left,
     right,
-    hbeam
+    hbeam,
+    pdu_fan
 }device_ids;
 
 Device* devices[MAX_CHANNELS];
@@ -24,6 +25,7 @@ void create_devices() {
     devices[left] = new toggle_Device(&channels[2], &(buttons[LEFT_BTN]), 10,15,2000);
     devices[right] = new toggle_Device(&channels[1], &(buttons[RGT_BTN]), 10,15,2000);
     devices[hbeam] = new momentary_Device(&channels[5], &hbeam_btn, 5,15,300);
+    devices[pdu_fan] = new momentary_Device(&channels[4],&buttons[dummy_BTN], 5,15,300);
 } 
 
 #endif

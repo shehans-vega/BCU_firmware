@@ -25,6 +25,7 @@ extern "C"
         WIPER_BTN,
         HRN_BTN,
         PASS_BTN,
+        dummy_BTN
     }button_id;
 
     buttonInput_t buttons[NUM_BUTTONS];
