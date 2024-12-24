@@ -4129,6 +4129,28 @@
                         <value>50</value>
                       </rx_buffer_number>
                     </filter>
+                    <filter>
+                      <filter_type index="1">
+                        <value>Extended</value>
+                      </filter_type>
+                      <filter_value>
+                        <value>0x10f8109a</value>
+                      </filter_value>
+                      <rx_buffer_number>
+                        <value>50</value>
+                      </rx_buffer_number>
+                    </filter>
+                    <filter>
+                      <filter_type index="1">
+                        <value>Extended</value>
+                      </filter_type>
+                      <filter_value>
+                        <value>0x10f8108d</value>
+                      </filter_value>
+                      <rx_buffer_number>
+                        <value>50</value>
+                      </rx_buffer_number>
+                    </filter>
                   </rx_buffer_filters>
                 </rx_buffer_configuration>
                 <fifo_0_configuration>

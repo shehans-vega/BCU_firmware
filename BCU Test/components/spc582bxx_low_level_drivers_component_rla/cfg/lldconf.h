@@ -401,7 +401,7 @@
 */
 /* MCAN filter configuration */
 #define SPC5_CAN_SUB_MAX_STD_FILTERS          3
-#define SPC5_CAN_SUB_MAX_XTD_FILTERS          3
+#define SPC5_CAN_SUB_MAX_XTD_FILTERS          5
 #define SPC5_CAN_MAX_DATA_LENGHT			  8U	
 
 /* MCAN DEBUG options */

@@ -183,4 +183,3 @@ CPPWARN = -Wall -Wextra
 
 include ./components/spc582bxx_platform_component_rla/lib/rsc/rules.mk
 
-
