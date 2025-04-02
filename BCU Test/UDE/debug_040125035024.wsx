@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="utf-8"?>
 <stg format="2.0">
 	<OriginalWsp type="string">debug.wsx</OriginalWsp>
-	<BackupWspFlag type="flag">0</BackupWspFlag>
+	<BackupWspFlag type="flag">1</BackupWspFlag>
 	<ProdInfo type="bin" size="52">vQTv/gAAAQAMAAMA6iAAAAUA5QcAAAAAPwAAAAAAAAAEAAAAAgAAAAAAAAAAAAAAAAAAAA==</ProdInfo>
 	<ProdInfoString type="string">2021</ProdInfoString>
 	<CreationDate type="string">22.08.2024 14:21:56:000</CreationDate>
-	<LastWriteDate type="string">01.04.2025 22:58:59:000</LastWriteDate>
+	<LastWriteDate type="string">01.04.2025 03:50:24:000</LastWriteDate>
 	<MainFrame type="key">
 		<NETPlacementRoot type="key">
 			<FormsData type="innerxml">
 				<FormsData>
 					<Bounds>
-						<X>190</X>
-						<Y>92</Y>
+						<X>100</X>
+						<Y>-831</Y>
 						<Width>1120</Width>
 						<Height>668</Height>
 					</Bounds>
@@ -29,7 +29,7 @@
 					<DocumentDockStyle>Top</DocumentDockStyle>
 					<DockingControls>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>240</DockedDimension>
+							<DockedDimension>239</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -47,7 +47,7 @@
 							<UniqueIdentifier>MainFrame.StdTargetManagerWin.OPEN_VIEW</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>1346</DockedDimension>
+							<DockedDimension>1347</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Bottom</DockingType>
 							<FloatingBounds>
@@ -155,7 +155,7 @@
 							<UniqueIdentifier>Core2.ViewSrv.StdUDESFRView.OPEN_VIEW00</UniqueIdentifier>
 						</UniqueControlIdDockingControlData>
 						<UniqueControlIdDockingControlData>
-							<DockedDimension>145</DockedDimension>
+							<DockedDimension>146</DockedDimension>
 							<Cancelled>false</Cancelled>
 							<DockingType>Left</DockingType>
 							<FloatingBounds>
@@ -276,7 +276,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Window Toolbar</Name>
+								<Name>Show Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -393,7 +393,7 @@
 									<Width>111</Width>
 									<Height>25</Height>
 								</Bounds>
-								<Name>Show Toolbar</Name>
+								<Name>Window Toolbar</Name>
 								<AlwaysUnvisible>false</AlwaysUnvisible>
 								<Visible>false</Visible>
 								<ToolItemData>
@@ -1024,7 +1024,7 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>ERROR: Read memory block 0x0000000000FC0202-0x0000000000FC0205 failed !</Text>
+										<Text>ERROR: Failed to update resources to target !</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1045,14 +1045,14 @@
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Core2 inactive</Text>
+										<Text>Core2 not connected</Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
 									<ToolItemPersistData>
 										<Name></Name>
 										<Visible>true</Visible>
-										<Text>Function disabled</Text>
+										<Text></Text>
 										<DisplayStyle>ImageAndText</DisplayStyle>
 										<AppendAccelerator>false</AppendAccelerator>
 									</ToolItemPersistData>
@@ -1098,22 +1098,6 @@
 							</WorkingArea>
 							<Primary>true</Primary>
 							<DeviceName>\\.\DISPLAY1</DeviceName>
-						</ScreenControlData>
-						<ScreenControlData>
-							<Bounds>
-								<X>304</X>
-								<Y>-1080</Y>
-								<Width>1920</Width>
-								<Height>1080</Height>
-							</Bounds>
-							<WorkingArea>
-								<X>304</X>
-								<Y>-1080</Y>
-								<Width>1920</Width>
-								<Height>1080</Height>
-							</WorkingArea>
-							<Primary>false</Primary>
-							<DeviceName>\\.\DISPLAY2</DeviceName>
 						</ScreenControlData>
 					</Screens>
 				</ScreensControlData>
@@ -1273,7 +1257,7 @@
 		<UDESTK.Script type="key">
 			<MacroGuiEntries type="key">
 				<LastScriptFilePath type="string">..\..\..\..\Users\User\Documents\pls\UDESTK 2021</LastScriptFilePath>
-				<Macro_01_04_25_03_50_22_0 type="key">
+				<Macro_01_04_25_03_45_44_0 type="key">
 					<ScriptDescription type="string">The script contains a collection of macros to save memory content into different file formats 
 and fill target memory ranges</ScriptDescription>
 					<ScriptPath type="string">V:\UDE\AddOns\Macro\MacroLibrary\StdMacros1.dsm</ScriptPath>
@@ -1553,7 +1537,7 @@ End Sub</ScriptSource>
 					<ScriptFromStg type="flag">1</ScriptFromStg>
 					<LocalComputerName type="string">WS_CORE_DUO</LocalComputerName>
 					<ExternalScriptPath type="string"></ExternalScriptPath>
-					<NextNodeName type="string">Macro_01_04_25_22_58_59_0</NextNodeName>
+					<NextNodeName type="string">Macro_01_04_25_03_50_22_0</NextNodeName>
 					<UnAss type="key">
 						<GUIEntry type="key">
 							<MenuID type="int">10</MenuID>
@@ -1610,7 +1594,7 @@ End Sub</ScriptSource>
 						<GUIEntryDescription type="string"></GUIEntryDescription>
 					</FillDWord>
 					<NoOfFunctions type="int">5</NoOfFunctions>
-				</Macro_01_04_25_03_50_22_0>
+				</Macro_01_04_25_03_45_44_0>
 			</MacroGuiEntries>
 			<LastSelectedMacro type="string"></LastSelectedMacro>
 		</UDESTK.Script>
@@ -2034,7 +2018,7 @@ End Sub</ScriptSource>
 		<SaveAndCopyWithoutTimeStamps type="flag">0</SaveAndCopyWithoutTimeStamps>
 	</Logging>
 	<TargetInfoFile type="string">..\..\..\..\..\pls\UDESTK 2021\Targets\stm_spc582b60_premiumkit_debug_jtag.cfg</TargetInfoFile>
-	<UseWspCnt type="int">0</UseWspCnt>
+	<UseWspCnt type="int">1</UseWspCnt>
 	<TargInfoFlags type="key">
 		<Controller0 type="key">
 			<Core2 type="key">

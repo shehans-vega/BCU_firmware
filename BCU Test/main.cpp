@@ -42,3 +42,4 @@ int main()
     osalThreadDelayMicroseconds(1);
     }
 }
+

@@ -9,6 +9,8 @@
 #include "can_stack.h"
 
 #include "input_elements.h"
+#include "CANMatrix_FD_3.h"
+
 
 #ifndef CAN_H_
 #define CAN_H_
@@ -56,6 +58,13 @@ void mcanconf_ext_rxcb(uint32_t msgbuf, CANRxFrame crfp) {
 			bms_rx++;
 			PDU_getData_read(crfp);
 		}
+		if ((crfp.EID == FD3_MSG1_RXID) && (crfp.IDE == CAN_ID_XTD)) {
+			get_FD3MSG1(crfp);
+		}
+
+		// if ((crfp.EID == FD3_MSG2_RXID) && (crfp.IDE == CAN_ID_XTD)) {
+		// 	get_FD3MSG2(crfp);
+		// }
 
 		if ((crfp.EID == LH_ID) && (crfp.IDE == CAN_ID_XTD)) {
 			Left_handle_msg(crfp);

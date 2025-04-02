@@ -100,9 +100,10 @@ build/obj/main.o: main.cpp \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\assert.h \
  c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\_ansi.h \
  source/APP/modules.hpp source/APP/module_class.hpp \
- source/COMMS/CANMatrix_pdu.h source/APP/devices.hpp source/COMMS/can.h \
- source/COMMS/can_stack.h source/APP/input_elements.h source/MCAL/hal.h \
- source/MCAL/timer.h
+ source/COMMS/CANMatrix_pdu.h source/COMMS/CANMatrix_FD_3.h \
+ source/APP/devices.hpp source/COMMS/can.h source/COMMS/can_stack.h \
+ source/APP/input_elements.h source/COMMS/CANMatrix_FD_3.h \
+ source/MCAL/hal.h source/MCAL/timer.h
 
 c:\spc5studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\powerpc-eabivle\include\c++\4.9.4\vector:
 
@@ -322,6 +323,8 @@ source/APP/module_class.hpp:
 
 source/COMMS/CANMatrix_pdu.h:
 
+source/COMMS/CANMatrix_FD_3.h:
+
 source/APP/devices.hpp:
 
 source/COMMS/can.h:
@@ -329,6 +332,8 @@ source/COMMS/can.h:
 source/COMMS/can_stack.h:
 
 source/APP/input_elements.h:
+
+source/COMMS/CANMatrix_FD_3.h:
 
 source/MCAL/hal.h:
 

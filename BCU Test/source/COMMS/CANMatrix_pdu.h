@@ -133,7 +133,7 @@ void PDU_getData_read(CANRxFrame crfp) {
 	}
 }
 
-bool get_fan_state(){
+bool get_bms_fan_state(){
        return PDU_getData_i.chg_fixSetG.bit.chiller;
 }
 

@@ -109,18 +109,8 @@ void get_FD3MSG1(CANRxFrame crfp)
 	FD3_MSG1.throttle = ((crfp.data8[2] << 8) | (crfp.data8[1]));
 	FD3_MSG1.FD3_work_status.all = crfp.data8[3];
 	FD3_MSG1.RPM = ((crfp.data8[5] << 8) | (crfp.data8[4]));
-	FD3_MSG1.motor_temp = crfp.data8[6] - 40; //-40 offset
-	FD3_MSG1.controller_temp = crfp.data8[7] - 40; //-40 offset
-
-	if (FD3_MSG1.FD3_controller_status.bits.speedmode == 0) {
-		currentMode = ecoMode;
-	}
-	if (FD3_MSG1.FD3_controller_status.bits.speedmode == 1) {
-		currentMode = normalMode;
-	}
-	if (FD3_MSG1.FD3_controller_status.bits.speedmode == 2) {
-		currentMode = sportMode;
-	}
+	FD3_MSG1.motor_temp = crfp.data8[7] - 40; //-40 offset
+	FD3_MSG1.controller_temp = crfp.data8[6] - 40; //-40 offset
 }
 
 void get_FD3MSG2(CANRxFrame crfp)
@@ -130,4 +120,11 @@ void get_FD3MSG2(CANRxFrame crfp)
 	FD3_MSG2.lap_count = ((crfp.data8[5] << 8) | (crfp.data8[4]));
 	FD3_MSG2.error_code.all = ((crfp.data8[7] << 8) | (crfp.data8[6]));
 }
+
+uint16_t get_motor_temp(){
+    uint8_t motor_temp = FD3_MSG1.motor_temp;
+    uint8_t controller_temp = FD3_MSG1.controller_temp;
+    return ((motor_temp<<8)|controller_temp);
+}
 #endif /* CANMATRIX_FD_3_H_ */
+
