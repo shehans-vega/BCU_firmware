@@ -142,8 +142,7 @@ INCDIR =    $(LIB_INCLUDES) \
 # Compiler settings
 #
 
-export PATH := C:\SPC5Studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\bin\$(PATH_SEPARATOR)${PATH}
-
+export PATH := C:\Users\Shehan\Documents\Environments\spc5_env\toolchain\bin
 
 MCU = -mcpu=e200z2 -mvle
 MCU += -meabi -msdata=none -mregnames

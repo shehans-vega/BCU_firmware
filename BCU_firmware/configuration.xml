@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <SPC5-Config core_version="6.0" version="1.0.0">
-  <application name="Any Test - SPC582B" version="1.0.0" standalone="true" locked="false">
+  <application name="BCM_Firmware" version="1.0.0" standalone="true" locked="false">
     <description>A brief description.</description>
     <component id="com.st.tools.spc5.components.platform.spc582bxx_rla" version="1.18.0">
       <component id="com.st.spc5.components.init.spc582bxx_rla" version="1.18.0" />
