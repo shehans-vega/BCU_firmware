@@ -16,9 +16,10 @@ endif
 
 COMPILER=freegcc
 
+
 # Compiler options here.
 ifeq ($(USE_OPT),)
-  USE_OPT = -O2  -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse 
+  USE_OPT = -O2  -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse
 endif
 
 # C specific options here (added to USE_OPT).
@@ -141,7 +142,8 @@ INCDIR =    $(LIB_INCLUDES) \
 # Compiler settings
 #
 
-export PATH := C:\Users\Shehan\Documents\Environments\spc5_env\toolchain\bin
+export PATH := C:\SPC5Studio-6.0\eclipse\plugins\com.st.tools.spc5.tools.gnu.gcc.ppcvle.win32_4.9.4.20200908161514\toolchain\bin\$(PATH_SEPARATOR)${PATH}
+
 
 MCU = -mcpu=e200z2 -mvle
 MCU += -meabi -msdata=none -mregnames
@@ -180,4 +182,5 @@ CPPWARN = -Wall -Wextra
 ##############################################################################
 
 include ./components/spc582bxx_platform_component_rla/lib/rsc/rules.mk
+
 
