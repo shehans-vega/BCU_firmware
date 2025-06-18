@@ -16,7 +16,6 @@ endif
 
 COMPILER=freegcc
 
-
 # Compiler options here.
 ifeq ($(USE_OPT),)
   USE_OPT = -O2  -gdwarf-2 -fomit-frame-pointer -falign-functions=16 -fno-gcse 
